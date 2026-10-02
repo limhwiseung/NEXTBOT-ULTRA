@@ -119,7 +119,7 @@
   .auth-team-hint{font-size:11px;color:var(--text-faint);margin:-3px 0 14px;line-height:1.4;}
   /* ---------- App shell ---------- */
   #appView{display:none; height:100%; flex-direction:row;}
-  #appView\.show{display:flex;}
+  #appView.show{display:flex;}
   .sidebar{
     width:236px; flex:none; background:var(--panel); border-right:1px solid var(--border-soft);
     display:flex; flex-direction:column; height:100%;
@@ -196,7 +196,7 @@
   .search-box input{flex:1; background:none; border:none; color:var(--text); font-size:12.5px;}
   .search-box .search-close{cursor:pointer; color:var(--text-faint);}
   .search-box .search-close:hover{color:var(--text);}
-  .msg-row\.search-hide{display:none;}
+  .msg-row.search-hide{display:none;}
   .msg-text mark{background:var(--blue-glow); color:var(--blue); border-radius:3px; padding:0 1px;}
   .topbar-right{margin-left:auto; display:flex; align-items:center; gap:6px;}
   .icon-btn{
@@ -528,7 +528,7 @@
     .msg-list{ padding:10px 12px 6px; }
     .msg-row{ padding:8px 6px; gap:8px; }
     .msg-actions{ display:none; position:static; margin-top:6px; background:none; border:none; gap:4px; }
-    .msg-row\.touch-open .msg-actions{ display:flex; }
+    .msg-row.touch-open .msg-actions{ display:flex; }
     .msg-actions button{ background:var(--panel-2); border:1px solid var(--border-soft); border-radius:6px; padding:7px 10px; }
     .composer-wrap{ padding:0 10px calc(12px + var(--safe-b)); }
     .composer textarea, .field input, textarea.field-ta{ font-size:16px; }
@@ -827,18 +827,18 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
 <script type="module">
-import { initializeApp } from "https://www\.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword,
   signOut, sendPasswordResetEmail, updateProfile, setPersistence, browserLocalPersistence
-} from "https://www\.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
   getFirestore, doc, setDoc, getDoc, updateDoc, deleteDoc, collection, addDoc, query,
   orderBy, onSnapshot, serverTimestamp, where, limit, getDocs, arrayUnion, arrayRemove, runTransaction, increment
-} from "https://www\.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import {
   getDatabase, ref, set, onValue, onDisconnect, remove, push, serverTimestamp as rtdbTimestamp, off
-} from "https://www\.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 const firebaseConfig = {
   apiKey: "AIzaSyAUwzRx2lEzogeJGRZfre5ghDkHuEoyz3E",
   authDomain: "robofest-nextbot.firebaseapp.com",
@@ -852,7 +852,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const rtdb = getDatabase(app);
-const ADMIN_EMAIL = "studiovoidsurpport\@gmail.com";
+const ADMIN_EMAIL = "studiovoidsurpport@gmail.com";
 const TEAM_ROBOFEST="robofest";
 const TEAM_CCE="cce";
 const CCE_EMAIL_DOMAIN="zeropoint.co.kr";
@@ -873,7 +873,7 @@ const CCE_STRUCTURE=[
   {id:"cce-cat-bot",name:"🤖 CCE NEXTBOT",position:4,channels:[{id:"cce-chan-bot",name:"봇-알림"}]}
 ];
 function teamFromEmail(email){
-  const raw=String(email||"").trim().toLowerCase(),domain=raw\.split("@").pop()||"";
+  const raw=String(email||"").trim().toLowerCase(),domain=raw.split("@").pop()||"";
   return domain===CCE_EMAIL_DOMAIN?TEAM_CCE:TEAM_ROBOFEST;
 }
 function userTeam(u){return u?.team||teamFromEmail(u?.email);}
@@ -925,7 +925,7 @@ let BOT_CAT_ID="cat-bot";
 let BOT_CHANNEL_ID="chan-bot";
 function refreshTeamBotIds(){const ids=teamBotIds(activeTeam);BOT_CAT_ID=ids.catId;BOT_CHANNEL_ID=ids.channelId;}
 const BOT_AVATAR = "data:image/svg+xml;utf8," + encodeURIComponent(
-  `<svg xmlns="http://www\.w3.org/2000/svg" viewBox="0 0 64 64">
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
     <rect width="64" height="64" rx="14" fill="#16181b"/>
     <rect x="30" y="9" width="4" height="9" fill="#3d7fff"/>
     <circle cx="32" cy="7" r="4" fill="#3d7fff"/>
@@ -966,7 +966,7 @@ const BOT_LEGACY_MODEL_FALLBACKS = {
   "gemini-2.0-flash-exp":"gemini-3.6-flash"
 };
 const HELP_COMMANDS = [
-  { cmd:"/주사위 [숫자]", desc:"1\~숫자(기본 6) 사이 주사위를 굴려요." },
+  { cmd:"/주사위 [숫자]", desc:"1~숫자(기본 6) 사이 주사위를 굴려요." },
   { cmd:"/동전", desc:"동전을 던져 앞면/뒷면을 알려줘요." },
   { cmd:"/가위바위보 가위|바위|보", desc:"봇과 가위바위보 대결을 해요." },
   { cmd:"/제비뽑기 항목1,항목2,...", desc:"쉼표로 구분한 항목 중 하나를 무작위로 뽑아요." },
@@ -975,7 +975,7 @@ const HELP_COMMANDS = [
   { cmd:"/디데이", desc:"대회까지 남은 날짜를 알려줘요." },
   { cmd:"/순위", desc:"이번 주 채팅 활동 랭킹(진행 중)을 보여줘요." },
   { cmd:"/help 또는 /도움말", desc:"이 명령어 목록을 보여줘요." },
-  { cmd:"/봇채팅 질문", desc:"전체 채팅 기록을 참고해 Gemini AI에게 질문해요. Gemini 사용량에 따라 1\~16토큰을 사용합니다." },
+  { cmd:"/봇채팅 질문", desc:"전체 채팅 기록을 참고해 Gemini AI에게 질문해요. Gemini 사용량에 따라 1~16토큰을 사용합니다." },
   { cmd:"/봇도움말", desc:"AI 봇 관련 명령어와 토큰 사용법을 보여줘요." },
   { cmd:"/봇채팅 질문", desc:"NEXTBOT이 필요한 경우 팀원·채널·메시지·기록 조회 및 지정 채널 게시 같은 도구를 사용할 수 있습니다." },
   { cmd:"/내토큰", desc:"현재 보유한 AI 봇 토큰을 확인해요." },
@@ -992,11 +992,11 @@ const HELP_ADMIN_COMMANDS = [
 const NEXTBOT_EXTRA_COMMANDS = [
   {cmd:"/내점수",desc:"이번 주 내 MVP 활동 점수를 확인해요."},
   {cmd:"/내순위",desc:"이번 주 내 MVP 순위를 확인해요."},
-  {cmd:"/랭킹 [1\~20]",desc:"이번 주 TOP N 랭킹을 보여줘요."},
-  {cmd:"/지난주순위 [1\~20]",desc:"지난주 활동 TOP N을 보여줘요."},
+  {cmd:"/랭킹 [1~20]",desc:"이번 주 TOP N 랭킹을 보여줘요."},
+  {cmd:"/지난주순위 [1~20]",desc:"지난주 활동 TOP N을 보여줘요."},
   {cmd:"/점수설명",desc:"MVP 점수 계산법을 알려줘요."},
   {cmd:"/mvp상태",desc:"현재 MVP 투표/집계 상태를 보여줘요."},
-  {cmd:"/mvp기록 [1\~20]",desc:"최근 MVP 결과를 보여줘요."},
+  {cmd:"/mvp기록 [1~20]",desc:"최근 MVP 결과를 보여줘요."},
   {cmd:"/mvp횟수",desc:"역대 MVP 우승 횟수 순위를 보여줘요."},
   {cmd:"/내프로필",desc:"내 닉네임·역할·접속 상태를 보여줘요."},
   {cmd:"/프로필 닉네임",desc:"팀원의 프로필을 찾아 보여줘요."},
@@ -1007,7 +1007,7 @@ const NEXTBOT_EXTRA_COMMANDS = [
   {cmd:"/채널정보",desc:"현재 채널 정보를 보여줘요."},
   {cmd:"/팀통계",desc:"이번 주 팀 활동 요약을 보여줘요."},
   {cmd:"/메시지수",desc:"현재 화면에 불러온 메시지 수를 보여줘요."},
-  {cmd:"/최근 [1\~10]",desc:"현재 채널의 최근 메시지를 요약해요."},
+  {cmd:"/최근 [1~10]",desc:"현재 채널의 최근 메시지를 요약해요."},
   {cmd:"/읽지않음",desc:"읽지 않은 채널을 찾아줘요."},
   {cmd:"/공지목록",desc:"최근 공지를 보여줘요."},
   {cmd:"/일정목록",desc:"다가오는 일정을 보여줘요."},
@@ -1047,8 +1047,8 @@ HELP_COMMANDS.push(...NEXTBOT_EXTRA_COMMANDS);
 /* ---------------- NEXTBOT ULTRA: 추가 실사용 명령어 ---------------- */
 const NEXTBOT_ULTRA_COMMANDS = [
   {cmd:"/상위3",desc:"이번 주 MVP TOP3를 바로 보여줘요."},
-  {cmd:"/메시지순위 [1\~20]",desc:"메시지 작성 수 기준 순위를 보여줘요."},
-  {cmd:"/리액션순위 [1\~20]",desc:"받은 리액션 수 기준 순위를 보여줘요."},
+  {cmd:"/메시지순위 [1~20]",desc:"메시지 작성 수 기준 순위를 보여줘요."},
+  {cmd:"/리액션순위 [1~20]",desc:"받은 리액션 수 기준 순위를 보여줘요."},
   {cmd:"/내활동",desc:"이번 주 내 메시지·리액션·점수를 요약해요."},
   {cmd:"/주간비교",desc:"이번 주와 지난주 팀 활동량을 비교해요."},
   {cmd:"/mvp후보",desc:"현재 MVP 후보 TOP3를 보여줘요."},
@@ -1126,10 +1126,10 @@ function extractEmbedUrl(text){
 function buildEmbedHtml(text){
   const url=extractEmbedUrl(text);
   if(!url) return '';
-  if(/\\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
+  if(/\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
     return `<div class="msg-embed"><img src="${url}" loading="lazy" alt=""></div>`;
   }
-  const yt = url.match(/(?:youtube\\.com\\/watch\\?v=|youtu\\.be\\/)([\w-]{6,15})/);
+  const yt = url.match(/(?:youtube\.com\\/watch\\?v=|youtu\.be\\/)([\w-]{6,15})/);
   if(yt){
     const vid=yt[1];
     return `<div class="msg-embed"><a class="yt-embed" href="${url}" target="_blank" rel="noopener">
@@ -1175,8 +1175,8 @@ function addCodePreviewToPre(pre){
   const head=document.createElement('div'); head.className='code-preview-head';
   const label=document.createElement('span'); label.textContent=kind==='html'?'🌐 HTML 미리보기':'🐍 Python 미리보기';
   const actions=document.createElement('div'); actions.className='code-preview-actions';
-  const preview=document.createElement('button'); preview\.textContent='미리보기';
-  preview\.onclick=()=>openCodePreview(kind,code.textContent);
+  const preview=document.createElement('button'); preview.textContent='미리보기';
+  preview.onclick=()=>openCodePreview(kind,code.textContent);
   actions.appendChild(preview);
   head.append(label,actions); card.appendChild(head);
   const frame=document.createElement('iframe'); frame.className='code-preview-frame'+(kind==='python'?' python':''); frame.setAttribute('sandbox',kind==='html'?'allow-scripts allow-forms allow-modals allow-popups':'allow-scripts'); frame.setAttribute('title',label.textContent);
@@ -1192,7 +1192,7 @@ function enhanceCodePreviews(root){
 }
 function renderMentions(text,withCodePreviews=true){
   const raw=String(text||'');
-  if(window\.marked && window\.DOMPurify){
+  if(window.marked && window.DOMPurify){
     try{
       marked.setOptions({breaks:true,gfm:true});
       let html=marked.parse(raw);
@@ -1256,7 +1256,7 @@ function showMsg(id, text, ok=false){
 $('signupBtn').onclick = async ()=>{
   const nick=$('suNick').value.trim(), email=$('suEmail').value.trim(), pw=$('suPw').value;
   if(!nick||!email||!pw){ showMsg('signupMsg','모든 항목을 입력해주세요.'); return; }
-  if(pw\.length<6){ showMsg('signupMsg','비밀번호는 6자 이상이어야 합니다.'); return; }
+  if(pw.length<6){ showMsg('signupMsg','비밀번호는 6자 이상이어야 합니다.'); return; }
   $('signupBtn').disabled=true;
   try{
     const cred = await createUserWithEmailAndPassword(auth, email, pw);
@@ -1482,7 +1482,7 @@ function renderMemberPanel(){
 }
 $('memberBtn').onclick=()=>{
   const mp=$('memberPanel');
-  if(window\.innerWidth<=880){
+  if(window.innerWidth<=880){
     const open=mp.classList.toggle('popup');
     $('memberScrim').classList.toggle('show', open);
   }
@@ -1761,7 +1761,7 @@ function renderPinBar(snap){
   }).join('<span style="color:var(--border);">|</span>');
   bar.querySelectorAll('[data-jumpid]').forEach(el=>el.onclick=()=>{
     const row=document.querySelector(`.msg-row[data-id="${el.getAttribute('data-jumpid')}"]`);
-    if(row){ row\.scrollIntoView({behavior:'smooth', block:'center'}); row\.style.background='var(--blue-glow)'; setTimeout(()=>row\.style.background='',900); }
+    if(row){ row.scrollIntoView({behavior:'smooth', block:'center'}); row.style.background='var(--blue-glow)'; setTimeout(()=>row.style.background='',900); }
   });
 }
 /* search within channel */
@@ -1780,10 +1780,10 @@ $('searchInput').addEventListener('input', applySearchFilter);
 function applySearchFilter(){
   const term=($('searchInput').value||'').trim().toLowerCase();
   document.querySelectorAll('#msgList .msg-row').forEach(row=>{
-    const txt=(row\.querySelector('[data-text]')?.textContent||'').toLowerCase();
-    const nick=(row\.querySelector('.msg-nick')?.textContent||'').toLowerCase();
+    const txt=(row.querySelector('[data-text]')?.textContent||'').toLowerCase();
+    const nick=(row.querySelector('.msg-nick')?.textContent||'').toLowerCase();
     const match = !term || txt.includes(term) || nick.includes(term);
-    row\.classList.toggle('search-hide', !match);
+    row.classList.toggle('search-hide', !match);
   });
 }
 /* ---------------- Chat export / backup ---------------- */
@@ -1825,7 +1825,7 @@ function renderMessage(id, m){
   const roleTxt = rolesLabel(u.roles);
   const mine = m.userId===currentUser.uid;
   const row=document.createElement('div');
-  row\.className='msg-row'; row\.dataset.id=id;
+  row.className='msg-row'; row.dataset.id=id;
   let replyHtml='';
   if(m.replyTo){
     replyHtml=`<div class="msg-reply-ref" data-jump="${m.replyTo.id||''}">↩ ${escapeHtml(m.replyTo.nickname||'')}: ${escapeHtml((m.replyTo.snippet||'').slice(0,60))}</div>`;
@@ -1839,7 +1839,7 @@ function renderMessage(id, m){
   const bodyHtml = isPoll
     ? renderPoll(id, m)
     : `${m.content?`<div class="msg-text" data-text>${renderMentions(m.content||'')}</div>${buildEmbedHtml(m.content||'')}`:''}${m.botMetaHtml||''}${attachHtml}`;
-  row\.innerHTML = `
+  row.innerHTML = `
     ${avatarHtml(u,34)}
     <div class="msg-body">
       ${replyHtml}
@@ -1863,25 +1863,25 @@ function renderMessage(id, m){
       ${(mine && !isPoll)?'<button data-act="edit">수정</button>':''}
       ${(mine||myDoc.isAdmin)?'<button data-act="del">삭제</button>':''}
     </div>`;
-  row\.querySelector('[data-act="copy"]').onclick=()=>copyMessageText(m, u);
-  const regenBtn=row\.querySelector('[data-act="regenerate"]');
+  row.querySelector('[data-act="copy"]').onclick=()=>copyMessageText(m, u);
+  const regenBtn=row.querySelector('[data-act="regenerate"]');
   if(regenBtn) regenBtn.onclick=async()=>{const q=String(m.botQuestion||'').trim();if(!q){toast('이 답변에는 재생성할 원래 질문 정보가 없습니다.');return;}await handleBotChatCommand(q,{regenerate:true});};
-  row\.querySelector('[data-act="bookmark"]').onclick=()=>toggleMessageBookmark(id, m, u);
-  row\.querySelector('[data-act="reply"]').onclick=()=>{
+  row.querySelector('[data-act="bookmark"]').onclick=()=>toggleMessageBookmark(id, m, u);
+  row.querySelector('[data-act="reply"]').onclick=()=>{
     replyTarget={ id, nickname:u.nickname, snippet: isPoll ? ('📊 '+(m.question||'')) : m.content }; renderReplyPreview(); $('msgInput').focus();
   };
-  const editBtn=row\.querySelector('[data-act="edit"]');
+  const editBtn=row.querySelector('[data-act="edit"]');
   if(editBtn) editBtn.onclick=()=>startEdit(row, id, m.content);
-  const delBtn=row\.querySelector('[data-act="del"]');
+  const delBtn=row.querySelector('[data-act="del"]');
   if(delBtn) delBtn.onclick=()=>{ if(confirm('메시지를 삭제할까요?')) deleteMessageWithStats(id,m); };
-  const pinBtn=row\.querySelector('[data-act="pin"]');
+  const pinBtn=row.querySelector('[data-act="pin"]');
   if(pinBtn)pinBtn.onclick=async()=>{
     const ch=currentChannelId&&channels.find(c=>c.id===currentChannelId);
     if(!canSeeChannel(ch)||!teamResourceMatches(m)){toast('현재 워크스페이스에서 사용할 수 없는 메시지입니다.');return;}
     await updateDoc(doc(db,'channels',currentChannelId,'messages',id),{pinned:!m.pinned,team:activeTeam});
   };
-  row\.querySelector('[data-act="react"]').onclick=(e)=>openReactionPicker(e.currentTarget, id);
-  row\.querySelectorAll('.chan-mention').forEach(el=>{
+  row.querySelector('[data-act="react"]').onclick=(e)=>openReactionPicker(e.currentTarget, id);
+  row.querySelectorAll('.chan-mention').forEach(el=>{
     el.onclick=(e)=>{
       e.stopPropagation();
       const ch=channels.find(c=>c.id===el.getAttribute('data-chan'));
@@ -1890,17 +1890,17 @@ function renderMessage(id, m){
       openChannel(ch.id, ch.name, cat?cat.name:'');
     };
   });
-  renderReactions(row\.querySelector('[data-reactions]'), id, m.reactions||{});
+  renderReactions(row.querySelector('[data-reactions]'), id, m.reactions||{});
   if(isPoll){
-    row\.querySelectorAll('[data-optidx]').forEach(el=>el.onclick=()=>votePoll(id, parseInt(el.getAttribute('data-optidx'),10)));
+    row.querySelectorAll('[data-optidx]').forEach(el=>el.onclick=()=>votePoll(id, parseInt(el.getAttribute('data-optidx'),10)));
   }
   // touch devices have no hover — tap the row background to reveal actions
-  row\.addEventListener('click',(e)=>{
-    if(window\.innerWidth>880) return;
+  row.addEventListener('click',(e)=>{
+    if(window.innerWidth>880) return;
     if(e.target.closest('a,button,.poll-opt,.reaction-chip,.reaction-add')) return;
-    const wasOpen=row\.classList.contains('touch-open');
-    document.querySelectorAll('.msg-row\.touch-open').forEach(r=>r.classList.remove('touch-open'));
-    if(!wasOpen) row\.classList.add('touch-open');
+    const wasOpen=row.classList.contains('touch-open');
+    document.querySelectorAll('.msg-row.touch-open').forEach(r=>r.classList.remove('touch-open'));
+    if(!wasOpen) row.classList.add('touch-open');
   });
   $('msgList').appendChild(row);
 }
@@ -1958,13 +1958,13 @@ function openReactionPicker(anchorEl, msgId){
   pop.innerHTML = REACTION_EMOJIS.map(e=>`<span data-e="${e}">${e}</span>`).join('');
   document.body.appendChild(pop);
   const r=anchorEl.getBoundingClientRect();
-  pop.style.top=(r.top-40+window\.scrollY)+'px';
-  pop.style.left=Math.max(8,r.left-80+window\.scrollX)+'px';
+  pop.style.top=(r.top-40+window.scrollY)+'px';
+  pop.style.left=Math.max(8,r.left-80+window.scrollX)+'px';
   pop.querySelectorAll('[data-e]').forEach(s=>s.onclick=()=>{ toggleReaction(msgId, s.getAttribute('data-e')); pop.remove(); });
   setTimeout(()=>document.addEventListener('click', function h(ev){ if(!pop.contains(ev.target)){ pop.remove(); } }, {once:true}),0);
 }
 function startEdit(row,id,content){
-  const body=row\.querySelector('.msg-text');
+  const body=row.querySelector('.msg-text');
   body.outerHTML = `<div class="msg-edit-box"><input type="text" value="${escapeHtml(content)}" id="editInput_${id}"><button class="btn btn-sm" id="editSave_${id}">저장</button><button class="btn btn-sm btn-ghost" id="editCancel_${id}">취소</button></div>`;
   $('editSave_'+id).onclick=async()=>{
     const val=$('editInput_'+id).value.trim();
@@ -2362,7 +2362,7 @@ function notifyBotCompletion(task,answer){
   try{
     if('Notification' in window && Notification.permission==='granted'){
       const n=new Notification('NEXTBOT 답변 완료',{body,tag:`nextbot-${task?.id||Date.now()}`});
-      n.onclick=()=>{try{window\.focus();}catch(_){} if(task?.channelId && !FEATURE_CHANNELS[task.channelId])openChannel(task.channelId,task.channelName,'');};
+      n.onclick=()=>{try{window.focus();}catch(_){} if(task?.channelId && !FEATURE_CHANNELS[task.channelId])openChannel(task.channelId,task.channelName,'');};
     }
   }catch(_e){}
 }
@@ -2392,7 +2392,7 @@ async function streamGeminiAnswer(apiKey,model,prompt,onText){
     }
     if(!res.body)throw new Error('이 브라우저에서는 Gemini 스트리밍을 지원하지 않습니다.');
     const reader=res.body.getReader(),decoder=new TextDecoder('utf-8');let buffer='',partAnswer='';
-    const consume=async raw=>{for(const line of raw\.split(/\r?\n/)){const t=line.trim();if(!t||!t.startsWith('data:'))continue;const payload=t.slice(5).trim();if(payload==='[DONE]')continue;try{const obj=JSON.parse(payload),parts=obj?.candidates?.[0]?.content?.parts||[],chunk=parts.map(x=>x.text||'').join('');if(obj?.usageMetadata)mergeUsage(obj.usageMetadata);const reason=obj?.candidates?.[0]?.finishReason;if(reason)lastFinishReason=reason;if(chunk){partAnswer+=chunk;answer+=chunk;onText(answer);}}catch(_e){}}};
+    const consume=async raw=>{for(const line of raw.split(/\r?\n/)){const t=line.trim();if(!t||!t.startsWith('data:'))continue;const payload=t.slice(5).trim();if(payload==='[DONE]')continue;try{const obj=JSON.parse(payload),parts=obj?.candidates?.[0]?.content?.parts||[],chunk=parts.map(x=>x.text||'').join('');if(obj?.usageMetadata)mergeUsage(obj.usageMetadata);const reason=obj?.candidates?.[0]?.finishReason;if(reason)lastFinishReason=reason;if(chunk){partAnswer+=chunk;answer+=chunk;onText(answer);}}catch(_e){}}};
     while(true){const {value,done}=await reader.read();if(done)break;buffer+=decoder.decode(value,{stream:true});const events=buffer.split(/\n\n/);buffer=events.pop()||'';for(const ev of events)await consume(ev);}buffer+=decoder.decode();if(buffer.trim())await consume(buffer);
     return partAnswer;
   };
@@ -2674,7 +2674,7 @@ function updateBotModeUI(){
   const btn=$('botModeBtn');
   if(btn) btn.classList.toggle('bot-mode-on', botModeOn);
 }
-window\.addEventListener('keydown', (e)=>{
+window.addEventListener('keydown', (e)=>{
   if(e.altKey && (e.key==='t' || e.key==='T')){
     if(!currentUser || !myDoc) return;
     e.preventDefault();
@@ -2730,7 +2730,7 @@ function clearChannelDraft(chanId){
 }
 async function copyTextSafe(text){
   try{
-    if(navigator.clipboard && window\.isSecureContext){ await navigator.clipboard.writeText(text); return true; }
+    if(navigator.clipboard && window.isSecureContext){ await navigator.clipboard.writeText(text); return true; }
     const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
     const ok=document.execCommand('copy'); ta.remove(); return !!ok;
   }catch(_){ return false; }
@@ -2757,7 +2757,7 @@ function openBookmarksModal(){
   document.querySelectorAll('[data-bmjump]').forEach(el=>el.onclick=()=>{
     const b=getBookmarks()[+el.dataset.bmjump]; if(!b)return; const ch=channels.find(c=>c.id===b.channelId);
     if(!ch){toast('해당 채널을 찾을 수 없어요.');return;} const cat=categories.find(c=>c.id===ch.categoryId); closeModal(); openChannel(ch.id,ch.name,cat?.name||'');
-    setTimeout(()=>{ const row=document.querySelector(`.msg-row[data-id="${b.msgId}"]`); if(row){row\.scrollIntoView({behavior:'smooth',block:'center'});row\.style.background='var(--blue-glow)';setTimeout(()=>row\.style.background='',1200);}else toast('최근 200개 메시지 밖의 북마크일 수 있어요.'); },700);
+    setTimeout(()=>{ const row=document.querySelector(`.msg-row[data-id="${b.msgId}"]`); if(row){row.scrollIntoView({behavior:'smooth',block:'center'});row.style.background='var(--blue-glow)';setTimeout(()=>row.style.background='',1200);}else toast('최근 200개 메시지 밖의 북마크일 수 있어요.'); },700);
   });
 }
 function favorites(){ return storeGet('favorites',[]); }
@@ -2783,7 +2783,7 @@ function prettyAgo(ms){
   if(m<1)return '방금'; if(m<60)return `${m}분 전`; const h=Math.floor(m/60); if(h<24)return `${h}시간 전`; return `${Math.floor(h/24)}일 전`;
 }
 function parseTimerArg(s){
-  const m=String(s||'').trim().toLowerCase().match(/^(\d+(?:\\.\d+)?)\s*(s|m|h|초|분|시간)?$/); if(!m)return 0;
+  const m=String(s||'').trim().toLowerCase().match(/^(\d+(?:\.\d+)?)\s*(s|m|h|초|분|시간)?$/); if(!m)return 0;
   const n=Number(m[1]); const u=m[2]||'s'; const mult=(u==='h'||u==='시간')?3600000:(u==='m'||u==='분')?60000:1000; return Math.round(n*mult);
 }
 function safeCalc(expr){
@@ -2944,7 +2944,7 @@ async function handleMegaCommand(cmd,args){
       const a=notes(),i=(parseInt(args)||0)-1;if(!a[i]){toast('올바른 메모 번호를 입력해주세요.');return true;}a.splice(i,1);storeSet('notes',a);toast('🗑 메모를 삭제했어요.');return true;
     }
     case '/타이머': {
-      const ms=parseTimerArg(args);if(ms<1000||ms>24*3600000){toast('예: /타이머 10m (1초\~24시간)');return true;}if(localTimerHandle)clearTimeout(localTimerHandle);localTimerEnd=Date.now()+ms;localTimerHandle=setTimeout(()=>{localTimerHandle=null;localTimerEnd=0;toast('⏰ 타이머 종료!');if('Notification' in window&&Notification.permission==='granted')new Notification('NEXTBOT',{body:'설정한 타이머가 끝났어요!'});},ms);toast(`⏰ 타이머 시작: ${Math.round(ms/1000)}초`);return true;
+      const ms=parseTimerArg(args);if(ms<1000||ms>24*3600000){toast('예: /타이머 10m (1초~24시간)');return true;}if(localTimerHandle)clearTimeout(localTimerHandle);localTimerEnd=Date.now()+ms;localTimerHandle=setTimeout(()=>{localTimerHandle=null;localTimerEnd=0;toast('⏰ 타이머 종료!');if('Notification' in window&&Notification.permission==='granted')new Notification('NEXTBOT',{body:'설정한 타이머가 끝났어요!'});},ms);toast(`⏰ 타이머 시작: ${Math.round(ms/1000)}초`);return true;
     }
     case '/타이머취소': {
       if(localTimerHandle){clearTimeout(localTimerHandle);localTimerHandle=null;localTimerEnd=0;toast('⏹ 타이머를 취소했어요.');}else toast('⏹ 실행 중인 타이머가 없어요.');return true;
@@ -2956,7 +2956,7 @@ async function handleMegaCommand(cmd,args){
       const a=args.split('|').map(x=>x.trim()).filter(Boolean);if(a.length<2){toast('사용법: /선택 A|B|C');return true;}await postBotReply(`🎯 선택: ${a[Math.floor(Math.random()*a.length)]}`);return true;
     }
     case '/숫자': {
-      const [aa,bb]=args.split('|').map(Number);if(!Number.isFinite(aa)||!Number.isFinite(bb)){toast('사용법: /숫자 1|100');return true;}const lo=Math.ceil(Math.min(aa,bb)),hi=Math.floor(Math.max(aa,bb));await postBotReply(`🔢 ${lo}\~${hi} → ${lo+Math.floor(Math.random()*(hi-lo+1))}`);return true;
+      const [aa,bb]=args.split('|').map(Number);if(!Number.isFinite(aa)||!Number.isFinite(bb)){toast('사용법: /숫자 1|100');return true;}const lo=Math.ceil(Math.min(aa,bb)),hi=Math.floor(Math.max(aa,bb));await postBotReply(`🔢 ${lo}~${hi} → ${lo+Math.floor(Math.random()*(hi-lo+1))}`);return true;
     }
     case '/비밀번호': {
       const n=Math.min(64,Math.max(8,parseInt(args)||16)),chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*_-';const bytes=new Uint32Array(n);crypto.getRandomValues(bytes);const pw=[...bytes].map(x=>chars[x%chars.length]).join('');openModal(`<h3>🔐 임시 비밀번호</h3><div class="field"><input id="generatedPw" value="${escapeHtml(pw)}" readonly></div><button class="btn btn-primary" id="copyGeneratedPw">복사</button><div class="tool-note">이 값은 채팅방에 전송되지 않습니다. 중요한 계정에는 비밀번호 관리자를 권장합니다.</div>`);$('copyGeneratedPw').onclick=async()=>toast(await copyTextSafe(pw)?'비밀번호를 복사했습니다.':'복사 실패');return true;
@@ -3129,7 +3129,7 @@ $('toolsBtn').onclick=openToolsModal;
 $('jumpBottomBtn').onclick=()=>{const l=$('msgList'); if(l)l.scrollTo({top:l.scrollHeight,behavior:'smooth'});};
 $('msgList').addEventListener('scroll',()=>{const l=$('msgList'); const far=l.scrollHeight-l.scrollTop-l.clientHeight>260; $('jumpBottomBtn').classList.toggle('show',far && !document.body.classList.contains('zen-no-jump'));});
 setInterval(()=>{ if(myDoc){ refreshUserAccessUI(); } },1000);
-window\.addEventListener('keydown',(e)=>{
+window.addEventListener('keydown',(e)=>{
   if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'&&currentChannelId&&!FEATURE_CHANNELS[currentChannelId]){e.preventDefault();$('searchBtn').click();}
   if(e.key==='Escape'){ if($('modalBg'))closeModal(); else if(!$('searchBox').classList.contains('hidden'))closeSearch(); }
   if(e.key==='End'&&currentChannelId&&!FEATURE_CHANNELS[currentChannelId]){const l=$('msgList');l.scrollTop=l.scrollHeight;}
@@ -3146,7 +3146,7 @@ function openCommandHelpModal(){
   `);
 }
 async function handleSlashCommand(raw){
-  const trimmed = raw\.trim();
+  const trimmed = raw.trim();
   const spaceIdx = trimmed.indexOf(' ');
   const cmd = (spaceIdx===-1 ? trimmed : trimmed.slice(0,spaceIdx)).toLowerCase();
   const args = spaceIdx===-1 ? '' : trimmed.slice(spaceIdx+1).trim();
@@ -3159,7 +3159,7 @@ async function handleSlashCommand(raw){
       case '/주사위': case '/dice': {
         let n=parseInt(args,10); if(!n || n<2) n=6;
         const result=1+Math.floor(Math.random()*n);
-        postBotReply(`🎲 ${myDoc.nickname}님이 주사위(1\~${n})를 굴려서 ${result}이(가) 나왔어요!`);
+        postBotReply(`🎲 ${myDoc.nickname}님이 주사위(1~${n})를 굴려서 ${result}이(가) 나왔어요!`);
         return;
       }
       case '/동전': case '/coin': {
@@ -3264,8 +3264,8 @@ function openFileAttachModal(){
   $('attachAddRow').onclick=()=>{
     const wrap=$('attachEditRows');
     if(wrap.children.length>=8){ toast('한 번에 최대 8개까지 첨부할 수 있습니다.'); return; }
-    const row=document.createElement('div'); row\.className='attach-edit-row';
-    row\.innerHTML=`<input type="text" placeholder="파일 이름" data-fname><input type="text" placeholder="파일 URL" data-furl><span class="attach-del" data-x>✕</span>`;
+    const row=document.createElement('div'); row.className='attach-edit-row';
+    row.innerHTML=`<input type="text" placeholder="파일 이름" data-fname><input type="text" placeholder="파일 URL" data-furl><span class="attach-del" data-x>✕</span>`;
     wrap.appendChild(row);
     refreshAttachDel();
   };
@@ -3306,7 +3306,7 @@ function openImageAttachModal(){
   const urlInput=$('imgUrlInput'), prev=$('imgUrlPreview');
   urlInput.addEventListener('input', ()=>{
     const url=urlInput.value.trim();
-    if(url && /\\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
+    if(url && /\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
       prev.innerHTML=`<img src="${url}" alt="" onerror="this.parentElement.textContent='이미지를 불러올 수 없습니다'">`;
     } else if(url){
       prev.textContent='이미지 파일 URL(.png/.jpg/.gif/.webp)을 입력해주세요';
@@ -3346,8 +3346,8 @@ function openPollModal(){
   $('pollAddOpt').onclick=()=>{
     const wrap=$('pollOptsEdit');
     if(wrap.children.length>=6){ toast('옵션은 최대 6개까지 가능합니다.'); return; }
-    const row=document.createElement('div'); row\.className='poll-opt-row';
-    row\.innerHTML=`<input type="text" placeholder="옵션 ${wrap.children.length+1}"><span class="poll-opt-del" data-x>✕</span>`;
+    const row=document.createElement('div'); row.className='poll-opt-row';
+    row.innerHTML=`<input type="text" placeholder="옵션 ${wrap.children.length+1}"><span class="poll-opt-del" data-x>✕</span>`;
     wrap.appendChild(row);
     refreshPollOptDel();
   };
@@ -4233,9 +4233,9 @@ async function renderAdminBot(){
       <div class="admin50-muted">브라우저에서 Gemini API를 직접 호출하므로 API 키가 클라이언트에 노출될 수 있습니다. 실제 서비스라면 서버/Cloud Function 프록시를 권장합니다.</div>
       <div class="modal-actions"><button class="btn btn-primary" id="a50GeminiSave" style="width:auto">설정 저장</button></div>
     </div>
-    <div class="admin50-card"><h4>💳 토큰 과금 기준</h4><div class="admin50-muted">Gemini 총 토큰 사용량 기준: 0\~1,500=1 · 1,501\~3,500=2 · 3,501\~7,000=3 · 7,001\~12,000=4 · 12,001\~20,000=6 · 20,001\~35,000=8 · 35,001\~60,000=12 · 60,001+=16토큰</div></div>
+    <div class="admin50-card"><h4>💳 토큰 과금 기준</h4><div class="admin50-muted">Gemini 총 토큰 사용량 기준: 0~1,500=1 · 1,501~3,500=2 · 3,501~7,000=3 · 7,001~12,000=4 · 12,001~20,000=6 · 20,001~35,000=8 · 35,001~60,000=12 · 60,001+=16토큰</div></div>
     <div class="admin50-card"><h4>📊 봇 사용 통계</h4><div class="admin50-grid"><div class="admin50-stat"><div class="v">${Number(stats.questions||0)}</div><div class="k">질문</div></div><div class="admin50-stat"><div class="v">${Number(stats.answers||0)}</div><div class="k">답변</div></div><div class="admin50-stat"><div class="v">${Number(stats.lastPingMs||0)}ms</div><div class="k">최근 봇 핑</div></div><div class="admin50-stat"><div class="v">${Math.floor(Number(stats.lastLatencyMs||0)/60000).toString().padStart(2,'0')}분 ${Math.floor(Number(stats.lastLatencyMs||0)/1000%60).toString().padStart(2,'0')}초</div><div class="k">최근 답변 속도</div></div></div></div>`;
-  $('a50BotTypingSpeed').oninput=()=>{ $('a50BotTypingSpeedValue').textContent=`${Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED)).toFixed(2).replace(/0+$/,'').replace(/\\.$/,'')}x`; };
+  $('a50BotTypingSpeed').oninput=()=>{ $('a50BotTypingSpeedValue').textContent=`${Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED)).toFixed(2).replace(/0+$/,'').replace(/\.$/,'')}x`; };
   document.querySelectorAll('[data-botspeed]').forEach(b=>b.onclick=()=>{const v=Math.min(100,Math.max(.25,Number(b.dataset.botspeed)||1));$('a50BotTypingSpeed').value=v;$('a50BotTypingSpeedValue').textContent=`${v}x`;});
   $('a50GeminiSave').onclick=async()=>{const key=$('a50GeminiKey').value.trim();const model=$('a50GeminiModel').value;const typingSpeed=Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED));const defaultPrompt=$('a50BotDefaultPrompt').value.trim();await setDoc(doc(db,'settings','bot'),{apiKey:key,model,typingSpeed,defaultPrompt,updatedAt:serverTimestamp(),updatedBy:currentUser.uid},{merge:true});await auditAdmin('update-gemini-settings','settings/bot',`model=${model}, typingSpeed=${typingSpeed}x, prompt=${defaultPrompt?'custom':'default'}`);toast(`Gemini 설정을 저장했습니다. · 출력 속도 ${typingSpeed}x`);};
 }
@@ -4329,3 +4329,4 @@ function closeDrawer(){ $('sidebar').classList.remove('open'); $('drawerScrim').
 </script>
 </body>
 </html>
+
