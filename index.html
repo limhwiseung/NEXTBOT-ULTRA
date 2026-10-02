@@ -58,6 +58,7 @@
   ::-webkit-scrollbar-track{background:transparent;}
   :focus-visible{ outline:2px solid var(--blue); outline-offset:2px; }
   .hidden{display:none !important;}
+<br>
   /* ---------- Auth screen ---------- */
   #authView{
     height:100%; display:flex; align-items:center; justify-content:center;
@@ -117,9 +118,11 @@
   .team-switch-btn:hover{color:var(--text);border-color:#33353a;}
   .team-switch-btn.active{color:var(--blue);border-color:var(--blue-dim);background:var(--blue-glow);}
   .auth-team-hint{font-size:11px;color:var(--text-faint);margin:-3px 0 14px;line-height:1.4;}
+<br>
   /* ---------- App shell ---------- */
   #appView{display:none; height:100%; flex-direction:row;}
   #appView.show{display:flex;}
+<br>
   .sidebar{
     width:236px; flex:none; background:var(--panel); border-right:1px solid var(--border-soft);
     display:flex; flex-direction:column; height:100%;
@@ -130,6 +133,7 @@
   .sb-brand .mark{width:26px;height:26px;border-radius:7px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:12px;color:#fff;flex:none;}
   .sb-brand .txt{font-family:var(--font-display); font-weight:700; font-size:14.5px; letter-spacing:.02em;}
   .sb-brand .ddaytag{margin-left:auto; font-size:10.5px; color:var(--blue); background:var(--blue-glow); padding:3px 7px; border-radius:20px; font-weight:600; white-space:nowrap;}
+<br>
   .sb-nav{padding:10px 10px 0;}
   .sb-nav-item{
     display:flex; align-items:center; gap:9px; padding:8px 9px; border-radius:var(--radius-sm);
@@ -138,6 +142,7 @@
   .sb-nav-item:hover{background:var(--panel-2); color:var(--text);}
   .sb-nav-item.active{background:var(--blue-glow); color:var(--blue);}
   .sb-nav-item .ic{width:16px; text-align:center; font-size:14px;}
+<br>
   .sb-channels{flex:1; overflow-y:auto; padding:8px 8px 10px;}
   .sb-cat{margin-top:14px;}
   .sb-cat-head{
@@ -166,6 +171,7 @@
   .sb-add-chan:hover{color:var(--blue);}
   .sb-add-cat-btn{margin:10px 8px 0; padding:7px 9px; border:1px dashed var(--border); border-radius:var(--radius-sm); color:var(--text-faint); font-size:12px; text-align:center; cursor:pointer;}
   .sb-add-cat-btn:hover{color:var(--blue); border-color:var(--blue-dim);}
+<br>
   .sb-user{
     border-top:1px solid var(--border-soft); padding:10px 12px; display:flex; align-items:center; gap:9px;
   }
@@ -180,6 +186,7 @@
   .sb-user .who{flex:1; min-width:0;}
   .sb-user .nick{font-size:12.5px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
   .sb-user .roles-mini{font-size:10.5px; color:var(--text-faint); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+<br>
   /* ---------- Main column ---------- */
   .main{flex:1; display:flex; flex-direction:column; height:100%; min-width:0; background:var(--bg);}
   .topbar{
@@ -209,6 +216,7 @@
     position:absolute; top:-2px; right:-2px; background:var(--blue); color:#fff; font-size:9.5px; font-weight:700;
     border-radius:8px; min-width:15px; height:15px; display:flex; align-items:center; justify-content:center; padding:0 3px;
   }
+<br>
   /* dashboard */
   .view-scroll{flex:1; overflow-y:auto;}
   .dash{padding:28px 32px 60px; max-width:1080px;}
@@ -233,6 +241,7 @@
   .dcard .empty{color:var(--text-faint); font-size:12.5px; padding:6px 0;}
   .online-list{display:flex; flex-wrap:wrap; gap:8px;}
   .online-chip{display:flex; align-items:center; gap:6px; background:var(--panel-2); border:1px solid var(--border-soft); border-radius:20px; padding:4px 10px 4px 4px; font-size:12px;}
+<br>
   /* chat */
   .chat-view{flex:1; display:flex; flex-direction:column; min-height:0;}
   .msg-list{flex:1; overflow-y:auto; padding:14px 20px 8px; display:flex; flex-direction:column; gap:2px;}
@@ -297,6 +306,7 @@
   @media(max-width:700px){.bot-token-pill{padding:0 7px}.bot-token-pill span{display:none}.composer .img-btn,.composer .file-btn,.composer .poll-btn{width:32px}.composer textarea{min-width:0;font-size:14px;}}
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important;}}
   .empty-chan .big{font-size:30px;}
+<br>
   .pin-bar{
     display:flex; align-items:center; gap:8px; padding:8px 20px; background:var(--panel); border-bottom:1px solid var(--border-soft);
     font-size:12px; color:var(--text-dim); overflow-x:auto; white-space:nowrap;
@@ -304,6 +314,7 @@
   .pin-bar .pin-item{display:flex; align-items:center; gap:6px; cursor:pointer; flex:none;}
   .pin-bar .pin-item:hover{color:var(--text);}
   .pin-bar .pin-lbl{color:var(--warn); font-weight:700; flex:none;}
+<br>
   .msg-embed{margin-top:6px; max-width:320px;}
   .msg-embed img{max-width:100%; border-radius:8px; border:1px solid var(--border-soft); display:block;}
   .msg-embed .yt-embed{
@@ -312,6 +323,7 @@
   }
   .msg-embed .yt-embed .yt-thumb{width:64px; height:40px; border-radius:5px; object-fit:cover; flex:none; background:#000;}
   .msg-embed .yt-embed .yt-txt{font-size:11.5px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis;}
+<br>
   .reaction-row{display:flex; flex-wrap:wrap; gap:5px; margin-top:6px;}
   .reaction-chip{
     display:flex; align-items:center; gap:4px; background:var(--panel-2); border:1px solid var(--border-soft);
@@ -330,6 +342,7 @@
   }
   .reaction-pop span{cursor:pointer; font-size:16px; padding:2px 3px; border-radius:6px;}
   .reaction-pop span:hover{background:var(--panel-2);}
+<br>
   /* poll */
   .composer .poll-btn{
     width:34px; height:34px; border-radius:8px; background:var(--panel-2); color:var(--text-dim);
@@ -383,6 +396,7 @@
   .poll-opts-edit input{flex:1;}
   .poll-opt-del{color:var(--danger); cursor:pointer; padding:0 8px; display:flex; align-items:center; font-size:13px;}
   .poll-add-opt{color:var(--blue); font-size:12.5px; cursor:pointer; margin-bottom:10px; display:inline-block;}
+<br>
   /* calendar */
   .cal-wrap{padding:26px 30px 50px; max-width:920px;}
   .cal-head{display:flex; align-items:center; gap:12px; margin-bottom:20px;}
@@ -400,6 +414,7 @@
   .day-evt-row{display:flex; align-items:center; gap:8px; padding:8px 0; border-bottom:1px solid var(--border-soft); font-size:13px;}
   .day-evt-row:last-child{border-bottom:none;}
   .day-evt-del{margin-left:auto; color:var(--danger); font-size:11.5px; cursor:pointer;}
+<br>
   /* member panel */
   .member-panel{width:220px; flex:none; border-left:1px solid var(--border-soft); background:var(--panel); overflow-y:auto; padding:16px 12px;}
   .member-panel h4{font-size:11px; color:var(--text-faint); font-weight:700; letter-spacing:.05em; margin:14px 8px 8px;}
@@ -408,6 +423,7 @@
   .member-row:hover{background:var(--panel-2);}
   .member-row .nick{font-size:12.5px; font-weight:600;}
   .member-row .roles-mini{font-size:10px; color:var(--text-faint);}
+<br>
   /* notification dropdown */
   .dropdown{position:absolute; top:50px; right:16px; width:320px; max-height:420px; overflow-y:auto; background:var(--card); border:1px solid var(--border); border-radius:10px; box-shadow:0 12px 32px rgba(0,0,0,.5); z-index:60;}
   .dropdown h5{padding:12px 14px; font-size:12.5px; font-weight:700; color:var(--text-dim); border-bottom:1px solid var(--border-soft);}
@@ -418,6 +434,7 @@
   .notif-item:not(.unread){padding-left:14px;}
   .notif-meta{color:var(--text-faint); font-size:10.5px; margin-top:2px;}
   .dd-empty{padding:26px 14px; text-align:center; color:var(--text-faint); font-size:12.5px;}
+<br>
   /* modal */
   .modal-bg{position:fixed; inset:0; background:rgba(4,5,6,.65); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; z-index:100; padding:20px;}
   .modal{background:var(--card); border:1px solid var(--border); border-radius:12px; width:100%; max-width:420px; max-height:86vh; overflow-y:auto; padding:22px;}
@@ -429,6 +446,7 @@
   .chip-select{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
   .chip-opt{border:1px solid var(--border); border-radius:20px; padding:6px 12px; font-size:12.5px; cursor:pointer; color:var(--text-dim);}
   .chip-opt.on{border-color:var(--blue); color:var(--blue); background:var(--blue-glow);}
+<br>
   /* ---------- AI Bot / Markdown ---------- */
   .markdown-body{line-height:1.65;overflow-wrap:anywhere;}
   .markdown-body p{margin:.25em 0 .7em;}
@@ -452,6 +470,7 @@
   @media (prefers-reduced-motion: reduce){.bot-streaming-cursor{animation:none;opacity:.7;}}
   .bot-answer-meta span{padding:3px 6px;border:1px solid var(--border-soft);border-radius:10px;background:var(--panel-2);}
   .bot-token-badge{font-size:10px;color:var(--blue);}
+<br>
   .code-preview-card{margin:9px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--panel-2);}
   .code-preview-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 9px;border-bottom:1px solid var(--border-soft);font-size:11px;font-weight:700;}
   .code-preview-actions{display:flex;gap:5px;flex-wrap:wrap;}
@@ -475,6 +494,7 @@
   .admin-userrow .nm .n{font-weight:600; font-size:13px;}
   .admin-userrow .nm .e{font-size:11px; color:var(--text-faint);}
   .table-input{background:var(--panel-2); border:1px solid var(--border); border-radius:6px; padding:8px 10px; font-size:13px; width:100%; margin-bottom:8px;}
+<br>
   /* generic list card entries for strategy/mission/practice/test/record */
   .feature-toolbar{display:flex; align-items:center; padding:14px 20px 0; gap:10px;}
   .feature-toolbar .ft-title{font-family:var(--font-display); font-weight:600; font-size:16px;}
@@ -489,10 +509,13 @@
   .pill{font-size:10.5px; padding:2px 8px; border-radius:20px; font-weight:700;}
   .pill.ok{background:rgba(62,207,142,.14); color:var(--ok);}
   .pill.fail{background:rgba(255,92,92,.14); color:var(--danger);}
+<br>
   .link-auto{color:var(--blue); text-decoration:underline; text-underline-offset:2px;}
+<br>
   /* toast */
   #toastWrap{position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:200; display:flex; flex-direction:column; gap:8px; align-items:center;}
   .toast{background:var(--card); border:1px solid var(--border); padding:10px 16px; border-radius:8px; font-size:12.5px; box-shadow:0 8px 24px rgba(0,0,0,.4);}
+<br>
   /* responsive */
   .drawer-scrim{display:none;}
   .member-scrim{display:none;}
@@ -521,10 +544,12 @@
     .modal{max-width:100%; max-height:calc(90vh - var(--safe-b));}
     .modal-bg{align-items:flex-end; padding:0;}
     .modal{border-radius:16px 16px 0 0; width:100%; padding-bottom:calc(22px + var(--safe-b));}
+<br>
     .topbar{ padding:0 10px; padding-top:var(--safe-t); height:calc(52px + var(--safe-t)); gap:6px; }
     .search-box{ width:auto; flex:1; margin-left:6px; }
     .chan-title{ font-size:13.5px; }
     .icon-btn{ width:38px; height:38px; font-size:16px; }
+<br>
     .msg-list{ padding:10px 12px 6px; }
     .msg-row{ padding:8px 6px; gap:8px; }
     .msg-actions{ display:none; position:static; margin-top:6px; background:none; border:none; gap:4px; }
@@ -533,9 +558,11 @@
     .composer-wrap{ padding:0 10px calc(12px + var(--safe-b)); }
     .composer textarea, .field input, textarea.field-ta{ font-size:16px; }
     .composer .send-btn, .composer .poll-btn, .composer .img-btn, .composer .file-btn{ width:38px; height:38px; }
+<br>
     .cal-wrap{ padding:16px 12px 40px; }
     .cal-cell{ min-height:58px; padding:4px; }
     .cal-evt{ font-size:9px; }
+<br>
     .admin-tabs{ overflow-x:auto; }
     .feature-toolbar{ flex-wrap:wrap; padding:12px 14px 0; }
     .feature-list{ padding:12px 14px 30px; }
@@ -549,8 +576,8 @@
   @media (pointer:coarse){
     .field input, textarea.field-ta, .composer textarea{ font-size:16px; }
   }
-
-
+<br>
+<br>
   /* ---------- NEXTBOT Mega Pack: UX extras ---------- */
   #jumpBottomBtn{
     position:fixed; right:22px; bottom:76px; z-index:70; width:38px; height:38px;
@@ -584,6 +611,7 @@
     #jumpBottomBtn{right:14px; bottom:86px;}
     .tool-grid{grid-template-columns:1fr;}
   }
+<br>
   /* ---------- NEXTBOT ULTRA: dashboard + focus ---------- */
   .ultra-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0 0 16px;}
   .ultra-stat{border:1px solid var(--border-soft);background:var(--panel);border-radius:10px;padding:13px 14px;min-width:0;}
@@ -609,8 +637,8 @@
   .ultra-mini{font-size:11.5px;color:var(--text-faint);}
   @media(max-width:980px){.ultra-summary{grid-template-columns:repeat(3,1fr);}}
   @media(max-width:640px){.ultra-summary{grid-template-columns:repeat(2,1fr)}.mvp-podium{grid-template-columns:1fr}.quick-actions{grid-template-columns:1fr}#focusPill{max-width:115px;overflow:hidden;text-overflow:ellipsis;}}
-
-
+<br>
+<br>
 /* ========== ADMIN 50 UPDATE ========== */
 .admin50-tabs{display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--border-soft);margin-bottom:16px;padding-bottom:2px}
 .admin50-tab{border:0;background:transparent;color:var(--text-faint);font-weight:700;font-size:12px;padding:9px 10px;border-radius:7px 7px 0 0;white-space:nowrap}
@@ -652,9 +680,11 @@
   .admin50-channel{grid-template-columns:1fr}
   .admin50-table{display:block;overflow-x:auto}
 }
+<br>
 </style>
 </head>
 <body>
+<br>
 <!-- ============ AUTH VIEW ============ -->
 <div id="authView">
   <div class="auth-box">
@@ -665,6 +695,7 @@
         <div class="sub">ROBOFEST 2027 국내예선대회</div>
       </div>
     </div>
+<br>
     <div id="loginForm">
       <h1 class="auth-h">팀에 로그인하세요</h1>
       <p class="auth-p">NEXTBOT 계정으로 로그인합니다.</p>
@@ -676,6 +707,7 @@
       <button class="btn btn-primary" id="loginBtn">로그인</button>
       <div class="auth-switch">아직 계정이 없나요? <button id="toSignup">회원가입</button></div>
     </div>
+<br>
     <div id="signupForm" class="hidden">
       <h1 class="auth-h">NEXTBOT 팀 합류하기</h1>
       <p class="auth-p">팀원 계정을 생성합니다.</p>
@@ -689,10 +721,12 @@
     </div>
   </div>
 </div>
+<br>
 <!-- ============ APP VIEW ============ -->
 <div id="appView">
   <div class="drawer-scrim" id="drawerScrim"></div>
   <div class="member-scrim" id="memberScrim"></div>
+<br>
   <aside class="sidebar" id="sidebar">
     <div class="sb-brand">
       <div class="mark">N</div>
@@ -713,6 +747,7 @@
     </div>
     <div class="sb-channels" id="sbChannels"></div>
     <div class="sb-add-cat-btn hidden" id="addCatBtn">+ 카테고리 추가</div>
+<br>
     <div class="sb-user">
       <div class="avatar" id="meAvatar"><span id="meAvatarLetter">?</span><span class="status-dot online"></span></div>
       <div class="who">
@@ -724,6 +759,7 @@
       <button class="icon-btn" id="logoutBtn" title="로그아웃">⏻</button>
     </div>
   </aside>
+<br>
   <div class="main">
     <div class="topbar">
       <button class="icon-btn drawer-toggle" id="drawerToggle">☰</button>
@@ -742,6 +778,7 @@
         <button class="icon-btn" id="memberBtn" title="팀원 목록">👥</button>
       </div>
     </div>
+<br>
     <div id="dashboardView" class="view-scroll">
       <div class="dash">
         <div class="dash-hero">
@@ -778,6 +815,7 @@
         </div>
       </div>
     </div>
+<br>
     <div id="chatView" class="chat-view hidden">
       <div class="pin-bar hidden" id="pinBar"></div>
       <div class="msg-list" id="msgList"></div>
@@ -797,6 +835,7 @@
         </div>
       </div>
     </div>
+<br>
     <div id="calendarView" class="view-scroll hidden">
       <div class="cal-wrap">
         <div class="cal-head">
@@ -810,6 +849,7 @@
         <div class="cal-grid" id="calGrid"></div>
       </div>
     </div>
+<br>
     <div id="featureView" class="chat-view hidden">
       <div class="feature-toolbar">
         <div><div class="ft-title" id="ftTitle">-</div><div class="ft-desc" id="ftDesc"></div></div>
@@ -818,12 +858,15 @@
       <div class="feature-list" id="featureList"></div>
     </div>
   </div>
+<br>
   <aside class="member-panel" id="memberPanel">
     <div id="memberPanelBody"></div>
   </aside>
 </div>
+<br>
 <button id="jumpBottomBtn" title="맨 아래로">↓</button>
 <div id="toastWrap"></div>
+<br>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
 <script type="module">
@@ -839,6 +882,7 @@ import {
 import {
   getDatabase, ref, set, onValue, onDisconnect, remove, push, serverTimestamp as rtdbTimestamp, off
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+<br>
 const firebaseConfig = {
   apiKey: "AIzaSyAUwzRx2lEzogeJGRZfre5ghDkHuEoyz3E",
   authDomain: "robofest-nextbot.firebaseapp.com",
@@ -853,6 +897,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const rtdb = getDatabase(app);
 const ADMIN_EMAIL = "studiovoidsurpport@gmail.com";
+<br>
 const TEAM_ROBOFEST="robofest";
 const TEAM_CCE="cce";
 const CCE_EMAIL_DOMAIN="zeropoint.co.kr";
@@ -887,6 +932,7 @@ function teamSettingRef(name,team=activeTeam){return doc(db,"settings",teamSetti
 function teamStatsDocId(weekId,team=activeTeam){return `${team}_${weekId}`;}
 function teamMvpDocId(weekId,team=activeTeam){return `${team}_${weekId}`;}
 function teamBotIds(team=activeTeam){return team===TEAM_CCE?{catId:"cce-cat-bot",channelId:"cce-chan-bot"}:{catId:"cat-bot",channelId:"chan-bot"};}
+<br>
 /* ---------------- Role config ---------------- */
 const ROLE_DEFS = {
   teacher:{ label:"👨‍🏫 선생님", short:"선생님", color:"var(--r-teacher)" },
@@ -898,6 +944,7 @@ const ROLE_DEFS = {
 };
 const MENTION_ROLE_TOKENS = { "전체":"__all__", "선생님":"teacher", "팀장":"leader", "팀원":"member", "코딩팀":"coding", "메이킹팀":"making" };
 const REACTION_EMOJIS = ["👍","❤️","😂","🎉","👀","✅"];
+<br>
 const DEFAULT_STRUCTURE = [
   { id:"cat-info", name:"📢 INFORMATION", position:0, channels:[
     {id:"chan-notice", name:"공지"}, {id:"chan-schedule", name:"일정"}, {id:"chan-rules", name:"대회규정"} ]},
@@ -920,6 +967,7 @@ const FEATURE_CHANNELS = {
   "chan-record":{ label:"기록", desc:"점수, 성공/실패 횟수 등을 기록합니다.", store:"records", fields:["title","content"] },
   "chan-test":{ label:"테스트", desc:"로봇 테스트 결과를 기록합니다. (모터/센서/라인 등)", store:"tests", fields:["title","content"] },
 };
+<br>
 /* ---------------- Bot config ---------------- */
 let BOT_CAT_ID="cat-bot";
 let BOT_CHANNEL_ID="chan-bot";
@@ -988,6 +1036,7 @@ const HELP_ADMIN_COMMANDS = [
   { cmd:"/일정 제목|YYYY-MM-DD", desc:"일정을 추가하고 봇이 알려요. (관리자)" },
   { cmd:"/채널생성 카테고리명|채널명", desc:"채널을 새로 만들어요. (관리자)" },
 ];
+<br>
 /* ---------------- NEXTBOT Mega Pack: 약 50개 추가 기능 ---------------- */
 const NEXTBOT_EXTRA_COMMANDS = [
   {cmd:"/내점수",desc:"이번 주 내 MVP 활동 점수를 확인해요."},
@@ -1042,8 +1091,8 @@ const NEXTBOT_EXTRA_COMMANDS = [
   {cmd:"/단축키",desc:"키보드 단축키를 보여줘요."},
 ];
 HELP_COMMANDS.push(...NEXTBOT_EXTRA_COMMANDS);
-
-
+<br>
+<br>
 /* ---------------- NEXTBOT ULTRA: 추가 실사용 명령어 ---------------- */
 const NEXTBOT_ULTRA_COMMANDS = [
   {cmd:"/상위3",desc:"이번 주 MVP TOP3를 바로 보여줘요."},
@@ -1083,8 +1132,9 @@ const NEXTBOT_ULTRA_COMMANDS = [
   {cmd:"/알림권한",desc:"브라우저 알림 권한을 요청해요."},
 ];
 HELP_COMMANDS.push(...NEXTBOT_ULTRA_COMMANDS);
-
-
+<br>
+<br>
+<br>
 /* ---------------- MVP 자동 선정 설정 ----------------
    매주 월요일(주 시작), 지난주 채팅 활동(메시지+리액션)을 집계해 TOP3를 뽑고
    봇이 투표를 올립니다. 그 다음 주가 시작되면 투표를 집계해 우승자를 발표해요.
@@ -1092,6 +1142,7 @@ HELP_COMMANDS.push(...NEXTBOT_ULTRA_COMMANDS);
 const MVP_MSG_WEIGHT = 1;   // 메시지 1개당 점수
 const MVP_REACT_WEIGHT = 2; // 받은 리액션 1개당 점수
 const MVP_TOP_N = 3;
+<br>
 /* ---------------- State ---------------- */
 let currentUser=null,myDoc=null;
 let activeTeam=TEAM_ROBOFEST;
@@ -1110,6 +1161,7 @@ let presenceSet=false;
 let ddayTarget=null;
 let notifList=[];
 let botModeOn=false;
+<br>
 const $=(id)=>document.getElementById(id);
 function toast(text){
   const t=document.createElement('div'); t.className='toast'; t.textContent=text;
@@ -1126,10 +1178,10 @@ function extractEmbedUrl(text){
 function buildEmbedHtml(text){
   const url=extractEmbedUrl(text);
   if(!url) return '';
-  if(/\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
+  if(/\\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
     return `<div class="msg-embed"><img src="${url}" loading="lazy" alt=""></div>`;
   }
-  const yt = url.match(/(?:youtube\.com\\/watch\\?v=|youtu\.be\\/)([\w-]{6,15})/);
+  const yt = url.match(/(?:youtube\\.com\\/watch\\?v=|youtu\\.be\\/)([\w-]{6,15})/);
   if(yt){
     const vid=yt[1];
     return `<div class="msg-embed"><a class="yt-embed" href="${url}" target="_blank" rel="noopener">
@@ -1156,8 +1208,8 @@ function openCodePreview(kind, code){
   if(kind==='html'){
     iframe.srcdoc=code;
   }else{
-    const py=code.replace(/\\\\/g,'\\\\\\\\').replace(/`/g,'\\\\`');
-    iframe.srcdoc=`<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:monospace;background:#0b0d10;color:#eee;padding:14px;white-space:pre-wrap}#out{color:#ddd}#err{color:#ff8d8d;white-space:pre-wrap}</style></head><body><div id="out">Python 실행 준비 중...</div><div id="err"></div><script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"><\\\\/script><script>const source=\\`${py}\\`; (async()=>{try{const pyodide=await loadPyodide();pyodide.setStdout({batched:s=>{document.getElementById('out').textContent=s||'(출력 없음)';}});await pyodide.runPythonAsync(source);document.getElementById('out').textContent+='\\\n\\\n✓ 실행 완료';}catch(e){document.getElementById('err').textContent=String(e);document.getElementById('out').textContent='';}})();<\\\\/script></body></html>`;
+    const py=code.replace(/\\\\/g,'\\\\\\\\').replace(/`/g,'\\\\\`');
+    iframe.srcdoc=`<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:monospace;background:#0b0d10;color:#eee;padding:14px;white-space:pre-wrap}#out{color:#ddd}#err{color:#ff8d8d;white-space:pre-wrap}</style></head><body><div id="out">Python 실행 준비 중...</div><div id="err"></div><script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"><\\\\/script><script>const source=\\\`${py}\\\`; (async()=>{try{const pyodide=await loadPyodide();pyodide.setStdout({batched:s=>{document.getElementById('out').textContent=s||'(출력 없음)';}});await pyodide.runPythonAsync(source);document.getElementById('out').textContent+='\\\n\\\n✓ 실행 완료';}catch(e){document.getElementById('err').textContent=String(e);document.getElementById('out').textContent='';}})();<\\\\/script></body></html>`;
   }
   inner.appendChild(iframe); modal.appendChild(inner); document.body.appendChild(modal);
   modal.addEventListener('click',e=>{if(e.target===modal)modal.remove();});
@@ -1204,7 +1256,7 @@ function renderMentions(text,withCodePreviews=true){
           t=t.replace(/@(전체|선생님|팀장|팀원|코딩팀|메이킹팀)/g,'<span class="mention">@$1</span>');
           Object.values(usersMap).forEach(u=>{
             if(!u.nickname) return;
-            const re=new RegExp('@'+u.nickname.replace(/[.*+?^${}()|[\]\\\]/g,'\\\\$&'),'g');
+            const re=new RegExp('@'+u.nickname.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&'),'g');
             t=t.replace(re,`<span class="mention">@${escapeHtml(u.nickname)}</span>`);
           });
           if(t!==node.textContent) node.innerHTML=t;
@@ -1215,8 +1267,7 @@ function renderMentions(text,withCodePreviews=true){
       return box.innerHTML;
     }catch(e){console.warn('markdown render failed',e);}
   }
-  return escapeHtml(raw).replace(/\n/g,'
-');
+  return escapeHtml(raw).replace(/\n/g,'<br>');
 }
 async function animateBotTyping(text,speed,onRender){
   const chars=Array.from(String(text||''));
@@ -1229,6 +1280,7 @@ async function animateBotTyping(text,speed,onRender){
   }
   return shown;
 }
+<br>
 function fmtTime(ts){
   if(!ts) return '';
   const d = ts.toDate ? ts.toDate() : new Date(ts);
@@ -1247,12 +1299,15 @@ function primaryRoleColor(roles){
   if(roles && roles.length) return ROLE_DEFS[roles[0]]?.color || ROLE_DEFS.member.color;
   return ROLE_DEFS.member.color;
 }
+<br>
 /* ---------------- Auth screen wiring ---------------- */
 $('toSignup').onclick=()=>{ $('loginForm').classList.add('hidden'); $('signupForm').classList.remove('hidden'); };
 $('toLogin').onclick=()=>{ $('signupForm').classList.add('hidden'); $('loginForm').classList.remove('hidden'); };
+<br>
 function showMsg(id, text, ok=false){
   const el=$(id); el.textContent=text; el.className='auth-msg show '+(ok?'ok':'err');
 }
+<br>
 $('signupBtn').onclick = async ()=>{
   const nick=$('suNick').value.trim(), email=$('suEmail').value.trim(), pw=$('suPw').value;
   if(!nick||!email||!pw){ showMsg('signupMsg','모든 항목을 입력해주세요.'); return; }
@@ -1273,6 +1328,7 @@ $('signupBtn').onclick = async ()=>{
   }catch(e){ showMsg('signupMsg', translateAuthErr(e)); }
   $('signupBtn').disabled=false;
 };
+<br>
 $('loginBtn').onclick = async ()=>{
   const email=$('loginEmail').value.trim(), pw=$('loginPw').value;
   if(!email||!pw){ showMsg('loginMsg','이메일과 비밀번호를 입력해주세요.'); return; }
@@ -1283,12 +1339,14 @@ $('loginBtn').onclick = async ()=>{
   }catch(e){ showMsg('loginMsg', translateAuthErr(e)); }
   $('loginBtn').disabled=false;
 };
+<br>
 $('forgotBtn').onclick = async ()=>{
   const email=$('loginEmail').value.trim();
   if(!email){ showMsg('loginMsg','비밀번호 재설정을 위해 이메일을 먼저 입력해주세요.'); return; }
   try{ await sendPasswordResetEmail(auth, email); showMsg('loginMsg','비밀번호 재설정 이메일을 보냈습니다.', true); }
   catch(e){ showMsg('loginMsg', translateAuthErr(e)); }
 };
+<br>
 function translateAuthErr(e){
   const c=e.code||'';
   const map={
@@ -1302,6 +1360,7 @@ function translateAuthErr(e){
   };
   return map[c] || ('오류가 발생했습니다: '+c);
 }
+<br>
 /* ---------------- Auth state ---------------- */
 onAuthStateChanged(auth,async(user)=>{
   if(user){
@@ -1333,6 +1392,7 @@ onAuthStateChanged(auth,async(user)=>{
     currentUser=null;myDoc=null;activeTeam=TEAM_ROBOFEST;refreshTeamBotIds();exitApp();
   }
 });
+<br>
 function stopTeamDataListeners(){
   if(usersUnsub){usersUnsub();usersUnsub=null;}
   if(categoriesUnsub){categoriesUnsub();categoriesUnsub=null;}
@@ -1371,6 +1431,7 @@ async function switchActiveTeam(team){
   toast(`${teamLabel(activeTeam)} 워크스페이스로 전환했습니다.`);closeDrawer();
 }
 document.querySelectorAll('[data-team-switch]').forEach(btn=>btn.onclick=()=>switchActiveTeam(btn.getAttribute('data-team-switch')));
+<br>
 function enterApp(){
   $('authView').style.display='none';
   $('appView').classList.add('show');
@@ -1383,6 +1444,7 @@ function enterApp(){
   botModeOn=false; updateBotModeUI();
   applyUiSettings();
   updateTeamSwitcherUI();
+<br>
   setupPresence();
   listenUsers();
   listenStructure();
@@ -1394,6 +1456,7 @@ function enterApp(){
   showDashboard();
   setTimeout(()=>recoverPendingBotTasks(),700);
 }
+<br>
 function renderAvatarInto(el, url, nick){
   const letterSpan = el.querySelector('#meAvatarLetter') || null;
   let img = el.querySelector('img');
@@ -1403,6 +1466,7 @@ function renderAvatarInto(el, url, nick){
     if(letterSpan) letterSpan.style.display='none';
   }
 }
+<br>
 /* ---------------- Presence (RTDB) ---------------- */
 function setupPresence(){
   const myPresenceRef = ref(rtdb, 'presence/'+currentUser.uid);
@@ -1446,6 +1510,7 @@ function avatarHtml(u, size=28){
   }
   return `<span class="avatar" style="width:${size}px;height:${size}px;">${escapeHtml(nick.slice(0,1))}<span class="status-dot ${online?'online':''}"></span></span>`;
 }
+<br>
 /* ---------------- Users listener ---------------- */
 function listenUsers(){
   if(usersUnsub)usersUnsub();
@@ -1461,6 +1526,7 @@ function listenUsers(){
     updateTeamSwitcherUI();renderMemberPanel();renderPresence(presenceData);refreshUserAccessUI();checkWeeklyMvpCycle();
   },e=>console.warn('users listener error',e));
 }
+<br>
 function renderMemberPanel(){
   const body=$('memberPanelBody');
   const groups={ 선생님:[], 팀장:[], 팀원:[] };
@@ -1489,6 +1555,7 @@ $('memberBtn').onclick=()=>{
   else { mp.style.display = mp.style.display==='none' ? '' : 'none'; }
 };
 $('memberScrim').onclick=()=>{ $('memberPanel').classList.remove('popup'); $('memberScrim').classList.remove('show'); };
+<br>
 /* ---------------- Structure (categories/channels) ---------------- */
 function teamStructureFallback(team=activeTeam){
   const src=team===TEAM_CCE?CCE_STRUCTURE:DEFAULT_STRUCTURE;
@@ -1525,6 +1592,7 @@ function listenStructure(){
     categories=teamStructureFallback(activeTeam);
     renderSidebarChannels();
   });
+<br>
   const chQuery=activeTeam===TEAM_CCE
     ?query(collection(db,'channels'),where('team','==',TEAM_CCE))
     :query(collection(db,'channels'));
@@ -1583,6 +1651,7 @@ async function ensureBotChannelExists(){
   }catch(e){console.error('bot channel ensure error',e);}
   botChannelEnsureInFlight=false;
 }
+<br>
 let collapsedCats = {};
 function renderSidebarChannels(){
   const box=$('sbChannels');
@@ -1621,6 +1690,7 @@ function renderSidebarChannels(){
   box.querySelectorAll('[data-addchan]').forEach(el=>el.onclick=async e=>{e.stopPropagation();const catId=el.getAttribute('data-addchan');const catObj=categories.find(c=>c.id===catId);if(!catObj||!teamResourceMatches(catObj))return;const name=prompt('새 채널 이름을 입력하세요');if(!name?.trim())return;const count=channels.filter(c=>c.categoryId===catId&&teamResourceMatches(c)).length;await addDoc(collection(db,'channels'),{categoryId:catId,name:name.trim(),position:count,allowedRoles:[],team:activeTeam,topic:'',locked:false,archived:false});sendBotMessage(BOT_CHANNEL_ID,`📌 ${myDoc.nickname}님이 #${name.trim()} 채널을 만들었어요. (${catObj.name})`);});
 }
 $('addCatBtn').onclick=async()=>{if(!myDoc?.isAdmin)return;const name=prompt('새 카테고리 이름을 입력하세요 (예: 📁 새 카테고리)');if(!name?.trim())return;await addDoc(collection(db,'categories'),{name:name.trim(),position:categories.length,team:activeTeam});sendBotMessage(BOT_CHANNEL_ID,`📁 ${myDoc.nickname}님이 "${name.trim()}" 카테고리를 새로 만들었어요.`);};
+<br>
 /* ---------------- Channel access permissions ---------------- */
 function canSeeChannel(ch){
   if(!ch||!teamResourceMatches(ch))return false;
@@ -1655,6 +1725,7 @@ function openChannelPermModal(chanId){
     sendBotMessage(BOT_CHANNEL_ID, `⚙ ${myDoc.nickname}님이 #${ch.name} 채널의 접근 권한을 변경했어요.`);
   };
 }
+<br>
 /* ---------------- Navigation ---------------- */
 $('navDashboard').onclick=()=>{ showDashboard(); closeDrawer(); };
 $('navCalendar').onclick=()=>{ showCalendar(); closeDrawer(); };
@@ -1688,6 +1759,7 @@ function openChannel(chanId, chanName, catName){
   $('dashboardView').classList.add('hidden');
   $('calendarView').classList.add('hidden');
   renderSidebarChannels();
+<br>
   if(FEATURE_CHANNELS[chanId]){
     $('chatView').classList.add('hidden');
     $('featureView').classList.remove('hidden');
@@ -1699,6 +1771,7 @@ function openChannel(chanId, chanName, catName){
     openChatChannel(chanId);
   }
 }
+<br>
 /* ---------------- Read state (unread dots) ---------------- */
 function markChannelRead(chanId){
   if(!currentUser) return;
@@ -1712,6 +1785,7 @@ function channelHasUnread(ch){
   const readAt = (myDoc.readState && myDoc.readState[ch.id]) || 0;
   return lastMsg > readAt;
 }
+<br>
 /* ---------------- Chat ---------------- */
 function openChatChannel(chanId){
   if(msgUnsub) msgUnsub();
@@ -1938,8 +2012,10 @@ async function toggleReaction(msgId, emoji){
   const uids = reactions[emoji] || [];
   const has = uids.includes(currentUser.uid);
   const field='reactions.'+emoji;
+<br>
   try{
     await updateDoc(mref, { [field]: has ? arrayRemove(currentUser.uid) : arrayUnion(currentUser.uid) });
+<br>
     // MVP의 '리액션 점수'는 리액션을 누른 사람 점수가 아니라
     // 그 리액션을 받은 메시지 작성자의 점수입니다. 자기 글 셀프 리액션/봇 글은 제외합니다.
     const authorUid=msg.userId;
@@ -1993,6 +2069,7 @@ function renderAttachPreview(){
     renderAttachPreview();
   });
 }
+<br>
 const msgInput=$('msgInput');
 msgInput.addEventListener('input', ()=>{
   saveChannelDraft();
@@ -2007,6 +2084,7 @@ msgInput.addEventListener('keydown',(e)=>{
   if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); sendMessage(); }
 });
 $('sendBtn').onclick=sendMessage;
+<br>
 function timeoutUntilMs(u){
   const v=u?.timeoutUntil;
   if(!v) return 0;
@@ -2027,6 +2105,7 @@ function timeoutRemainingText(u=myDoc){
   if(h<24)return `${h}시간${m?` ${m}분`:''}`;
   return `${Math.floor(h/24)}일${h%24?` ${h%24}시간`:''}`;
 }
+<br>
 function refreshUserAccessUI(){
   const timed=isUserTimedOut();
   const count=botTokensOf(myDoc);
@@ -2046,6 +2125,7 @@ function refreshUserAccessUI(){
     notice.textContent=`⏳ 타임아웃 상태입니다. 남은 시간: ${timeoutRemainingText()}`;
   }else if(notice){notice.remove();}
 }
+<br>
 async function sendMessage(){
   refreshUserAccessUI();
   if(isUserTimedOut()){ toast(`⏳ 타임아웃 상태입니다. 남은 시간: ${timeoutRemainingText()}`); return; }
@@ -2082,7 +2162,7 @@ async function sendMessage(){
     // /순위를 바로 실행해도 방금 보낸 메시지가 포함되도록 통계 기록을 기다립니다.
     // 통계 권한 설정이 잘못돼도 이미 성공한 메시지 전송 자체를 실패로 처리하지는 않습니다.
     try{ await bumpStat('msgCount', currentUser.uid); }
-    catch(e){ console.warn('MVP 통계 기록을 건너뜁니다:', e); }
+    catch(e){ console.warn('MVP 통계 저장 실패(메시지 전송은 정상):', e); }
     msgInput.value=''; msgInput.style.height='auto'; clearChannelDraft(currentChannelId);
     replyTarget=null; renderReplyPreview();
     pendingAttachments=[]; renderAttachPreview();
@@ -2093,6 +2173,7 @@ async function sendMessage(){
   }
   setTypingState(false);
 }
+<br>
 /* ---------------- Bot: 명령어 & 봇 모드 ---------------- */
 function canUseAdminCommands(){
   if(!myDoc) return false;
@@ -2120,12 +2201,14 @@ function postBotReply(text){
   const target = (currentChannelId && !FEATURE_CHANNELS[currentChannelId]) ? currentChannelId : BOT_CHANNEL_ID;
   return sendBotMessage(target, text);
 }
+<br>
 /* ---------------- Gemini Bot Chat ---------------- */
 function botTokensOf(u){ return Math.max(0,Number(u?.botTokens||0)); }
 async function getBotSettings(){
   const s=await getDoc(doc(db,'settings','bot'));
   return s.exists()?s.data():{};
 }
+<br>
 /* ---------------- NEXTBOT Agent Tools ---------------- */
 const NEXTBOT_TOOL_POLICY = {
   readTeam:true, readChannels:true, searchMessages:true, readRecords:true,
@@ -2141,6 +2224,7 @@ function nextbotToolCatalog(){
 - messages.pin: 지정 메시지 고정/해제 (관리자 권한 필요)
 - channels.create: 새 채널 생성 (관리자 권한 필요)
 - tasks.manage: 현재 사용자의 할 일 추가/완료/삭제
+<br>
 도구 사용 규칙:
 1) 질문에 답하기 위해 필요한 경우 도구를 적극적으로 사용하세요.
 2) 읽기 도구는 자유롭게 사용할 수 있습니다.
@@ -2148,6 +2232,7 @@ function nextbotToolCatalog(){
 4) 관리자 전용 도구는 실제 관리자일 때만 실행됩니다.
 5) 실행 결과를 사실처럼 꾸며내지 말고 실제 결과를 바탕으로 답하세요.
 6) 도구가 필요 없으면 사용하지 마세요.
+<br>
 도구 호출 형식(필요할 때 답변에 포함):
 [[NEXTBOT_TOOL]]{"name":"team.list","args":{}}
 [[NEXTBOT_TOOL]]{"name":"messages.search","args":{"query":"검색어","limit":20}}
@@ -2195,7 +2280,7 @@ async function nextbotAgentTool(name,args={},actorUid){
   throw new Error('알 수 없는 NEXTBOT 도구입니다.');
 }
 async function runNextbotToolCalls(text,actorUid){
-  const re=/\[\[NEXTBOT_TOOL\]\]\s*(\\{[\s\S]*?\\})/g; let m,results=[],clean=text;
+  const re=/\\[\\[NEXTBOT_TOOL\\]\\]\s*(\\{[\s\S]*?\\})/g; let m,results=[],clean=text;
   while((m=re.exec(text))){
     try{const call=JSON.parse(m[1]);const result=await nextbotAgentTool(call.name,call.args||{},actorUid);results.push({call,result});}
     catch(e){results.push({call:{name:'unknown'},error:e.message||String(e)});}
@@ -2203,6 +2288,7 @@ async function runNextbotToolCalls(text,actorUid){
   }
   return {text:clean.replace(/\n{3,}/g,'\n\n').trim(),results};
 }
+<br>
 async function collectAllChatForBot(){
   const rows=[];
   for(const ch of channels){
@@ -2405,8 +2491,10 @@ async function streamGeminiAnswer(apiKey,model,prompt,onText){
     continuation++;
     // 이전 출력 전체를 기준으로 이어 쓰게 하여 코드블록/문서가 중간에서 끊겨도 자동 완성합니다.
     reqPrompt=`${prompt}
+<br>
 === 지금까지 생성된 답변 ===
 ${answer}
+<br>
 === 이어쓰기 지침 ===
 위 답변은 출력 토큰 한도 때문에 중간에서 끊겼습니다. 위 내용을 절대 반복하거나 처음부터 다시 쓰지 말고, 마지막 문자 바로 다음부터 자연스럽게 이어서 작성하세요. 코드라면 기존 코드의 정확한 다음 줄부터 계속하고, 필요한 닫는 괄호/태그/코드블록까지 완전하게 마무리하세요. 설명 없이 이어지는 내용만 출력하세요.`;
   }
@@ -2426,23 +2514,20 @@ async function handleBotChatCommand(question){
   renderBotTaskIndicator();
   const started=performance.now();let consumed=false,answer='',usage={},finalCost=BOT_CHAT_MIN_COST;
   try{
-    try{
-      await runTransaction(db,async tx=>{const uref=doc(db,'users',currentUser.uid),usnap=await tx.get(uref),left=botTokensOf(usnap.data());if(left<BOT_CHAT_MIN_COST)throw new Error('봇 토큰이 부족합니다.');tx.update(uref,{botTokens:left-BOT_CHAT_MIN_COST});consumed=true;});
-    }catch(tokenErr){
-      if(tokenErr?.code==='permission-denied' || tokenErr?.code==='failed-precondition'){
-        console.warn('봇 토큰 Firebase 기록을 건너뜁니다:', tokenErr);
-        consumed=false;
-      }else{ throw tokenErr; }
-    }
+    await runTransaction(db,async tx=>{const uref=doc(db,'users',currentUser.uid),usnap=await tx.get(uref),left=botTokensOf(usnap.data());if(left<BOT_CHAT_MIN_COST)throw new Error('봇 토큰이 부족합니다.');tx.update(uref,{botTokens:left-BOT_CHAT_MIN_COST});consumed=true;});
     task.phase='generating'; persistBotTask(task);
     const history=await collectAllChatForBot(),actorName=myDoc?.nickname||currentUser.displayName||'사용자';
     const defaultBotPrompt='당신은 이 팀 채팅 서비스의 AI 봇 NEXTBOT입니다. 사용자의 요청에 직접 답하세요. 과거 채팅 기록은 필요한 경우 참고 자료로 사용하세요. 기록에 없는 사실도 사용자가 새로운 창작, 코딩, 게임, HTML, Python 등의 생성을 요청한다면 직접 새로 만들어 제공할 수 있습니다. 기록에 없는 과거 사실을 사실인 것처럼 지어내지는 마세요. 답변은 한국어로, 필요한 경우 Markdown을 사용하세요(제목, 굵게, 기울임, 취소선, 목록, 표, 코드블록 등). 코드나 긴 문서를 요청받으면 절대 임의로 생략하거나 요약하지 말고 실행 가능한 완성본 전체를 제공하세요. 출력 한도에 닿으면 자동으로 이어서 완성해야 하며, 코드의 중간 부분을 생략했다는 식의 축약 표현을 사용하지 마세요.';
     const baseBotPrompt=String(settings.defaultPrompt||defaultBotPrompt).trim()||defaultBotPrompt;
     const prompt=`${baseBotPrompt}
+<br>
 ${nextbotToolCatalog()}
+<br>
 현재 질문자: ${actorName}
+<br>
 === 전체 채팅 기록 ===
 ${history}
+<br>
 === 질문 ===
 ${question}`;
     if(currentChannelId===task.channelId)updateBotStreamingBubble('','생성 중...',false,taskId,task.channelId);
@@ -2460,12 +2545,7 @@ ${question}`;
     // 처음에는 최소 1토큰을 예약하고, 실제 사용량을 받은 뒤 추가분만 안전하게 차감합니다.
     if(finalCost>BOT_CHAT_MIN_COST){
       const extra=finalCost-BOT_CHAT_MIN_COST;
-      try{
-        await runTransaction(db,async tx=>{const uref=doc(db,'users',currentUser.uid),usnap=await tx.get(uref),left=botTokensOf(usnap.data());if(left<extra)throw new Error(`사용량 기준 ${finalCost}토큰이 필요하지만 현재 추가로 사용할 수 있는 토큰이 ${left}개뿐입니다.`);tx.update(uref,{botTokens:left-extra});});
-      }catch(extraTokenErr){
-        if(extraTokenErr?.code==='permission-denied' || extraTokenErr?.code==='failed-precondition') console.warn('추가 봇 토큰 Firebase 기록을 건너뜁니다:', extraTokenErr);
-        else throw extraTokenErr;
-      }
+      await runTransaction(db,async tx=>{const uref=doc(db,'users',currentUser.uid),usnap=await tx.get(uref),left=botTokensOf(usnap.data());if(left<extra)throw new Error(`사용량 기준 ${finalCost}토큰이 필요하지만 현재 추가로 사용할 수 있는 토큰이 ${left}개뿐입니다.`);tx.update(uref,{botTokens:left-extra});});
     }
     const typingSpeed=Math.max(.25,Number(settings.typingSpeed||BOT_DEFAULT_TYPING_SPEED));
     if(currentChannelId===task.channelId){
@@ -2476,11 +2556,7 @@ ${question}`;
     }
     const ms=Math.max(0,Math.round(performance.now()-started));let stats={};try{stats=(await getDoc(doc(db,'settings','botStats'))).data()||{};}catch(e){}
     const questions=Number(stats.questions||0)+1,answersCount=Number(stats.answers||0)+1;
-    try{
-      await setDoc(doc(db,'settings','botStats'),{questions,answers:answersCount,lastLatencyMs:ms,lastPingMs:ms,lastTokenCost:finalCost,lastUsage:usage,updatedAt:serverTimestamp()},{merge:true});
-    }catch(statsErr){
-      console.warn('봇 통계 저장을 건너뜁니다:', statsErr);
-    }
+    await setDoc(doc(db,'settings','botStats'),{questions,answers:answersCount,lastLatencyMs:ms,lastPingMs:ms,lastTokenCost:finalCost,lastUsage:usage,updatedAt:serverTimestamp()},{merge:true});
     const meta=`<div class="bot-answer-meta"><span>답변 속도: ${Math.floor(ms/60000).toString().padStart(2,'0')}분 ${Math.floor(ms/1000%60).toString().padStart(2,'0')}초</span><span>봇 핑: ${ms}ms</span><span>질문: ${questions}</span><span>답변: ${answersCount}</span><span>사용 토큰: ${finalCost}</span></div>`;
     if(currentChannelId===task.channelId)updateBotStreamingBubble(answer,'답변 완료',true,taskId,task.channelId);
     task.phase='saving'; persistBotTask(task);
@@ -2500,8 +2576,8 @@ ${question}`;
     renderBotTaskIndicator();
   }
 }
-
-
+<br>
+<br>
 /* ---------------- MVP 자동 선정: 주간 활동 통계 + 투표 + 발표 ---------------- */
 function getMonday(d){
   const date=new Date(d);
@@ -2549,6 +2625,7 @@ async function computeRanking(weekId){
   const data = snap.exists() ? snap.data() : {};
   const msgCount = data.msgCount||{}, reactCount = data.reactCount||{};
   const uids = new Set([...Object.keys(msgCount), ...Object.keys(reactCount)]);
+<br>
   // users onSnapshot이 아직 첫 데이터를 받기 전 /순위를 실행해도 닉네임을 찾을 수 있게 보강
   const missing=[...uids].filter(uid=>!usersMap[uid]);
   await Promise.all(missing.map(async uid=>{
@@ -2560,6 +2637,7 @@ async function computeRanking(weekId){
       }
     }catch(e){ console.warn('ranking user load failed', uid, e); }
   }));
+<br>
   const rows=[];
   uids.forEach(uid=>{
     const u = usersMap[uid];
@@ -2630,6 +2708,7 @@ async function tallyAndAnnounceMvp(weekId, state){
     }
   }catch(e){ console.error('mvp tally error', e); }
 }
+<br>
 async function checkWeeklyMvpCycle(){
   if(mvpCycleChecked) return;
   if(!myDoc || !currentUser) return;
@@ -2661,6 +2740,7 @@ async function showCurrentRanking(){
   await postBotReply(`📊 이번 주 채팅 활동 랭킹 (진행 중 · 관리자 제외)\n` +
     top.map((c,i)=>`${i+1}. ${c.nickname} — ${c.score}점 (메시지 ${c.msgCount} / 받은 리액션 ${c.reactCount})`).join('\n'));
 }
+<br>
 function toggleBotMode(){
   if(!canUseAdminCommands()){ toast('관리자(팀장/선생님)만 봇 모드를 사용할 수 있어요.'); return; }
   botModeOn=!botModeOn;
@@ -2681,12 +2761,14 @@ window.addEventListener('keydown', (e)=>{
     toggleBotMode();
   }
 });
+<br>
 /* ============================================================
    NEXTBOT MEGA PACK
    - MVP/랭킹, 팀 정보, 개인 생산성, 유틸리티, 채팅 UX/설정
    - 개인 데이터(todo/note/bookmark/favorites/settings/draft)는 계정별 저장소 사용
    ============================================================ */
 let localTimerHandle=null, localTimerEnd=0;
+<br>
 function userStoreKey(name){ return `nextbot:${currentUser?.uid||'guest'}:${name}`; }
 function storeGet(name, fallback){
   try{ const v=localStorage.getItem(userStoreKey(name)); return v===null ? fallback : JSON.parse(v); }
@@ -2713,6 +2795,7 @@ function applyUiSettings(){
   document.body.classList.toggle('high-contrast',!!u.contrast);
 }
 function rerenderCurrentChannel(){ if(currentChannelId && !FEATURE_CHANNELS[currentChannelId]) openChatChannel(currentChannelId); }
+<br>
 function saveChannelDraft(){
   if(!currentUser || !currentChannelId || !msgInput) return;
   const drafts=storeGet('drafts',{}); const v=msgInput.value||'';
@@ -2728,6 +2811,7 @@ function restoreChannelDraft(chanId){
 function clearChannelDraft(chanId){
   if(!chanId) return; const drafts=storeGet('drafts',{}); delete drafts[chanId]; storeSet('drafts',drafts);
 }
+<br>
 async function copyTextSafe(text){
   try{
     if(navigator.clipboard && window.isSecureContext){ await navigator.clipboard.writeText(text); return true; }
@@ -2760,6 +2844,7 @@ function openBookmarksModal(){
     setTimeout(()=>{ const row=document.querySelector(`.msg-row[data-id="${b.msgId}"]`); if(row){row.scrollIntoView({behavior:'smooth',block:'center'});row.style.background='var(--blue-glow)';setTimeout(()=>row.style.background='',1200);}else toast('최근 200개 메시지 밖의 북마크일 수 있어요.'); },700);
   });
 }
+<br>
 function favorites(){ return storeGet('favorites',[]); }
 function isFavoriteChannel(id){ return favorites().includes(id); }
 function updateFavoriteChannelButton(){
@@ -2776,6 +2861,7 @@ function openFavoriteChannelsModal(){
   openModal(`<h3>⭐ 즐겨찾기 채널</h3>${rows}`);
   document.querySelectorAll('[data-favopen]').forEach(el=>el.onclick=()=>{const c=channels.find(x=>x.id===el.dataset.favopen);if(!c)return;const cat=categories.find(x=>x.id===c.categoryId);closeModal();openChannel(c.id,c.name,cat?.name||'');});
 }
+<br>
 function todos(){ return storeGet('todos',[]); }
 function notes(){ return storeGet('notes',[]); }
 function prettyAgo(ms){
@@ -2783,7 +2869,7 @@ function prettyAgo(ms){
   if(m<1)return '방금'; if(m<60)return `${m}분 전`; const h=Math.floor(m/60); if(h<24)return `${h}시간 전`; return `${Math.floor(h/24)}일 전`;
 }
 function parseTimerArg(s){
-  const m=String(s||'').trim().toLowerCase().match(/^(\d+(?:\.\d+)?)\s*(s|m|h|초|분|시간)?$/); if(!m)return 0;
+  const m=String(s||'').trim().toLowerCase().match(/^(\d+(?:\\.\d+)?)\s*(s|m|h|초|분|시간)?$/); if(!m)return 0;
   const n=Number(m[1]); const u=m[2]||'s'; const mult=(u==='h'||u==='시간')?3600000:(u==='m'||u==='분')?60000:1000; return Math.round(n*mult);
 }
 function safeCalc(expr){
@@ -2846,6 +2932,7 @@ function openToolsModal(){
   $('toolShortcuts').onclick=openShortcutModal;
   $('toolHelp').onclick=openCommandHelpModal;
 }
+<br>
 async function handleMegaCommand(cmd,args){
   switch(cmd){
     case '/봇도움말': { openCommandHelpModal(); return true; }
@@ -2983,14 +3070,15 @@ async function handleMegaCommand(cmd,args){
   }
   return false;
 }
-
-
+<br>
+<br>
 /* ============================================================
    NEXTBOT ULTRA PACK
    - 기존 Firestore 컬렉션(stats/users) 조회 + 개인 localStorage 중심
    - 새로운 서버 컬렉션을 만들지 않아 추가 Rules 없이 동작
    ============================================================ */
 let focusTickHandle=null;
+<br>
 function rawWeekStats(weekId){
   return getDoc(doc(db,'stats',teamStatsDocId(weekId))).then(s=>s.exists()?s.data():{});
 }
@@ -3065,16 +3153,19 @@ async function refreshUltraDashboard(){
   $('ultraTodoCount').textContent=String(todos().filter(x=>!x.done).length);
   $('ultraFavCount').textContent=String(favorites().filter(id=>channels.some(c=>c.id===id)).length);
   $('ultraOnlineCount').textContent=String(Object.entries(presenceData||{}).filter(([uid,v])=>uid!=='BOT'&&v&&v.state==='online').length);
+<br>
   const g=currentGoal();
   $('ultraGoal').innerHTML=g?`<div class="goal-box ${g.done?'done':''}">${g.done?'✅':'🎯'} ${escapeHtml(g.text)}<div class="ultra-mini" style="margin-top:5px;">${g.done?'완료됨':'/목표완료 로 완료 처리'}</div></div>`:'<div class="empty">/주간목표 목표내용 으로 설정하세요</div>';
   const td=todos().filter(x=>!x.done).slice(0,4);
   $('ultraTodos').innerHTML=td.length?td.map((x,i)=>`<div class="dash-todo-row"><span>⬜</span><span>${escapeHtml(x.text)}</span></div>`).join(''):'<div class="empty">미완료 할 일이 없습니다</div>';
+<br>
   try{
     const [data,rank]=await Promise.all([rawWeekStats(wk),computeRanking(wk)]); const me=myRawWeekScore(data); const idx=rank.findIndex(x=>x.uid===currentUser.uid);
     $('ultraMyScore').textContent=`${me.score}점`; $('ultraMyScoreMeta').textContent=`메시지 ${me.msgCount} · 리액션 ${me.reactCount}`; $('ultraMyRank').textContent=idx>=0?`${idx+1}위`:'-';
     const top=rank.slice(0,3); const medals=['🥇','🥈','🥉'];
     $('ultraMvpTop').innerHTML=top.length?`<div class="mvp-podium">${top.map((r,i)=>`<div class="mvp-place ${i===0?'p1':''}"><div class="rank">${medals[i]}</div><div class="name">${escapeHtml(r.nickname)}</div><div class="score">${r.score}점 · 💬${r.msgCount} · ❤️${r.reactCount}</div></div>`).join('')}</div>`:'<div class="empty">아직 집계된 MVP 활동이 없습니다</div>';
   }catch(e){ console.warn('ultra dashboard stats failed',e); $('ultraMvpTop').innerHTML='<div class="empty">MVP 통계를 불러오지 못했습니다</div>'; }
+<br>
   const qTodo=$('qaTodo'),qFocus=$('qaFocus'),qRank=$('qaRank'),qFav=$('qaFav');
   if(qTodo) qTodo.onclick=()=>{openModal(`<h3>📝 빠른 할 일 추가</h3><div class="field"><input id="qaTodoInput" placeholder="예: 센서 보정 테스트"></div><div class="modal-actions"><button class="btn" id="qaTodoCancel">취소</button><button class="btn btn-primary" id="qaTodoSave" style="width:auto">추가</button></div>`);$('qaTodoCancel').onclick=closeModal;$('qaTodoSave').onclick=()=>{const v=$('qaTodoInput').value.trim();if(!v)return;const a=todos();a.push({text:v,done:false,at:Date.now()});storeSet('todos',a.slice(-100));closeModal();refreshUltraDashboard();toast('할 일을 추가했어요.');};};
   if(qFocus) qFocus.onclick=()=>startFocusTimer(25);
@@ -3082,6 +3173,7 @@ async function refreshUltraDashboard(){
   if(qFav) qFav.onclick=openFavoriteChannelsModal;
   refreshFocusPill();
 }
+<br>
 async function handleUltraCommand(cmd,args){
   switch(cmd){
     case '/상위3': case '/mvp후보': {const r=await computeRanking(weekIdOf(new Date()));await postBotReply(rankText(r,3,'🏆 이번 주 MVP TOP3'));return true;}
@@ -3121,8 +3213,10 @@ async function handleUltraCommand(cmd,args){
   }
   return false;
 }
+<br>
 $('focusPill').onclick=()=>{const st=focusState();if(st&&st.endAt>Date.now())openModal(`<h3>🎯 집중 타이머</h3><div style="font-family:var(--font-display);font-size:34px;font-weight:700;text-align:center;padding:14px 0;">${escapeHtml(fmtDuration(st.endAt-Date.now()))}</div><div class="modal-actions"><button class="btn btn-danger" id="focusModalCancel">집중 취소</button></div>`);if($('focusModalCancel'))$('focusModalCancel').onclick=()=>{closeModal();stopFocusTimer();refreshUltraDashboard();};};
 armFocusTimer();refreshFocusPill();
+<br>
 // UI wiring for extra features
 $('favChanBtn').onclick=toggleFavoriteChannel;
 $('toolsBtn').onclick=openToolsModal;
@@ -3135,6 +3229,7 @@ window.addEventListener('keydown',(e)=>{
   if(e.key==='End'&&currentChannelId&&!FEATURE_CHANNELS[currentChannelId]){const l=$('msgList');l.scrollTop=l.scrollHeight;}
 });
 applyUiSettings();
+<br>
 function openCommandHelpModal(){
   const rows = list => list.map(c=>`<div class="day-evt-row"><span style="font-family:'SFMono-Regular',Consolas,monospace; color:var(--blue);">${escapeHtml(c.cmd)}</span><span style="margin-left:auto; color:var(--text-dim); font-size:12px;">${escapeHtml(c.desc)}</span></div>`).join('');
   openModal(`
@@ -3306,7 +3401,7 @@ function openImageAttachModal(){
   const urlInput=$('imgUrlInput'), prev=$('imgUrlPreview');
   urlInput.addEventListener('input', ()=>{
     const url=urlInput.value.trim();
-    if(url && /\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
+    if(url && /\\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
       prev.innerHTML=`<img src="${url}" alt="" onerror="this.parentElement.textContent='이미지를 불러올 수 없습니다'">`;
     } else if(url){
       prev.textContent='이미지 파일 URL(.png/.jpg/.gif/.webp)을 입력해주세요';
@@ -3326,6 +3421,7 @@ function openImageAttachModal(){
     msgInput.focus();
   };
 }
+<br>
 /* ---------------- Poll (투표) ---------------- */
 $('pollBtn').onclick=()=>{
   if(!currentChannelId){ toast('채널을 먼저 선택해주세요.'); return; }
@@ -3429,6 +3525,7 @@ async function pushMentionNotifications(mentions, text){
     });
   }
 }
+<br>
 /* mention autocomplete popup */
 function handleMentionPopup(){
   const val=msgInput.value;
@@ -3453,6 +3550,7 @@ function handleMentionPopup(){
 document.addEventListener('click',(e)=>{
   if(!e.target.closest('.composer')){ $('mentionPop').classList.add('hidden'); $('channelPop').classList.add('hidden'); $('slashPop').classList.add('hidden'); }
 });
+<br>
 /* channel-reference autocomplete popup: '#'를 입력하면 볼 수 있는 채널 목록을 보여줌 */
 function handleChannelPopup(){
   const val=msgInput.value;
@@ -3474,6 +3572,7 @@ function handleChannelPopup(){
     $('sendBtn').disabled = !msgInput.value.trim() && !pendingAttachments.length;
   });
 }
+<br>
 /* slash-command autocomplete popup: 메시지 맨 앞에 '/'를 입력하면 사용 가능한 명령어를 보여줌 */
 function handleSlashPopup(){
   const val=msgInput.value;
@@ -3501,6 +3600,7 @@ function handleSlashPopup(){
     msgInput.focus();
   });
 }
+<br>
 function handleTyping(){
   setTypingState(true);
   clearTimeout(typingTimeoutHandle);
@@ -3510,6 +3610,7 @@ function setTypingState(isTyping){
   if(!currentChannelId) return;
   set(ref(rtdb,'typing/'+currentChannelId+'/'+currentUser.uid), isTyping ? { typing:true, nickname:myDoc.nickname } : { typing:false, nickname:myDoc.nickname });
 }
+<br>
 /* ---------------- Feature channels (strategy/mission/practice/test/record) ---------------- */
 function openFeatureChannel(chanId){
   const cfg=FEATURE_CHANNELS[chanId];
@@ -3555,6 +3656,7 @@ function openFeatureAddModal(cfg){
     closeModal();
   };
 }
+<br>
 /* ---------------- Dashboard feeds ---------------- */
 function restartTeamFeeds(){
   teamFeedUnsubs.forEach(fn=>{try{fn();}catch(_e){}});
@@ -3658,6 +3760,7 @@ $('notifBtn').onclick=(e)=>{
   setTimeout(()=>document.addEventListener('click', closeDD, {once:true}),0);
 };
 function closeDD(){ const dd=$('notifDropdown'); if(dd) dd.remove(); }
+<br>
 /* ---------------- Profile settings ---------------- */
 $('meSettingsBtn').onclick=()=>{
   openModal(`
@@ -3680,10 +3783,11 @@ $('logoutBtn').onclick=async ()=>{
   if(currentUser){ await set(ref(rtdb,'presence/'+currentUser.uid), {state:'offline', nickname:myDoc.nickname, last_changed:Date.now()}); }
   await signOut(auth);
 };
-
-
+<br>
+<br>
 /* ---------------- Admin 50 Control Center ---------------- */
 $('navAdmin').onclick=()=>{ closeDrawer(); openAdminModal(); };
+<br>
 const ADMIN50_FEATURES = [
   '실시간 KPI','온라인 인원','비활성 계정 수','관리자 수','카테고리 수','채널 수','주간 메시지 수','주간 리액션 수','MVP TOP3','새로고침',
   '사용자 검색','역할 필터','상태 필터','정렬','다중 선택','전체 선택','일괄 활성화','일괄 비활성화','역할 일괄 추가','역할 일괄 제거',
@@ -3694,6 +3798,7 @@ const ADMIN50_FEATURES = [
 ];
 let admin50SelectedUsers = new Set();
 let admin50Tab = 'overview';
+<br>
 function openAdminModal(){
   if(!myDoc || !myDoc.isAdmin){ toast('관리자만 사용할 수 있습니다.'); return; }
   openModal(`
@@ -3720,6 +3825,7 @@ function openAdminModal(){
   admin50Tab='overview';
   renderAdminTab('overview');
 }
+<br>
 function a50Ts(v){
   if(!v) return 0;
   if(typeof v==='number') return v;
@@ -3770,6 +3876,7 @@ function a50WeekTotals(data){
 function a50VisibleUsers(){
   return Object.values(usersMap).filter(u=>u && !u.isBot && u.uid!=='BOT');
 }
+<br>
 async function renderAdminTab(tab){
   const body=$('adminBody');
   if(!body) return;
@@ -3789,6 +3896,7 @@ async function renderAdminTab(tab){
     body.innerHTML=`<div class="admin50-card admin50-danger">오류: ${escapeHtml(e.message||String(e))}</div>`;
   }
 }
+<br>
 async function renderAdminOverview(){
   const body=$('adminBody');
   const users=a50VisibleUsers();
@@ -3833,6 +3941,7 @@ function a50SwitchTab(tab){
   document.querySelectorAll('[data-a50tab]').forEach(x=>x.classList.toggle('active',x.getAttribute('data-a50tab')===tab));
   admin50Tab=tab; renderAdminTab(tab);
 }
+<br>
 /* ----- users ----- */
 function renderAdminUsers(){
   const body=$('adminBody');
@@ -3899,8 +4008,7 @@ function a50RenderUserRows(){
     const online=presenceData[u.uid]?.state==='online';
     return `<tr>
       <td><input class="admin50-check" type="checkbox" data-a50sel="${u.uid}" ${admin50SelectedUsers.has(u.uid)?'checked':''}></td>
-      <td><b>${escapeHtml(u.nickname||'?')}</b><div class="admin50-muted">${escapeHtml(u.email||'')}
-${escapeHtml(u.uid)}</div></td>
+      <td><b>${escapeHtml(u.nickname||'?')}</b><div class="admin50-muted">${escapeHtml(u.email||'')}<br>${escapeHtml(u.uid)}</div></td>
       <td>${escapeHtml(rolesLabel(u.roles))}${u.isAdmin?' · 👑':''}</td>
       <td>${u.disabled?'<span class="pill fail">정지</span>':isUserTimedOut(u)?`<span class="pill fail">타임아웃 · ${escapeHtml(timeoutRemainingText(u))}</span>`:online?'<span class="pill ok">온라인</span>':'오프라인'}</td>
       <td>${escapeHtml(a50Date(u.lastSeen))}</td>
@@ -3940,6 +4048,7 @@ function a50ExportUsersCsv(){
   a50Download(`nextbot_users_${new Date().toISOString().slice(0,10)}.csv`,rows.map(r=>r.map(a50Csv).join(',')).join('\n'),'text/csv;charset=utf-8');
   auditAdmin('export-users');
 }
+<br>
 async function openUserManageModal(uid){
   const u=usersMap[uid]; if(!u||u.isBot) return;
   let stats={};
@@ -4011,6 +4120,7 @@ async function openUserManageModal(uid){
     toast('계정을 저장했습니다.');closeModal();
   };
 }
+<br>
 /* ----- structure ----- */
 function renderAdminStructure(){
   const body=$('adminBody');
@@ -4137,6 +4247,7 @@ async function a50ClearChannel(id){
   }
   await auditAdmin('clear-channel',id,`${total} deleted`);toast(`${total}개 메시지를 삭제했습니다.`);closeModal();
 }
+<br>
 /* ----- content ----- */
 async function renderAdminContent(){
   const body=$('adminBody');
@@ -4177,6 +4288,7 @@ function a50EditEvent(e=null){
     }else await addDoc(collection(db,'events'),{title,date,team:activeTeam,createdAt:serverTimestamp(),notified:[]});
     await auditAdmin(e?'edit-event':'create-event',e?.id||'',`${title}|${date}`);toast('저장했습니다.');closeModal();};
 }
+<br>
 /* ----- moderation ----- */
 function renderAdminModeration(){
   const body=$('adminBody');
@@ -4195,6 +4307,7 @@ async function a50LoadModeration(){
   box.querySelectorAll('[data-moddel]').forEach(b=>b.onclick=async()=>{if(!confirm('이 메시지를 삭제할까요?'))return;await deleteDoc(doc(db,'channels',id,'messages',b.dataset.moddel));await auditAdmin('delete-message',`${id}/${b.dataset.moddel}`);a50LoadModeration();});
   box.querySelectorAll('[data-modpin]').forEach(b=>b.onclick=async()=>{const m=rows.find(x=>x.id===b.dataset.modpin);await updateDoc(doc(db,'channels',id,'messages',m.id),{pinned:!m.pinned});await auditAdmin(m.pinned?'unpin-message':'pin-message',`${id}/${m.id}`);a50LoadModeration();});
 }
+<br>
 /* ----- MVP ----- */
 async function renderAdminMvp(){
   const body=$('adminBody'),wk=weekIdOf(new Date()),prev=prevWeekId(wk),ranking=await computeRanking(wk),stats=await a50GetWeekData(wk);
@@ -4218,6 +4331,7 @@ function a50EditMvpUser(uid,stats){
   $('a50MvpCancel').onclick=()=>{closeModal();setTimeout(openAdminModal,0);};
   $('a50MvpSave').onclick=async()=>{const s=await a50GetWeekData(wk),mc={...(s.msgCount||{})},rc={...(s.reactCount||{})};mc[uid]=Math.max(0,Number($('a50MvpMsg').value)||0);rc[uid]=Math.max(0,Number($('a50MvpReact').value)||0);await setDoc(doc(db,'stats',teamStatsDocId(wk)),{weekId:wk,msgCount:mc,reactCount:rc,updatedAt:serverTimestamp()},{merge:true});await auditAdmin('edit-mvp-score',uid,`m=${mc[uid]},r=${rc[uid]}`);toast('점수를 저장했습니다.');closeModal();};
 }
+<br>
 /* ----- AI bot admin ----- */
 async function renderAdminBot(){
   const body=$('adminBody');
@@ -4235,10 +4349,11 @@ async function renderAdminBot(){
     </div>
     <div class="admin50-card"><h4>💳 토큰 과금 기준</h4><div class="admin50-muted">Gemini 총 토큰 사용량 기준: 0~1,500=1 · 1,501~3,500=2 · 3,501~7,000=3 · 7,001~12,000=4 · 12,001~20,000=6 · 20,001~35,000=8 · 35,001~60,000=12 · 60,001+=16토큰</div></div>
     <div class="admin50-card"><h4>📊 봇 사용 통계</h4><div class="admin50-grid"><div class="admin50-stat"><div class="v">${Number(stats.questions||0)}</div><div class="k">질문</div></div><div class="admin50-stat"><div class="v">${Number(stats.answers||0)}</div><div class="k">답변</div></div><div class="admin50-stat"><div class="v">${Number(stats.lastPingMs||0)}ms</div><div class="k">최근 봇 핑</div></div><div class="admin50-stat"><div class="v">${Math.floor(Number(stats.lastLatencyMs||0)/60000).toString().padStart(2,'0')}분 ${Math.floor(Number(stats.lastLatencyMs||0)/1000%60).toString().padStart(2,'0')}초</div><div class="k">최근 답변 속도</div></div></div></div>`;
-  $('a50BotTypingSpeed').oninput=()=>{ $('a50BotTypingSpeedValue').textContent=`${Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED)).toFixed(2).replace(/0+$/,'').replace(/\.$/,'')}x`; };
+  $('a50BotTypingSpeed').oninput=()=>{ $('a50BotTypingSpeedValue').textContent=`${Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED)).toFixed(2).replace(/0+$/,'').replace(/\\.$/,'')}x`; };
   document.querySelectorAll('[data-botspeed]').forEach(b=>b.onclick=()=>{const v=Math.min(100,Math.max(.25,Number(b.dataset.botspeed)||1));$('a50BotTypingSpeed').value=v;$('a50BotTypingSpeedValue').textContent=`${v}x`;});
   $('a50GeminiSave').onclick=async()=>{const key=$('a50GeminiKey').value.trim();const model=$('a50GeminiModel').value;const typingSpeed=Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED));const defaultPrompt=$('a50BotDefaultPrompt').value.trim();await setDoc(doc(db,'settings','bot'),{apiKey:key,model,typingSpeed,defaultPrompt,updatedAt:serverTimestamp(),updatedBy:currentUser.uid},{merge:true});await auditAdmin('update-gemini-settings','settings/bot',`model=${model}, typingSpeed=${typingSpeed}x, prompt=${defaultPrompt?'custom':'default'}`);toast(`Gemini 설정을 저장했습니다. · 출력 속도 ${typingSpeed}x`);};
 }
+<br>
 /* ----- system ----- */
 async function renderAdminSystem(){
   const body=$('adminBody');
@@ -4277,6 +4392,7 @@ async function a50AdminBackup(){
   a50Download(`nextbot_admin_backup_${Date.now()}.json`,JSON.stringify(backup,null,2),'application/json');
   auditAdmin('admin-backup');
 }
+<br>
 /* ----- audit ----- */
 async function renderAdminAudit(){
   const body=$('adminBody');
@@ -4288,6 +4404,7 @@ async function renderAdminAudit(){
   $('a50AuditExport').onclick=()=>a50Download(`admin_logs_${Date.now()}.json`,JSON.stringify(logs.map(l=>({...l,createdAt:a50Date(l.createdAt)})),null,2),'application/json');
   $('a50AuditClear').onclick=async()=>{if(!confirm(`화면에 불러온 최근 ${logs.length}개 로그를 삭제할까요?`))return;await Promise.all(logs.map(l=>deleteDoc(doc(db,'admin_logs',l.id))));toast('삭제했습니다.');renderAdminAudit();};
 }
+<br>
 /* ----- global admin settings behavior ----- */
 let adminAppSettings={};
 function listenAdminAppSettings(){
@@ -4312,7 +4429,9 @@ function applyCurrentChannelAdminState(){
   if(locked&&!note){note=document.createElement('div');note.id='adminChannelLockNote';note.className='admin50-locknote';note.textContent='🔒 이 채널은 관리자가 쓰기 잠금했습니다.';$('chatView')?.insertBefore(note,$('msgList'));}
   if(!locked&&note)note.remove();
 }
+<br>
 /* ---------------- Modal helper ---------------- */
+<br>
 function openModal(innerHtml, wide=false){
   closeModal();
   const bg=document.createElement('div'); bg.className='modal-bg'; bg.id='modalBg';
@@ -4322,6 +4441,7 @@ function openModal(innerHtml, wide=false){
   bg.onclick=(e)=>{ if(e.target===bg) closeModal(); };
 }
 function closeModal(){ const bg=$('modalBg'); if(bg) bg.remove(); }
+<br>
 /* ---------------- Drawer (mobile) ---------------- */
 $('drawerToggle').onclick=()=>{ $('sidebar').classList.add('open'); $('drawerScrim').classList.add('show'); };
 $('drawerScrim').onclick=closeDrawer;
@@ -4329,4 +4449,3 @@ function closeDrawer(){ $('sidebar').classList.remove('open'); $('drawerScrim').
 </script>
 </body>
 </html>
-
