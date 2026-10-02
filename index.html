@@ -42,7 +42,7 @@
     --safe-l:env(safe-area-inset-left,0px);
     --safe-r:env(safe-area-inset-right,0px);
   }
-  \*{box-sizing:border-box; margin:0; padding:0;}
+  *{box-sizing:border-box; margin:0; padding:0;}
   html,body{height:100%;}
   body{
     background:var(--bg); color:var(--text); font-family:var(--font-ui);
@@ -58,8 +58,7 @@
   ::-webkit-scrollbar-track{background:transparent;}
   :focus-visible{ outline:2px solid var(--blue); outline-offset:2px; }
   .hidden{display:none !important;}
-<br>
-  /\* ---------- Auth screen ---------- \*/
+  /* ---------- Auth screen ---------- */
   #authView{
     height:100%; display:flex; align-items:center; justify-content:center;
     background:
@@ -118,11 +117,9 @@
   .team-switch-btn:hover{color:var(--text);border-color:#33353a;}
   .team-switch-btn.active{color:var(--blue);border-color:var(--blue-dim);background:var(--blue-glow);}
   .auth-team-hint{font-size:11px;color:var(--text-faint);margin:-3px 0 14px;line-height:1.4;}
-<br>
-  /\* ---------- App shell ---------- \*/
+  /* ---------- App shell ---------- */
   #appView{display:none; height:100%; flex-direction:row;}
   #appView\.show{display:flex;}
-<br>
   .sidebar{
     width:236px; flex:none; background:var(--panel); border-right:1px solid var(--border-soft);
     display:flex; flex-direction:column; height:100%;
@@ -133,7 +130,6 @@
   .sb-brand .mark{width:26px;height:26px;border-radius:7px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:12px;color:#fff;flex:none;}
   .sb-brand .txt{font-family:var(--font-display); font-weight:700; font-size:14.5px; letter-spacing:.02em;}
   .sb-brand .ddaytag{margin-left:auto; font-size:10.5px; color:var(--blue); background:var(--blue-glow); padding:3px 7px; border-radius:20px; font-weight:600; white-space:nowrap;}
-<br>
   .sb-nav{padding:10px 10px 0;}
   .sb-nav-item{
     display:flex; align-items:center; gap:9px; padding:8px 9px; border-radius:var(--radius-sm);
@@ -142,7 +138,6 @@
   .sb-nav-item:hover{background:var(--panel-2); color:var(--text);}
   .sb-nav-item.active{background:var(--blue-glow); color:var(--blue);}
   .sb-nav-item .ic{width:16px; text-align:center; font-size:14px;}
-<br>
   .sb-channels{flex:1; overflow-y:auto; padding:8px 8px 10px;}
   .sb-cat{margin-top:14px;}
   .sb-cat-head{
@@ -171,7 +166,6 @@
   .sb-add-chan:hover{color:var(--blue);}
   .sb-add-cat-btn{margin:10px 8px 0; padding:7px 9px; border:1px dashed var(--border); border-radius:var(--radius-sm); color:var(--text-faint); font-size:12px; text-align:center; cursor:pointer;}
   .sb-add-cat-btn:hover{color:var(--blue); border-color:var(--blue-dim);}
-<br>
   .sb-user{
     border-top:1px solid var(--border-soft); padding:10px 12px; display:flex; align-items:center; gap:9px;
   }
@@ -186,8 +180,7 @@
   .sb-user .who{flex:1; min-width:0;}
   .sb-user .nick{font-size:12.5px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
   .sb-user .roles-mini{font-size:10.5px; color:var(--text-faint); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-<br>
-  /\* ---------- Main column ---------- \*/
+  /* ---------- Main column ---------- */
   .main{flex:1; display:flex; flex-direction:column; height:100%; min-width:0; background:var(--bg);}
   .topbar{
     height:52px; flex:none; border-bottom:1px solid var(--border-soft); display:flex; align-items:center;
@@ -216,8 +209,7 @@
     position:absolute; top:-2px; right:-2px; background:var(--blue); color:#fff; font-size:9.5px; font-weight:700;
     border-radius:8px; min-width:15px; height:15px; display:flex; align-items:center; justify-content:center; padding:0 3px;
   }
-<br>
-  /\* dashboard \*/
+  /* dashboard */
   .view-scroll{flex:1; overflow-y:auto;}
   .dash{padding:28px 32px 60px; max-width:1080px;}
   .dash-hero{
@@ -241,8 +233,7 @@
   .dcard .empty{color:var(--text-faint); font-size:12.5px; padding:6px 0;}
   .online-list{display:flex; flex-wrap:wrap; gap:8px;}
   .online-chip{display:flex; align-items:center; gap:6px; background:var(--panel-2); border:1px solid var(--border-soft); border-radius:20px; padding:4px 10px 4px 4px; font-size:12px;}
-<br>
-  /\* chat \*/
+  /* chat */
   .chat-view{flex:1; display:flex; flex-direction:column; min-height:0;}
   .msg-list{flex:1; overflow-y:auto; padding:14px 20px 8px; display:flex; flex-direction:column; gap:2px;}
   .msg-row{display:flex; gap:11px; padding:6px 8px; border-radius:8px; position:relative;}
@@ -304,9 +295,8 @@
   .access-notice.timeout{color:var(--warn);}
   .access-notice button{margin-left:6px;}
   @media(max-width:700px){.bot-token-pill{padding:0 7px}.bot-token-pill span{display:none}.composer .img-btn,.composer .file-btn,.composer .poll-btn{width:32px}.composer textarea{min-width:0;font-size:14px;}}
-  @media(prefers-reduced-motion:reduce){\*,\*::before,\*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important;}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important;}}
   .empty-chan .big{font-size:30px;}
-<br>
   .pin-bar{
     display:flex; align-items:center; gap:8px; padding:8px 20px; background:var(--panel); border-bottom:1px solid var(--border-soft);
     font-size:12px; color:var(--text-dim); overflow-x:auto; white-space:nowrap;
@@ -314,7 +304,6 @@
   .pin-bar .pin-item{display:flex; align-items:center; gap:6px; cursor:pointer; flex:none;}
   .pin-bar .pin-item:hover{color:var(--text);}
   .pin-bar .pin-lbl{color:var(--warn); font-weight:700; flex:none;}
-<br>
   .msg-embed{margin-top:6px; max-width:320px;}
   .msg-embed img{max-width:100%; border-radius:8px; border:1px solid var(--border-soft); display:block;}
   .msg-embed .yt-embed{
@@ -323,7 +312,6 @@
   }
   .msg-embed .yt-embed .yt-thumb{width:64px; height:40px; border-radius:5px; object-fit:cover; flex:none; background:#000;}
   .msg-embed .yt-embed .yt-txt{font-size:11.5px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis;}
-<br>
   .reaction-row{display:flex; flex-wrap:wrap; gap:5px; margin-top:6px;}
   .reaction-chip{
     display:flex; align-items:center; gap:4px; background:var(--panel-2); border:1px solid var(--border-soft);
@@ -342,8 +330,7 @@
   }
   .reaction-pop span{cursor:pointer; font-size:16px; padding:2px 3px; border-radius:6px;}
   .reaction-pop span:hover{background:var(--panel-2);}
-<br>
-  /\* poll \*/
+  /* poll */
   .composer .poll-btn{
     width:34px; height:34px; border-radius:8px; background:var(--panel-2); color:var(--text-dim);
     border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:15px; flex:none;
@@ -396,8 +383,7 @@
   .poll-opts-edit input{flex:1;}
   .poll-opt-del{color:var(--danger); cursor:pointer; padding:0 8px; display:flex; align-items:center; font-size:13px;}
   .poll-add-opt{color:var(--blue); font-size:12.5px; cursor:pointer; margin-bottom:10px; display:inline-block;}
-<br>
-  /\* calendar \*/
+  /* calendar */
   .cal-wrap{padding:26px 30px 50px; max-width:920px;}
   .cal-head{display:flex; align-items:center; gap:12px; margin-bottom:20px;}
   .cal-head h2{font-family:var(--font-display); font-size:19px; font-weight:700;}
@@ -414,8 +400,7 @@
   .day-evt-row{display:flex; align-items:center; gap:8px; padding:8px 0; border-bottom:1px solid var(--border-soft); font-size:13px;}
   .day-evt-row:last-child{border-bottom:none;}
   .day-evt-del{margin-left:auto; color:var(--danger); font-size:11.5px; cursor:pointer;}
-<br>
-  /\* member panel \*/
+  /* member panel */
   .member-panel{width:220px; flex:none; border-left:1px solid var(--border-soft); background:var(--panel); overflow-y:auto; padding:16px 12px;}
   .member-panel h4{font-size:11px; color:var(--text-faint); font-weight:700; letter-spacing:.05em; margin:14px 8px 8px;}
   .member-panel h4:first-child{margin-top:0;}
@@ -423,8 +408,7 @@
   .member-row:hover{background:var(--panel-2);}
   .member-row .nick{font-size:12.5px; font-weight:600;}
   .member-row .roles-mini{font-size:10px; color:var(--text-faint);}
-<br>
-  /\* notification dropdown \*/
+  /* notification dropdown */
   .dropdown{position:absolute; top:50px; right:16px; width:320px; max-height:420px; overflow-y:auto; background:var(--card); border:1px solid var(--border); border-radius:10px; box-shadow:0 12px 32px rgba(0,0,0,.5); z-index:60;}
   .dropdown h5{padding:12px 14px; font-size:12.5px; font-weight:700; color:var(--text-dim); border-bottom:1px solid var(--border-soft);}
   .notif-item{padding:11px 14px; border-bottom:1px solid var(--border-soft); font-size:12.5px; cursor:pointer; display:flex; gap:9px;}
@@ -434,8 +418,7 @@
   .notif-item:not(.unread){padding-left:14px;}
   .notif-meta{color:var(--text-faint); font-size:10.5px; margin-top:2px;}
   .dd-empty{padding:26px 14px; text-align:center; color:var(--text-faint); font-size:12.5px;}
-<br>
-  /\* modal \*/
+  /* modal */
   .modal-bg{position:fixed; inset:0; background:rgba(4,5,6,.65); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; z-index:100; padding:20px;}
   .modal{background:var(--card); border:1px solid var(--border); border-radius:12px; width:100%; max-width:420px; max-height:86vh; overflow-y:auto; padding:22px;}
   .modal.wide{max-width:760px;}
@@ -446,8 +429,7 @@
   .chip-select{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
   .chip-opt{border:1px solid var(--border); border-radius:20px; padding:6px 12px; font-size:12.5px; cursor:pointer; color:var(--text-dim);}
   .chip-opt.on{border-color:var(--blue); color:var(--blue); background:var(--blue-glow);}
-<br>
-  /\* ---------- AI Bot / Markdown ---------- \*/
+  /* ---------- AI Bot / Markdown ---------- */
   .markdown-body{line-height:1.65;overflow-wrap:anywhere;}
   .markdown-body p{margin:.25em 0 .7em;}
   .markdown-body p:last-child{margin-bottom:0;}
@@ -470,7 +452,6 @@
   @media (prefers-reduced-motion: reduce){.bot-streaming-cursor{animation:none;opacity:.7;}}
   .bot-answer-meta span{padding:3px 6px;border:1px solid var(--border-soft);border-radius:10px;background:var(--panel-2);}
   .bot-token-badge{font-size:10px;color:var(--blue);}
-<br>
   .code-preview-card{margin:9px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--panel-2);}
   .code-preview-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 9px;border-bottom:1px solid var(--border-soft);font-size:11px;font-weight:700;}
   .code-preview-actions{display:flex;gap:5px;flex-wrap:wrap;}
@@ -485,7 +466,7 @@
   .bot-typing-setting{display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
   .bot-typing-setting input[type=range]{width:180px;}
   .bot-typing-value{min-width:42px;text-align:center;font-weight:700;color:var(--blue);}
-  /\* admin \*/
+  /* admin */
   .admin-tabs{display:flex; gap:6px; border-bottom:1px solid var(--border-soft); margin-bottom:16px;}
   .admin-tab{padding:9px 4px; font-size:13px; color:var(--text-faint); font-weight:600; border-bottom:2px solid transparent; cursor:pointer; margin-right:14px;}
   .admin-tab.active{color:var(--text); border-color:var(--blue);}
@@ -494,8 +475,7 @@
   .admin-userrow .nm .n{font-weight:600; font-size:13px;}
   .admin-userrow .nm .e{font-size:11px; color:var(--text-faint);}
   .table-input{background:var(--panel-2); border:1px solid var(--border); border-radius:6px; padding:8px 10px; font-size:13px; width:100%; margin-bottom:8px;}
-<br>
-  /\* generic list card entries for strategy/mission/practice/test/record \*/
+  /* generic list card entries for strategy/mission/practice/test/record */
   .feature-toolbar{display:flex; align-items:center; padding:14px 20px 0; gap:10px;}
   .feature-toolbar .ft-title{font-family:var(--font-display); font-weight:600; font-size:16px;}
   .feature-toolbar .ft-desc{font-size:12px; color:var(--text-faint);}
@@ -509,14 +489,11 @@
   .pill{font-size:10.5px; padding:2px 8px; border-radius:20px; font-weight:700;}
   .pill.ok{background:rgba(62,207,142,.14); color:var(--ok);}
   .pill.fail{background:rgba(255,92,92,.14); color:var(--danger);}
-<br>
   .link-auto{color:var(--blue); text-decoration:underline; text-underline-offset:2px;}
-<br>
-  /\* toast \*/
+  /* toast */
   #toastWrap{position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:200; display:flex; flex-direction:column; gap:8px; align-items:center;}
   .toast{background:var(--card); border:1px solid var(--border); padding:10px 16px; border-radius:8px; font-size:12.5px; box-shadow:0 8px 24px rgba(0,0,0,.4);}
-<br>
-  /\* responsive \*/
+  /* responsive */
   .drawer-scrim{display:none;}
   .member-scrim{display:none;}
   @media (max-width:880px){
@@ -544,12 +521,10 @@
     .modal{max-width:100%; max-height:calc(90vh - var(--safe-b));}
     .modal-bg{align-items:flex-end; padding:0;}
     .modal{border-radius:16px 16px 0 0; width:100%; padding-bottom:calc(22px + var(--safe-b));}
-<br>
     .topbar{ padding:0 10px; padding-top:var(--safe-t); height:calc(52px + var(--safe-t)); gap:6px; }
     .search-box{ width:auto; flex:1; margin-left:6px; }
     .chan-title{ font-size:13.5px; }
     .icon-btn{ width:38px; height:38px; font-size:16px; }
-<br>
     .msg-list{ padding:10px 12px 6px; }
     .msg-row{ padding:8px 6px; gap:8px; }
     .msg-actions{ display:none; position:static; margin-top:6px; background:none; border:none; gap:4px; }
@@ -558,11 +533,9 @@
     .composer-wrap{ padding:0 10px calc(12px + var(--safe-b)); }
     .composer textarea, .field input, textarea.field-ta{ font-size:16px; }
     .composer .send-btn, .composer .poll-btn, .composer .img-btn, .composer .file-btn{ width:38px; height:38px; }
-<br>
     .cal-wrap{ padding:16px 12px 40px; }
     .cal-cell{ min-height:58px; padding:4px; }
     .cal-evt{ font-size:9px; }
-<br>
     .admin-tabs{ overflow-x:auto; }
     .feature-toolbar{ flex-wrap:wrap; padding:12px 14px 0; }
     .feature-list{ padding:12px 14px 30px; }
@@ -572,13 +545,13 @@
     .search-box{ display:none !important; }
     .auth-box{ max-width:100%; }
   }
-  /\* iOS: avoid input auto-zoom by keeping form fields >=16px on touch \*/
+  /* iOS: avoid input auto-zoom by keeping form fields >=16px on touch */
   @media (pointer:coarse){
     .field input, textarea.field-ta, .composer textarea{ font-size:16px; }
   }
-<br>
-<br>
-  /\* ---------- NEXTBOT Mega Pack: UX extras ---------- \*/
+
+
+  /* ---------- NEXTBOT Mega Pack: UX extras ---------- */
   #jumpBottomBtn{
     position:fixed; right:22px; bottom:76px; z-index:70; width:38px; height:38px;
     border-radius:50%; border:1px solid var(--border); background:var(--card); color:var(--text);
@@ -597,7 +570,7 @@
   body.font-small .msg-text{font-size:12px;}
   body.font-large{font-size:16px;}
   body.font-large .msg-text{font-size:16px;}
-  body.no-motion \*, body.no-motion \*::before, body.no-motion \*::after{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+  body.no-motion *, body.no-motion *::before, body.no-motion *::after{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
   body.high-contrast{--text:#fff; --text-dim:#d7d9dd; --text-faint:#999fa8; --border:#484c54; --border-soft:#343840;}
   .msg-time.full-time{font-variant-numeric:tabular-nums;}
   .msg-actions button[data-act="copy"], .msg-actions button[data-act="bookmark"]{font-size:11.5px;}
@@ -611,8 +584,7 @@
     #jumpBottomBtn{right:14px; bottom:86px;}
     .tool-grid{grid-template-columns:1fr;}
   }
-<br>
-  /\* ---------- NEXTBOT ULTRA: dashboard + focus ---------- \*/
+  /* ---------- NEXTBOT ULTRA: dashboard + focus ---------- */
   .ultra-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0 0 16px;}
   .ultra-stat{border:1px solid var(--border-soft);background:var(--panel);border-radius:10px;padding:13px 14px;min-width:0;}
   .ultra-stat .us-label{font-size:10.5px;color:var(--text-faint);font-weight:700;letter-spacing:.03em;}
@@ -637,9 +609,9 @@
   .ultra-mini{font-size:11.5px;color:var(--text-faint);}
   @media(max-width:980px){.ultra-summary{grid-template-columns:repeat(3,1fr);}}
   @media(max-width:640px){.ultra-summary{grid-template-columns:repeat(2,1fr)}.mvp-podium{grid-template-columns:1fr}.quick-actions{grid-template-columns:1fr}#focusPill{max-width:115px;overflow:hidden;text-overflow:ellipsis;}}
-<br>
-<br>
-/\* ========== ADMIN 50 UPDATE ========== \*/
+
+
+/* ========== ADMIN 50 UPDATE ========== */
 .admin50-tabs{display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--border-soft);margin-bottom:16px;padding-bottom:2px}
 .admin50-tab{border:0;background:transparent;color:var(--text-faint);font-weight:700;font-size:12px;padding:9px 10px;border-radius:7px 7px 0 0;white-space:nowrap}
 .admin50-tab:hover{color:var(--text);background:var(--panel-2)}
@@ -680,11 +652,9 @@
   .admin50-channel{grid-template-columns:1fr}
   .admin50-table{display:block;overflow-x:auto}
 }
-<br>
 </style>
 </head>
 <body>
-<br>
 <!-- ============ AUTH VIEW ============ -->
 <div id="authView">
   <div class="auth-box">
@@ -695,7 +665,6 @@
         <div class="sub">ROBOFEST 2027 국내예선대회</div>
       </div>
     </div>
-<br>
     <div id="loginForm">
       <h1 class="auth-h">팀에 로그인하세요</h1>
       <p class="auth-p">NEXTBOT 계정으로 로그인합니다.</p>
@@ -707,7 +676,6 @@
       <button class="btn btn-primary" id="loginBtn">로그인</button>
       <div class="auth-switch">아직 계정이 없나요? <button id="toSignup">회원가입</button></div>
     </div>
-<br>
     <div id="signupForm" class="hidden">
       <h1 class="auth-h">NEXTBOT 팀 합류하기</h1>
       <p class="auth-p">팀원 계정을 생성합니다.</p>
@@ -721,12 +689,10 @@
     </div>
   </div>
 </div>
-<br>
 <!-- ============ APP VIEW ============ -->
 <div id="appView">
   <div class="drawer-scrim" id="drawerScrim"></div>
   <div class="member-scrim" id="memberScrim"></div>
-<br>
   <aside class="sidebar" id="sidebar">
     <div class="sb-brand">
       <div class="mark">N</div>
@@ -747,7 +713,6 @@
     </div>
     <div class="sb-channels" id="sbChannels"></div>
     <div class="sb-add-cat-btn hidden" id="addCatBtn">+ 카테고리 추가</div>
-<br>
     <div class="sb-user">
       <div class="avatar" id="meAvatar"><span id="meAvatarLetter">?</span><span class="status-dot online"></span></div>
       <div class="who">
@@ -759,7 +724,6 @@
       <button class="icon-btn" id="logoutBtn" title="로그아웃">⏻</button>
     </div>
   </aside>
-<br>
   <div class="main">
     <div class="topbar">
       <button class="icon-btn drawer-toggle" id="drawerToggle">☰</button>
@@ -778,7 +742,6 @@
         <button class="icon-btn" id="memberBtn" title="팀원 목록">👥</button>
       </div>
     </div>
-<br>
     <div id="dashboardView" class="view-scroll">
       <div class="dash">
         <div class="dash-hero">
@@ -815,7 +778,6 @@
         </div>
       </div>
     </div>
-<br>
     <div id="chatView" class="chat-view hidden">
       <div class="pin-bar hidden" id="pinBar"></div>
       <div class="msg-list" id="msgList"></div>
@@ -835,7 +797,6 @@
         </div>
       </div>
     </div>
-<br>
     <div id="calendarView" class="view-scroll hidden">
       <div class="cal-wrap">
         <div class="cal-head">
@@ -849,7 +810,6 @@
         <div class="cal-grid" id="calGrid"></div>
       </div>
     </div>
-<br>
     <div id="featureView" class="chat-view hidden">
       <div class="feature-toolbar">
         <div><div class="ft-title" id="ftTitle">-</div><div class="ft-desc" id="ftDesc"></div></div>
@@ -858,15 +818,12 @@
       <div class="feature-list" id="featureList"></div>
     </div>
   </div>
-<br>
   <aside class="member-panel" id="memberPanel">
     <div id="memberPanelBody"></div>
   </aside>
 </div>
-<br>
 <button id="jumpBottomBtn" title="맨 아래로">↓</button>
 <div id="toastWrap"></div>
-<br>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
 <script type="module">
@@ -882,7 +839,6 @@ import {
 import {
   getDatabase, ref, set, onValue, onDisconnect, remove, push, serverTimestamp as rtdbTimestamp, off
 } from "https://www\.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-<br>
 const firebaseConfig = {
   apiKey: "AIzaSyAUwzRx2lEzogeJGRZfre5ghDkHuEoyz3E",
   authDomain: "robofest-nextbot.firebaseapp.com",
@@ -897,7 +853,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const rtdb = getDatabase(app);
 const ADMIN_EMAIL = "studiovoidsurpport\@gmail.com";
-<br>
 const TEAM_ROBOFEST="robofest";
 const TEAM_CCE="cce";
 const CCE_EMAIL_DOMAIN="zeropoint.co.kr";
@@ -929,11 +884,10 @@ function isTeamLeadAccount(u=myDoc){
 function teamLabel(team=activeTeam){const d=TEAM_DEFS[team]||TEAM_DEFS[TEAM_ROBOFEST];return `${d.icon} ${d.label}`;}
 function teamSettingId(name,team=activeTeam){return team===TEAM_ROBOFEST&&name==="dday"?"dday":`${name}-${team}`;}
 function teamSettingRef(name,team=activeTeam){return doc(db,"settings",teamSettingId(name,team));}
-function teamStatsDocId(weekId,team=activeTeam){return `${team}\_${weekId}`;}
-function teamMvpDocId(weekId,team=activeTeam){return `${team}\_${weekId}`;}
+function teamStatsDocId(weekId,team=activeTeam){return `${team}_${weekId}`;}
+function teamMvpDocId(weekId,team=activeTeam){return `${team}_${weekId}`;}
 function teamBotIds(team=activeTeam){return team===TEAM_CCE?{catId:"cce-cat-bot",channelId:"cce-chan-bot"}:{catId:"cat-bot",channelId:"chan-bot"};}
-<br>
-/\* ---------------- Role config ---------------- \*/
+/* ---------------- Role config ---------------- */
 const ROLE_DEFS = {
   teacher:{ label:"👨‍🏫 선생님", short:"선생님", color:"var(--r-teacher)" },
   leader:{ label:"👑 팀장", short:"팀장", color:"var(--r-leader)" },
@@ -942,9 +896,8 @@ const ROLE_DEFS = {
   making:{ label:"🔧 메이킹팀", short:"메이킹팀", color:"var(--r-making)" },
   bot:{ label:"🤖 봇", short:"봇", color:"var(--blue)" },
 };
-const MENTION_ROLE_TOKENS = { "전체":"\_\_all\_\_", "선생님":"teacher", "팀장":"leader", "팀원":"member", "코딩팀":"coding", "메이킹팀":"making" };
+const MENTION_ROLE_TOKENS = { "전체":"__all__", "선생님":"teacher", "팀장":"leader", "팀원":"member", "코딩팀":"coding", "메이킹팀":"making" };
 const REACTION_EMOJIS = ["👍","❤️","😂","🎉","👀","✅"];
-<br>
 const DEFAULT_STRUCTURE = [
   { id:"cat-info", name:"📢 INFORMATION", position:0, channels:[
     {id:"chan-notice", name:"공지"}, {id:"chan-schedule", name:"일정"}, {id:"chan-rules", name:"대회규정"} ]},
@@ -967,8 +920,7 @@ const FEATURE_CHANNELS = {
   "chan-record":{ label:"기록", desc:"점수, 성공/실패 횟수 등을 기록합니다.", store:"records", fields:["title","content"] },
   "chan-test":{ label:"테스트", desc:"로봇 테스트 결과를 기록합니다. (모터/센서/라인 등)", store:"tests", fields:["title","content"] },
 };
-<br>
-/\* ---------------- Bot config ---------------- \*/
+/* ---------------- Bot config ---------------- */
 let BOT_CAT_ID="cat-bot";
 let BOT_CHANNEL_ID="chan-bot";
 function refreshTeamBotIds(){const ids=teamBotIds(activeTeam);BOT_CAT_ID=ids.catId;BOT_CHANNEL_ID=ids.channelId;}
@@ -1036,8 +988,7 @@ const HELP_ADMIN_COMMANDS = [
   { cmd:"/일정 제목|YYYY-MM-DD", desc:"일정을 추가하고 봇이 알려요. (관리자)" },
   { cmd:"/채널생성 카테고리명|채널명", desc:"채널을 새로 만들어요. (관리자)" },
 ];
-<br>
-/\* ---------------- NEXTBOT Mega Pack: 약 50개 추가 기능 ---------------- \*/
+/* ---------------- NEXTBOT Mega Pack: 약 50개 추가 기능 ---------------- */
 const NEXTBOT_EXTRA_COMMANDS = [
   {cmd:"/내점수",desc:"이번 주 내 MVP 활동 점수를 확인해요."},
   {cmd:"/내순위",desc:"이번 주 내 MVP 순위를 확인해요."},
@@ -1091,9 +1042,9 @@ const NEXTBOT_EXTRA_COMMANDS = [
   {cmd:"/단축키",desc:"키보드 단축키를 보여줘요."},
 ];
 HELP_COMMANDS.push(...NEXTBOT_EXTRA_COMMANDS);
-<br>
-<br>
-/\* ---------------- NEXTBOT ULTRA: 추가 실사용 명령어 ---------------- \*/
+
+
+/* ---------------- NEXTBOT ULTRA: 추가 실사용 명령어 ---------------- */
 const NEXTBOT_ULTRA_COMMANDS = [
   {cmd:"/상위3",desc:"이번 주 MVP TOP3를 바로 보여줘요."},
   {cmd:"/메시지순위 [1\~20]",desc:"메시지 작성 수 기준 순위를 보여줘요."},
@@ -1132,18 +1083,16 @@ const NEXTBOT_ULTRA_COMMANDS = [
   {cmd:"/알림권한",desc:"브라우저 알림 권한을 요청해요."},
 ];
 HELP_COMMANDS.push(...NEXTBOT_ULTRA_COMMANDS);
-<br>
-<br>
-<br>
-/\* ---------------- MVP 자동 선정 설정 ----------------
+
+
+/* ---------------- MVP 자동 선정 설정 ----------------
    매주 월요일(주 시작), 지난주 채팅 활동(메시지+리액션)을 집계해 TOP3를 뽑고
    봇이 투표를 올립니다. 그 다음 주가 시작되면 투표를 집계해 우승자를 발표해요.
-\*/
+*/
 const MVP_MSG_WEIGHT = 1;   // 메시지 1개당 점수
 const MVP_REACT_WEIGHT = 2; // 받은 리액션 1개당 점수
 const MVP_TOP_N = 3;
-<br>
-/\* ---------------- State ---------------- \*/
+/* ---------------- State ---------------- */
 let currentUser=null,myDoc=null;
 let activeTeam=TEAM_ROBOFEST;
 let usersMap={};           // uid -> userDoc for active workspace
@@ -1161,7 +1110,6 @@ let presenceSet=false;
 let ddayTarget=null;
 let notifList=[];
 let botModeOn=false;
-<br>
 const $=(id)=>document.getElementById(id);
 function toast(text){
   const t=document.createElement('div'); t.className='toast'; t.textContent=text;
@@ -1169,7 +1117,7 @@ function toast(text){
 }
 function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function linkify(text){
-  return text.replace(/(https?:\\/\\/[^\s]+)/g, (u)=>`<a class="link-auto" href="${u}" target="\_blank" rel="noopener">${u}</a>`);
+  return text.replace(/(https?:\\/\\/[^\s]+)/g, (u)=>`<a class="link-auto" href="${u}" target="_blank" rel="noopener">${u}</a>`);
 }
 function extractEmbedUrl(text){
   const m=(text||'').match(/(https?:\\/\\/[^\s]+)/);
@@ -1178,13 +1126,13 @@ function extractEmbedUrl(text){
 function buildEmbedHtml(text){
   const url=extractEmbedUrl(text);
   if(!url) return '';
-  if(/\\.(png|jpe?g|gif|webp)(\\?.\*)?$/i.test(url)){
+  if(/\\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
     return `<div class="msg-embed"><img src="${url}" loading="lazy" alt=""></div>`;
   }
   const yt = url.match(/(?:youtube\\.com\\/watch\\?v=|youtu\\.be\\/)([\w-]{6,15})/);
   if(yt){
     const vid=yt[1];
-    return `<div class="msg-embed"><a class="yt-embed" href="${url}" target="\_blank" rel="noopener">
+    return `<div class="msg-embed"><a class="yt-embed" href="${url}" target="_blank" rel="noopener">
       <img class="yt-thumb" src="https://img.youtube.com/vi/${vid}/mqdefault.jpg" alt="">
       <span class="yt-txt">▶ YouTube 영상 열기</span></a></div>`;
   }
@@ -1250,24 +1198,25 @@ function renderMentions(text,withCodePreviews=true){
       let html=marked.parse(raw);
       html=DOMPurify.sanitize(html,{ADD_ATTR:['target','rel']});
       const box=document.createElement('div'); box.innerHTML=html;
-      box.querySelectorAll('\*').forEach(node=>{
+      box.querySelectorAll('*').forEach(node=>{
         if(node.children.length===0 && node.textContent){
           let t=node.textContent;
           t=t.replace(/@(전체|선생님|팀장|팀원|코딩팀|메이킹팀)/g,'<span class="mention">@$1</span>');
           Object.values(usersMap).forEach(u=>{
             if(!u.nickname) return;
-            const re=new RegExp('@'+u.nickname.replace(/[.\*+?^${}()|[\\]\\\\]/g,'\\\\$&'),'g');
+            const re=new RegExp('@'+u.nickname.replace(/[.*+?^${}()|[\]\\\]/g,'\\\\$&'),'g');
             t=t.replace(re,`<span class="mention">@${escapeHtml(u.nickname)}</span>`);
           });
           if(t!==node.textContent) node.innerHTML=t;
         }
       });
-      box.querySelectorAll('a').forEach(a=>{a.target='\_blank';a.rel='noopener noreferrer';});
+      box.querySelectorAll('a').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer';});
       if(withCodePreviews) enhanceCodePreviews(box);
       return box.innerHTML;
     }catch(e){console.warn('markdown render failed',e);}
   }
-  return escapeHtml(raw).replace(/\n/g,'<br>');
+  return escapeHtml(raw).replace(/\n/g,'
+');
 }
 async function animateBotTyping(text,speed,onRender){
   const chars=Array.from(String(text||''));
@@ -1280,7 +1229,6 @@ async function animateBotTyping(text,speed,onRender){
   }
   return shown;
 }
-<br>
 function fmtTime(ts){
   if(!ts) return '';
   const d = ts.toDate ? ts.toDate() : new Date(ts);
@@ -1299,15 +1247,12 @@ function primaryRoleColor(roles){
   if(roles && roles.length) return ROLE_DEFS[roles[0]]?.color || ROLE_DEFS.member.color;
   return ROLE_DEFS.member.color;
 }
-<br>
-/\* ---------------- Auth screen wiring ---------------- \*/
+/* ---------------- Auth screen wiring ---------------- */
 $('toSignup').onclick=()=>{ $('loginForm').classList.add('hidden'); $('signupForm').classList.remove('hidden'); };
 $('toLogin').onclick=()=>{ $('signupForm').classList.add('hidden'); $('loginForm').classList.remove('hidden'); };
-<br>
 function showMsg(id, text, ok=false){
   const el=$(id); el.textContent=text; el.className='auth-msg show '+(ok?'ok':'err');
 }
-<br>
 $('signupBtn').onclick = async ()=>{
   const nick=$('suNick').value.trim(), email=$('suEmail').value.trim(), pw=$('suPw').value;
   if(!nick||!email||!pw){ showMsg('signupMsg','모든 항목을 입력해주세요.'); return; }
@@ -1328,7 +1273,6 @@ $('signupBtn').onclick = async ()=>{
   }catch(e){ showMsg('signupMsg', translateAuthErr(e)); }
   $('signupBtn').disabled=false;
 };
-<br>
 $('loginBtn').onclick = async ()=>{
   const email=$('loginEmail').value.trim(), pw=$('loginPw').value;
   if(!email||!pw){ showMsg('loginMsg','이메일과 비밀번호를 입력해주세요.'); return; }
@@ -1339,14 +1283,12 @@ $('loginBtn').onclick = async ()=>{
   }catch(e){ showMsg('loginMsg', translateAuthErr(e)); }
   $('loginBtn').disabled=false;
 };
-<br>
 $('forgotBtn').onclick = async ()=>{
   const email=$('loginEmail').value.trim();
   if(!email){ showMsg('loginMsg','비밀번호 재설정을 위해 이메일을 먼저 입력해주세요.'); return; }
   try{ await sendPasswordResetEmail(auth, email); showMsg('loginMsg','비밀번호 재설정 이메일을 보냈습니다.', true); }
   catch(e){ showMsg('loginMsg', translateAuthErr(e)); }
 };
-<br>
 function translateAuthErr(e){
   const c=e.code||'';
   const map={
@@ -1360,8 +1302,7 @@ function translateAuthErr(e){
   };
   return map[c] || ('오류가 발생했습니다: '+c);
 }
-<br>
-/\* ---------------- Auth state ---------------- \*/
+/* ---------------- Auth state ---------------- */
 onAuthStateChanged(auth,async(user)=>{
   if(user){
     currentUser=user;
@@ -1392,12 +1333,11 @@ onAuthStateChanged(auth,async(user)=>{
     currentUser=null;myDoc=null;activeTeam=TEAM_ROBOFEST;refreshTeamBotIds();exitApp();
   }
 });
-<br>
 function stopTeamDataListeners(){
   if(usersUnsub){usersUnsub();usersUnsub=null;}
   if(categoriesUnsub){categoriesUnsub();categoriesUnsub=null;}
   if(channelsUnsub){channelsUnsub();channelsUnsub=null;}
-  teamFeedUnsubs.forEach(fn=>{try{fn();}catch(\_e){}});
+  teamFeedUnsubs.forEach(fn=>{try{fn();}catch(_e){}});
   teamFeedUnsubs=[];
   if(msgUnsub){msgUnsub();msgUnsub=null;}
   if(typingUnsub){typingUnsub();typingUnsub=null;}
@@ -1431,7 +1371,6 @@ async function switchActiveTeam(team){
   toast(`${teamLabel(activeTeam)} 워크스페이스로 전환했습니다.`);closeDrawer();
 }
 document.querySelectorAll('[data-team-switch]').forEach(btn=>btn.onclick=()=>switchActiveTeam(btn.getAttribute('data-team-switch')));
-<br>
 function enterApp(){
   $('authView').style.display='none';
   $('appView').classList.add('show');
@@ -1444,7 +1383,6 @@ function enterApp(){
   botModeOn=false; updateBotModeUI();
   applyUiSettings();
   updateTeamSwitcherUI();
-<br>
   setupPresence();
   listenUsers();
   listenStructure();
@@ -1456,7 +1394,6 @@ function enterApp(){
   showDashboard();
   setTimeout(()=>recoverPendingBotTasks(),700);
 }
-<br>
 function renderAvatarInto(el, url, nick){
   const letterSpan = el.querySelector('#meAvatarLetter') || null;
   let img = el.querySelector('img');
@@ -1466,8 +1403,7 @@ function renderAvatarInto(el, url, nick){
     if(letterSpan) letterSpan.style.display='none';
   }
 }
-<br>
-/\* ---------------- Presence (RTDB) ---------------- \*/
+/* ---------------- Presence (RTDB) ---------------- */
 function setupPresence(){
   const myPresenceRef = ref(rtdb, 'presence/'+currentUser.uid);
   const connectedRef = ref(rtdb, '.info/connected');
@@ -1510,8 +1446,7 @@ function avatarHtml(u, size=28){
   }
   return `<span class="avatar" style="width:${size}px;height:${size}px;">${escapeHtml(nick.slice(0,1))}<span class="status-dot ${online?'online':''}"></span></span>`;
 }
-<br>
-/\* ---------------- Users listener ---------------- \*/
+/* ---------------- Users listener ---------------- */
 function listenUsers(){
   if(usersUnsub)usersUnsub();
   const q=isTeamLeadAccount()?collection(db,'users'):query(collection(db,'users'),where('team','==',activeTeam));
@@ -1526,7 +1461,6 @@ function listenUsers(){
     updateTeamSwitcherUI();renderMemberPanel();renderPresence(presenceData);refreshUserAccessUI();checkWeeklyMvpCycle();
   },e=>console.warn('users listener error',e));
 }
-<br>
 function renderMemberPanel(){
   const body=$('memberPanelBody');
   const groups={ 선생님:[], 팀장:[], 팀원:[] };
@@ -1555,19 +1489,18 @@ $('memberBtn').onclick=()=>{
   else { mp.style.display = mp.style.display==='none' ? '' : 'none'; }
 };
 $('memberScrim').onclick=()=>{ $('memberPanel').classList.remove('popup'); $('memberScrim').classList.remove('show'); };
-<br>
-/\* ---------------- Structure (categories/channels) ---------------- \*/
+/* ---------------- Structure (categories/channels) ---------------- */
 function teamStructureFallback(team=activeTeam){
   const src=team===TEAM_CCE?CCE_STRUCTURE:DEFAULT_STRUCTURE;
   return src.map(cat=>({
     id:cat.id,name:cat.name,position:cat.position,team,
-    \_\_virtual:true
+    __virtual:true
   }));
 }
 function teamChannelFallback(team=activeTeam){
   const src=team===TEAM_CCE?CCE_STRUCTURE:DEFAULT_STRUCTURE;
   return src.flatMap(cat=>cat.channels.map((c,i)=>({
-    id:c.id,categoryId:cat.id,name:c.name,position:i,allowedRoles:[],team,topic:'',locked:false,archived:false,\_\_virtual:true
+    id:c.id,categoryId:cat.id,name:c.name,position:i,allowedRoles:[],team,topic:'',locked:false,archived:false,__virtual:true
   })));
 }
 function mergeWithTeamFallback(dbItems, fallbackItems){
@@ -1584,7 +1517,7 @@ function listenStructure(){
   categoriesUnsub=onSnapshot(catQuery,snap=>{
     const dbCats=snap.docs.map(d=>({id:d.id,...d.data()})).filter(c=>teamResourceMatches(c));
     categories=mergeWithTeamFallback(dbCats,teamStructureFallback(activeTeam));
-    structureSeeded=categories.some(c=>!c.\_\_virtual);
+    structureSeeded=categories.some(c=>!c.__virtual);
     ensureBotChannelExists();
     renderSidebarChannels();
   },e=>{
@@ -1592,7 +1525,6 @@ function listenStructure(){
     categories=teamStructureFallback(activeTeam);
     renderSidebarChannels();
   });
-<br>
   const chQuery=activeTeam===TEAM_CCE
     ?query(collection(db,'channels'),where('team','==',TEAM_CCE))
     :query(collection(db,'channels'));
@@ -1651,7 +1583,6 @@ async function ensureBotChannelExists(){
   }catch(e){console.error('bot channel ensure error',e);}
   botChannelEnsureInFlight=false;
 }
-<br>
 let collapsedCats = {};
 function renderSidebarChannels(){
   const box=$('sbChannels');
@@ -1668,15 +1599,15 @@ function renderSidebarChannels(){
     return `<div class="sb-cat" data-cat="${escapeHtml(cat.id)}">
       <div class="sb-cat-head ${collapsed?'collapsed':''}" data-toggle="${escapeHtml(cat.id)}">
         <span class="car">▾</span><span>${escapeHtml(cat.name)}</span>
-        ${myDoc?.isAdmin&&!cat.\_\_virtual?`<span class="sb-cat-admin-del" data-delcat="${escapeHtml(cat.id)}">삭제</span>`:''}
+        ${myDoc?.isAdmin&&!cat.__virtual?`<span class="sb-cat-admin-del" data-delcat="${escapeHtml(cat.id)}">삭제</span>`:''}
       </div>
       <div class="sb-chan-list ${collapsed?'collapsed':''}">
         ${chans.map(ch=>`<div class="sb-chan ${ch.id===currentChannelId?'active':''}" data-chan="${escapeHtml(ch.id)}" data-catname="${escapeHtml(cat.name)}">
             <span class="hash">#</span><span>${escapeHtml(ch.name)}</span>
             <span class="unread-dot ${channelHasUnread(ch)?'on':''}"></span>
-            ${myDoc?.isAdmin&&!ch.\_\_virtual?`<span class="chan-perm" data-permchan="${escapeHtml(ch.id)}" title="접근 권한">⚙</span><span class="del-x" data-delchan="${escapeHtml(ch.id)}">✕</span>`:''}
+            ${myDoc?.isAdmin&&!ch.__virtual?`<span class="chan-perm" data-permchan="${escapeHtml(ch.id)}" title="접근 권한">⚙</span><span class="del-x" data-delchan="${escapeHtml(ch.id)}">✕</span>`:''}
           </div>`).join('')}
-        ${myDoc?.isAdmin&&!cat.\_\_virtual?`<div class="sb-add-chan" data-addchan="${escapeHtml(cat.id)}">+ 채널 추가</div>`:''}
+        ${myDoc?.isAdmin&&!cat.__virtual?`<div class="sb-add-chan" data-addchan="${escapeHtml(cat.id)}">+ 채널 추가</div>`:''}
         ${!chans.length?'<div class="empty" style="padding:5px 16px;font-size:11px;">표시할 채널이 없습니다.</div>':''}
       </div>
     </div>`;
@@ -1684,14 +1615,13 @@ function renderSidebarChannels(){
   const addCatBtn=$('addCatBtn'); if(addCatBtn)addCatBtn.classList.toggle('hidden',!myDoc?.isAdmin);
   box.querySelectorAll('[data-toggle]').forEach(el=>el.onclick=()=>{const id=el.getAttribute('data-toggle');collapsedCats[id]=!collapsedCats[id];renderSidebarChannels();});
   box.querySelectorAll('[data-chan]').forEach(el=>el.onclick=()=>{const cid=el.getAttribute('data-chan');const ch=channels.find(c=>c.id===cid);if(!ch||!canSeeChannel(ch))return;openChannel(cid,ch.name,categories.find(c=>c.id===ch.categoryId)?.name||'');closeDrawer();});
-  box.querySelectorAll('[data-delchan]').forEach(el=>el.onclick=async e=>{e.stopPropagation();const cid=el.getAttribute('data-delchan');const chObj=channels.find(c=>c.id===cid);if(!chObj||!teamResourceMatches(chObj)||chObj.\_\_virtual)return;if(!confirm(`#${chObj.name} 채널을 삭제할까요?`))return;await deleteDoc(doc(db,'channels',cid));if(cid!==BOT_CHANNEL_ID)sendBotMessage(BOT_CHANNEL_ID,`🗑 ${myDoc.nickname}님이 #${chObj.name} 채널을 삭제했어요.`);});
+  box.querySelectorAll('[data-delchan]').forEach(el=>el.onclick=async e=>{e.stopPropagation();const cid=el.getAttribute('data-delchan');const chObj=channels.find(c=>c.id===cid);if(!chObj||!teamResourceMatches(chObj)||chObj.__virtual)return;if(!confirm(`#${chObj.name} 채널을 삭제할까요?`))return;await deleteDoc(doc(db,'channels',cid));if(cid!==BOT_CHANNEL_ID)sendBotMessage(BOT_CHANNEL_ID,`🗑 ${myDoc.nickname}님이 #${chObj.name} 채널을 삭제했어요.`);});
   box.querySelectorAll('[data-permchan]').forEach(el=>el.onclick=e=>{e.stopPropagation();openChannelPermModal(el.getAttribute('data-permchan'));});
-  box.querySelectorAll('[data-delcat]').forEach(el=>el.onclick=async e=>{e.stopPropagation();const cid=el.getAttribute('data-delcat');const catObj=categories.find(c=>c.id===cid);if(!catObj||!teamResourceMatches(catObj)||catObj.\_\_virtual)return;if(!confirm(`"${catObj.name}"와 하위 채널을 모두 삭제할까요?`))return;for(const c of channels.filter(x=>x.categoryId===cid&&teamResourceMatches(x)))await deleteDoc(doc(db,'channels',c.id));await deleteDoc(doc(db,'categories',cid));if(cid!==BOT_CAT_ID)sendBotMessage(BOT_CHANNEL_ID,`🗑 ${myDoc.nickname}님이 "${catObj.name}" 카테고리를 삭제했어요.`);});
+  box.querySelectorAll('[data-delcat]').forEach(el=>el.onclick=async e=>{e.stopPropagation();const cid=el.getAttribute('data-delcat');const catObj=categories.find(c=>c.id===cid);if(!catObj||!teamResourceMatches(catObj)||catObj.__virtual)return;if(!confirm(`"${catObj.name}"와 하위 채널을 모두 삭제할까요?`))return;for(const c of channels.filter(x=>x.categoryId===cid&&teamResourceMatches(x)))await deleteDoc(doc(db,'channels',c.id));await deleteDoc(doc(db,'categories',cid));if(cid!==BOT_CAT_ID)sendBotMessage(BOT_CHANNEL_ID,`🗑 ${myDoc.nickname}님이 "${catObj.name}" 카테고리를 삭제했어요.`);});
   box.querySelectorAll('[data-addchan]').forEach(el=>el.onclick=async e=>{e.stopPropagation();const catId=el.getAttribute('data-addchan');const catObj=categories.find(c=>c.id===catId);if(!catObj||!teamResourceMatches(catObj))return;const name=prompt('새 채널 이름을 입력하세요');if(!name?.trim())return;const count=channels.filter(c=>c.categoryId===catId&&teamResourceMatches(c)).length;await addDoc(collection(db,'channels'),{categoryId:catId,name:name.trim(),position:count,allowedRoles:[],team:activeTeam,topic:'',locked:false,archived:false});sendBotMessage(BOT_CHANNEL_ID,`📌 ${myDoc.nickname}님이 #${name.trim()} 채널을 만들었어요. (${catObj.name})`);});
 }
 $('addCatBtn').onclick=async()=>{if(!myDoc?.isAdmin)return;const name=prompt('새 카테고리 이름을 입력하세요 (예: 📁 새 카테고리)');if(!name?.trim())return;await addDoc(collection(db,'categories'),{name:name.trim(),position:categories.length,team:activeTeam});sendBotMessage(BOT_CHANNEL_ID,`📁 ${myDoc.nickname}님이 "${name.trim()}" 카테고리를 새로 만들었어요.`);};
-<br>
-/\* ---------------- Channel access permissions ---------------- \*/
+/* ---------------- Channel access permissions ---------------- */
 function canSeeChannel(ch){
   if(!ch||!teamResourceMatches(ch))return false;
   if(myDoc?.isAdmin&&(isTeamLeadAccount()||userTeam(myDoc)===activeTeam))return true;
@@ -1725,8 +1655,7 @@ function openChannelPermModal(chanId){
     sendBotMessage(BOT_CHANNEL_ID, `⚙ ${myDoc.nickname}님이 #${ch.name} 채널의 접근 권한을 변경했어요.`);
   };
 }
-<br>
-/\* ---------------- Navigation ---------------- \*/
+/* ---------------- Navigation ---------------- */
 $('navDashboard').onclick=()=>{ showDashboard(); closeDrawer(); };
 $('navCalendar').onclick=()=>{ showCalendar(); closeDrawer(); };
 function showDashboard(){
@@ -1759,7 +1688,6 @@ function openChannel(chanId, chanName, catName){
   $('dashboardView').classList.add('hidden');
   $('calendarView').classList.add('hidden');
   renderSidebarChannels();
-<br>
   if(FEATURE_CHANNELS[chanId]){
     $('chatView').classList.add('hidden');
     $('featureView').classList.remove('hidden');
@@ -1771,8 +1699,7 @@ function openChannel(chanId, chanName, catName){
     openChatChannel(chanId);
   }
 }
-<br>
-/\* ---------------- Read state (unread dots) ---------------- \*/
+/* ---------------- Read state (unread dots) ---------------- */
 function markChannelRead(chanId){
   if(!currentUser) return;
   updateDoc(doc(db,'users',currentUser.uid), { [`readState.${chanId}`]: Date.now() }).catch(()=>{});
@@ -1781,12 +1708,11 @@ function markChannelRead(chanId){
 function channelHasUnread(ch){
   if(!myDoc || ch.id===currentChannelId) return false;
   if(!ch.lastMessageAt) return false;
-  const lastMsg = ch.lastMessageAt.toMillis ? ch.lastMessageAt.toMillis() : (ch.lastMessageAt.seconds? ch.lastMessageAt.seconds\*1000 : 0);
+  const lastMsg = ch.lastMessageAt.toMillis ? ch.lastMessageAt.toMillis() : (ch.lastMessageAt.seconds? ch.lastMessageAt.seconds*1000 : 0);
   const readAt = (myDoc.readState && myDoc.readState[ch.id]) || 0;
   return lastMsg > readAt;
 }
-<br>
-/\* ---------------- Chat ---------------- \*/
+/* ---------------- Chat ---------------- */
 function openChatChannel(chanId){
   if(msgUnsub) msgUnsub();
   if(typingUnsub) typingUnsub();
@@ -1838,7 +1764,7 @@ function renderPinBar(snap){
     if(row){ row\.scrollIntoView({behavior:'smooth', block:'center'}); row\.style.background='var(--blue-glow)'; setTimeout(()=>row\.style.background='',900); }
   });
 }
-/\* search within channel \*/
+/* search within channel */
 $('searchBtn').onclick=()=>{
   $('searchBox').classList.remove('hidden'); $('searchBtn').classList.add('hidden');
   $('searchInput').value=''; $('searchInput').focus();
@@ -1860,7 +1786,7 @@ function applySearchFilter(){
     row\.classList.toggle('search-hide', !match);
   });
 }
-/\* ---------------- Chat export / backup ---------------- \*/
+/* ---------------- Chat export / backup ---------------- */
 $('exportBtn').onclick=exportChannelChat;
 async function exportChannelChat(){
   if(!currentChannelId) return;
@@ -1886,7 +1812,7 @@ async function exportChannelChat(){
     const blob = new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'});
     const url = URL.createObjectURL(blob);
     const a=document.createElement('a');
-    a.href=url; a.download = `${(currentChannelName||'channel')}\_backup\_${new Date().toISOString().slice(0,10)}.txt`;
+    a.href=url; a.download = `${(currentChannelName||'channel')}_backup_${new Date().toISOString().slice(0,10)}.txt`;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(()=>URL.revokeObjectURL(url), 2000);
     toast('내보내기가 완료되었습니다.');
@@ -1908,7 +1834,7 @@ function renderMessage(id, m){
   const canManageTeamMessage=isTeamLeadAccount()||!!myDoc.isAdmin;
   const isPoll=m.type==='poll';
   const attachHtml = (m.attachments && m.attachments.length)
-    ? `<div class="attach-list">${m.attachments.map(a=>`<a class="attach-item" href="${escapeHtml(a.url)}" target="\_blank" rel="noopener">📎 ${escapeHtml(a.name)}</a>`).join('')}</div>`
+    ? `<div class="attach-list">${m.attachments.map(a=>`<a class="attach-item" href="${escapeHtml(a.url)}" target="_blank" rel="noopener">📎 ${escapeHtml(a.name)}</a>`).join('')}</div>`
     : '';
   const bodyHtml = isPoll
     ? renderPoll(id, m)
@@ -2012,16 +1938,14 @@ async function toggleReaction(msgId, emoji){
   const uids = reactions[emoji] || [];
   const has = uids.includes(currentUser.uid);
   const field='reactions.'+emoji;
-<br>
   try{
     await updateDoc(mref, { [field]: has ? arrayRemove(currentUser.uid) : arrayUnion(currentUser.uid) });
-<br>
     // MVP의 '리액션 점수'는 리액션을 누른 사람 점수가 아니라
     // 그 리액션을 받은 메시지 작성자의 점수입니다. 자기 글 셀프 리액션/봇 글은 제외합니다.
     const authorUid=msg.userId;
     if(authorUid && authorUid!==currentUser.uid && authorUid!=='BOT' && !msg.isBot){
       try{ await bumpStat('reactCount', authorUid, has ? -1 : 1); }
-      catch(e){ toast('리액션은 반영됐지만 MVP 통계 기록에 실패했어요. Firebase 권한을 확인해주세요.'); }
+      catch(e){ console.warn('MVP 리액션 통계 저장 실패(리액션은 정상):', e); }
     }
   }catch(e){
     console.error('reaction update error', e);
@@ -2041,14 +1965,14 @@ function openReactionPicker(anchorEl, msgId){
 }
 function startEdit(row,id,content){
   const body=row\.querySelector('.msg-text');
-  body.outerHTML = `<div class="msg-edit-box"><input type="text" value="${escapeHtml(content)}" id="editInput\_${id}"><button class="btn btn-sm" id="editSave\_${id}">저장</button><button class="btn btn-sm btn-ghost" id="editCancel\_${id}">취소</button></div>`;
-  $('editSave\_'+id).onclick=async()=>{
-    const val=$('editInput\_'+id).value.trim();
+  body.outerHTML = `<div class="msg-edit-box"><input type="text" value="${escapeHtml(content)}" id="editInput_${id}"><button class="btn btn-sm" id="editSave_${id}">저장</button><button class="btn btn-sm btn-ghost" id="editCancel_${id}">취소</button></div>`;
+  $('editSave_'+id).onclick=async()=>{
+    const val=$('editInput_'+id).value.trim();
     const ch=channels.find(c=>c.id===currentChannelId);
     if(!canSeeChannel(ch)){toast('현재 워크스페이스의 채널이 아닙니다.');return;}
     if(val)await updateDoc(doc(db,'channels',currentChannelId,'messages',id),{content:val,team:activeTeam,editedAt:serverTimestamp()});
   };
-  $('editCancel\_'+id).onclick=()=>{ /\* re-render happens automatically via snapshot \*/ };
+  $('editCancel_'+id).onclick=()=>{ /* re-render happens automatically via snapshot */ };
 }
 function renderReplyPreview(){
   const el=$('replyPreview');
@@ -2069,7 +1993,6 @@ function renderAttachPreview(){
     renderAttachPreview();
   });
 }
-<br>
 const msgInput=$('msgInput');
 msgInput.addEventListener('input', ()=>{
   saveChannelDraft();
@@ -2084,13 +2007,12 @@ msgInput.addEventListener('keydown',(e)=>{
   if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); sendMessage(); }
 });
 $('sendBtn').onclick=sendMessage;
-<br>
 function timeoutUntilMs(u){
   const v=u?.timeoutUntil;
   if(!v) return 0;
   if(typeof v==='number') return v;
   if(v.toMillis) return v.toMillis();
-  if(v.seconds) return v.seconds\*1000;
+  if(v.seconds) return v.seconds*1000;
   return 0;
 }
 function isUserTimedOut(u=myDoc){ return timeoutUntilMs(u)>Date.now(); }
@@ -2105,7 +2027,6 @@ function timeoutRemainingText(u=myDoc){
   if(h<24)return `${h}시간${m?` ${m}분`:''}`;
   return `${Math.floor(h/24)}일${h%24?` ${h%24}시간`:''}`;
 }
-<br>
 function refreshUserAccessUI(){
   const timed=isUserTimedOut();
   const count=botTokensOf(myDoc);
@@ -2125,7 +2046,6 @@ function refreshUserAccessUI(){
     notice.textContent=`⏳ 타임아웃 상태입니다. 남은 시간: ${timeoutRemainingText()}`;
   }else if(notice){notice.remove();}
 }
-<br>
 async function sendMessage(){
   refreshUserAccessUI();
   if(isUserTimedOut()){ toast(`⏳ 타임아웃 상태입니다. 남은 시간: ${timeoutRemainingText()}`); return; }
@@ -2173,8 +2093,7 @@ async function sendMessage(){
   }
   setTypingState(false);
 }
-<br>
-/\* ---------------- Bot: 명령어 & 봇 모드 ---------------- \*/
+/* ---------------- Bot: 명령어 & 봇 모드 ---------------- */
 function canUseAdminCommands(){
   if(!myDoc) return false;
   return !!myDoc.isAdmin || (myDoc.roles||[]).includes('leader') || (myDoc.roles||[]).includes('teacher');
@@ -2191,7 +2110,7 @@ async function sendBotMessage(channelId,content,actingUid,botMetaHtml,botExtra={
       ...(botMetaHtml?{botMetaHtml}:{}),...(botExtra||{}),createdAt:serverTimestamp()
     };
     // 새로고침/복구 중 같은 작업이 두 번 저장되는 것을 막기 위해 작업 ID가 있으면 고정 문서 ID를 사용합니다.
-    const taskKey=botExtra?.botTaskId ? `bot-${String(botExtra.botTaskId).replace(/[^a-zA-Z0-9\_-]/g,'\_')}` : '';
+    const taskKey=botExtra?.botTaskId ? `bot-${String(botExtra.botTaskId).replace(/[^a-zA-Z0-9_-]/g,'_')}` : '';
     if(taskKey) await setDoc(doc(db,'channels',channelId,'messages',taskKey),payload,{merge:true});
     else await addDoc(collection(db,'channels',channelId,'messages'), payload);
     updateDoc(doc(db,'channels',channelId), { lastMessageAt: serverTimestamp() }).catch(()=>{});
@@ -2201,15 +2120,13 @@ function postBotReply(text){
   const target = (currentChannelId && !FEATURE_CHANNELS[currentChannelId]) ? currentChannelId : BOT_CHANNEL_ID;
   return sendBotMessage(target, text);
 }
-<br>
-/\* ---------------- Gemini Bot Chat ---------------- \*/
+/* ---------------- Gemini Bot Chat ---------------- */
 function botTokensOf(u){ return Math.max(0,Number(u?.botTokens||0)); }
 async function getBotSettings(){
   const s=await getDoc(doc(db,'settings','bot'));
   return s.exists()?s.data():{};
 }
-<br>
-/\* ---------------- NEXTBOT Agent Tools ---------------- \*/
+/* ---------------- NEXTBOT Agent Tools ---------------- */
 const NEXTBOT_TOOL_POLICY = {
   readTeam:true, readChannels:true, searchMessages:true, readRecords:true,
   postMessage:true, pinMessage:true, createChannel:true, manageTasks:true
@@ -2224,7 +2141,6 @@ function nextbotToolCatalog(){
 - messages.pin: 지정 메시지 고정/해제 (관리자 권한 필요)
 - channels.create: 새 채널 생성 (관리자 권한 필요)
 - tasks.manage: 현재 사용자의 할 일 추가/완료/삭제
-<br>
 도구 사용 규칙:
 1) 질문에 답하기 위해 필요한 경우 도구를 적극적으로 사용하세요.
 2) 읽기 도구는 자유롭게 사용할 수 있습니다.
@@ -2232,7 +2148,6 @@ function nextbotToolCatalog(){
 4) 관리자 전용 도구는 실제 관리자일 때만 실행됩니다.
 5) 실행 결과를 사실처럼 꾸며내지 말고 실제 결과를 바탕으로 답하세요.
 6) 도구가 필요 없으면 사용하지 마세요.
-<br>
 도구 호출 형식(필요할 때 답변에 포함):
 [[NEXTBOT_TOOL]]{"name":"team.list","args":{}}
 [[NEXTBOT_TOOL]]{"name":"messages.search","args":{"query":"검색어","limit":20}}
@@ -2280,7 +2195,7 @@ async function nextbotAgentTool(name,args={},actorUid){
   throw new Error('알 수 없는 NEXTBOT 도구입니다.');
 }
 async function runNextbotToolCalls(text,actorUid){
-  const re=/\\[\\[NEXTBOT_TOOL\\]\\]\s\*(\\{[\s\S]\*?\\})/g; let m,results=[],clean=text;
+  const re=/\[\[NEXTBOT_TOOL\]\]\s*(\\{[\s\S]*?\\})/g; let m,results=[],clean=text;
   while((m=re.exec(text))){
     try{const call=JSON.parse(m[1]);const result=await nextbotAgentTool(call.name,call.args||{},actorUid);results.push({call,result});}
     catch(e){results.push({call:{name:'unknown'},error:e.message||String(e)});}
@@ -2288,7 +2203,6 @@ async function runNextbotToolCalls(text,actorUid){
   }
   return {text:clean.replace(/\n{3,}/g,'\n\n').trim(),results};
 }
-<br>
 async function collectAllChatForBot(){
   const rows=[];
   for(const ch of channels){
@@ -2448,9 +2362,9 @@ function notifyBotCompletion(task,answer){
   try{
     if('Notification' in window && Notification.permission==='granted'){
       const n=new Notification('NEXTBOT 답변 완료',{body,tag:`nextbot-${task?.id||Date.now()}`});
-      n.onclick=()=>{try{window\.focus();}catch(\_){} if(task?.channelId && !FEATURE_CHANNELS[task.channelId])openChannel(task.channelId,task.channelName,'');};
+      n.onclick=()=>{try{window\.focus();}catch(_){} if(task?.channelId && !FEATURE_CHANNELS[task.channelId])openChannel(task.channelId,task.channelName,'');};
     }
-  }catch(\_e){}
+  }catch(_e){}
 }
 async function streamGeminiAnswer(apiKey,model,prompt,onText){
   const url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:streamGenerateContent?alt=sse&key=${encodeURIComponent(apiKey)}`;
@@ -2469,16 +2383,16 @@ async function streamGeminiAnswer(apiKey,model,prompt,onText){
     const body={contents:[{role:'user',parts:[{text:reqPrompt}]}],generationConfig:{temperature:0.35,maxOutputTokens:maxTokens}};
     let res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     if(!res.ok){
-      let data={};try{data=await res.json();}catch(\_e){}
+      let data={};try{data=await res.json();}catch(_e){}
       // 일부 모델/프로젝트가 32768을 허용하지 않는 경우 16384로 한 번 낮춰 재시도합니다.
       if((res.status===400||res.status===413) && maxTokens>16384){
         res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...body,generationConfig:{temperature:0.35,maxOutputTokens:16384}})});
       }
-      if(!res.ok){data={};try{data=await res.json();}catch(\_e){}const msg=data?.error?.message||`Gemini API 오류 (${res.status})`;const friendly=res.status===403?'Gemini 프로젝트 접근 권한이 거부되었습니다. 관리자 API 키/프로젝트 상태를 확인해주세요.':res.status===429?'Gemini 요청 한도에 도달했습니다. 잠시 후 다시 시도해주세요.':res.status===404?'선택한 Gemini 모델을 찾을 수 없습니다. 관리자 페이지에서 모델을 확인해주세요.':msg;throw new Error(friendly);}
+      if(!res.ok){data={};try{data=await res.json();}catch(_e){}const msg=data?.error?.message||`Gemini API 오류 (${res.status})`;const friendly=res.status===403?'Gemini 프로젝트 접근 권한이 거부되었습니다. 관리자 API 키/프로젝트 상태를 확인해주세요.':res.status===429?'Gemini 요청 한도에 도달했습니다. 잠시 후 다시 시도해주세요.':res.status===404?'선택한 Gemini 모델을 찾을 수 없습니다. 관리자 페이지에서 모델을 확인해주세요.':msg;throw new Error(friendly);}
     }
     if(!res.body)throw new Error('이 브라우저에서는 Gemini 스트리밍을 지원하지 않습니다.');
     const reader=res.body.getReader(),decoder=new TextDecoder('utf-8');let buffer='',partAnswer='';
-    const consume=async raw=>{for(const line of raw\.split(/\r?\n/)){const t=line.trim();if(!t||!t.startsWith('data:'))continue;const payload=t.slice(5).trim();if(payload==='[DONE]')continue;try{const obj=JSON.parse(payload),parts=obj?.candidates?.[0]?.content?.parts||[],chunk=parts.map(x=>x.text||'').join('');if(obj?.usageMetadata)mergeUsage(obj.usageMetadata);const reason=obj?.candidates?.[0]?.finishReason;if(reason)lastFinishReason=reason;if(chunk){partAnswer+=chunk;answer+=chunk;onText(answer);}}catch(\_e){}}};
+    const consume=async raw=>{for(const line of raw\.split(/\r?\n/)){const t=line.trim();if(!t||!t.startsWith('data:'))continue;const payload=t.slice(5).trim();if(payload==='[DONE]')continue;try{const obj=JSON.parse(payload),parts=obj?.candidates?.[0]?.content?.parts||[],chunk=parts.map(x=>x.text||'').join('');if(obj?.usageMetadata)mergeUsage(obj.usageMetadata);const reason=obj?.candidates?.[0]?.finishReason;if(reason)lastFinishReason=reason;if(chunk){partAnswer+=chunk;answer+=chunk;onText(answer);}}catch(_e){}}};
     while(true){const {value,done}=await reader.read();if(done)break;buffer+=decoder.decode(value,{stream:true});const events=buffer.split(/\n\n/);buffer=events.pop()||'';for(const ev of events)await consume(ev);}buffer+=decoder.decode();if(buffer.trim())await consume(buffer);
     return partAnswer;
   };
@@ -2491,10 +2405,8 @@ async function streamGeminiAnswer(apiKey,model,prompt,onText){
     continuation++;
     // 이전 출력 전체를 기준으로 이어 쓰게 하여 코드블록/문서가 중간에서 끊겨도 자동 완성합니다.
     reqPrompt=`${prompt}
-<br>
 === 지금까지 생성된 답변 ===
 ${answer}
-<br>
 === 이어쓰기 지침 ===
 위 답변은 출력 토큰 한도 때문에 중간에서 끊겼습니다. 위 내용을 절대 반복하거나 처음부터 다시 쓰지 말고, 마지막 문자 바로 다음부터 자연스럽게 이어서 작성하세요. 코드라면 기존 코드의 정확한 다음 줄부터 계속하고, 필요한 닫는 괄호/태그/코드블록까지 완전하게 마무리하세요. 설명 없이 이어지는 내용만 출력하세요.`;
   }
@@ -2527,14 +2439,10 @@ async function handleBotChatCommand(question){
     const defaultBotPrompt='당신은 이 팀 채팅 서비스의 AI 봇 NEXTBOT입니다. 사용자의 요청에 직접 답하세요. 과거 채팅 기록은 필요한 경우 참고 자료로 사용하세요. 기록에 없는 사실도 사용자가 새로운 창작, 코딩, 게임, HTML, Python 등의 생성을 요청한다면 직접 새로 만들어 제공할 수 있습니다. 기록에 없는 과거 사실을 사실인 것처럼 지어내지는 마세요. 답변은 한국어로, 필요한 경우 Markdown을 사용하세요(제목, 굵게, 기울임, 취소선, 목록, 표, 코드블록 등). 코드나 긴 문서를 요청받으면 절대 임의로 생략하거나 요약하지 말고 실행 가능한 완성본 전체를 제공하세요. 출력 한도에 닿으면 자동으로 이어서 완성해야 하며, 코드의 중간 부분을 생략했다는 식의 축약 표현을 사용하지 마세요.';
     const baseBotPrompt=String(settings.defaultPrompt||defaultBotPrompt).trim()||defaultBotPrompt;
     const prompt=`${baseBotPrompt}
-<br>
 ${nextbotToolCatalog()}
-<br>
 현재 질문자: ${actorName}
-<br>
 === 전체 채팅 기록 ===
 ${history}
-<br>
 === 질문 ===
 ${question}`;
     if(currentChannelId===task.channelId)updateBotStreamingBubble('','생성 중...',false,taskId,task.channelId);
@@ -2584,7 +2492,7 @@ ${question}`;
   }catch(e){
     console.error('Gemini bot error',e);
     if(currentChannelId===task.channelId)removeBotStreamingBubble(taskId);
-    if(consumed){try{await updateDoc(doc(db,'users',currentUser.uid),{botTokens:increment(BOT_CHAT_MIN_COST)});}catch(\_e){}}
+    if(consumed){try{await updateDoc(doc(db,'users',currentUser.uid),{botTokens:increment(BOT_CHAT_MIN_COST)});}catch(_e){}}
     void clearPersistedBotTask(task.id);
     toast('봇 답변에 실패했습니다: '+(e.message||String(e)));
   }finally{
@@ -2592,9 +2500,9 @@ ${question}`;
     renderBotTaskIndicator();
   }
 }
-<br>
-<br>
-/\* ---------------- MVP 자동 선정: 주간 활동 통계 + 투표 + 발표 ---------------- \*/
+
+
+/* ---------------- MVP 자동 선정: 주간 활동 통계 + 투표 + 발표 ---------------- */
 function getMonday(d){
   const date=new Date(d);
   const day=date.getDay(); // 0=일 ... 6=토
@@ -2641,7 +2549,6 @@ async function computeRanking(weekId){
   const data = snap.exists() ? snap.data() : {};
   const msgCount = data.msgCount||{}, reactCount = data.reactCount||{};
   const uids = new Set([...Object.keys(msgCount), ...Object.keys(reactCount)]);
-<br>
   // users onSnapshot이 아직 첫 데이터를 받기 전 /순위를 실행해도 닉네임을 찾을 수 있게 보강
   const missing=[...uids].filter(uid=>!usersMap[uid]);
   await Promise.all(missing.map(async uid=>{
@@ -2653,7 +2560,6 @@ async function computeRanking(weekId){
       }
     }catch(e){ console.warn('ranking user load failed', uid, e); }
   }));
-<br>
   const rows=[];
   uids.forEach(uid=>{
     const u = usersMap[uid];
@@ -2662,7 +2568,7 @@ async function computeRanking(weekId){
     const roles=u.roles||[];
     if(u.isAdmin || roles.includes('leader') || roles.includes('teacher')) return;
     const m=Number(msgCount[uid])||0, r=Number(reactCount[uid])||0;
-    const score = m\*MVP_MSG_WEIGHT + r\*MVP_REACT_WEIGHT;
+    const score = m*MVP_MSG_WEIGHT + r*MVP_REACT_WEIGHT;
     if(score>0) rows.push({ uid, nickname:u.nickname||'?', msgCount:m, reactCount:r, score });
   });
   rows.sort((a,b)=>b.score-a.score || b.reactCount-a.reactCount || b.msgCount-a.msgCount || a.nickname.localeCompare(b.nickname));
@@ -2724,7 +2630,6 @@ async function tallyAndAnnounceMvp(weekId, state){
     }
   }catch(e){ console.error('mvp tally error', e); }
 }
-<br>
 async function checkWeeklyMvpCycle(){
   if(mvpCycleChecked) return;
   if(!myDoc || !currentUser) return;
@@ -2756,7 +2661,6 @@ async function showCurrentRanking(){
   await postBotReply(`📊 이번 주 채팅 활동 랭킹 (진행 중 · 관리자 제외)\n` +
     top.map((c,i)=>`${i+1}. ${c.nickname} — ${c.score}점 (메시지 ${c.msgCount} / 받은 리액션 ${c.reactCount})`).join('\n'));
 }
-<br>
 function toggleBotMode(){
   if(!canUseAdminCommands()){ toast('관리자(팀장/선생님)만 봇 모드를 사용할 수 있어요.'); return; }
   botModeOn=!botModeOn;
@@ -2777,18 +2681,16 @@ window\.addEventListener('keydown', (e)=>{
     toggleBotMode();
   }
 });
-<br>
-/\* ============================================================
+/* ============================================================
    NEXTBOT MEGA PACK
    - MVP/랭킹, 팀 정보, 개인 생산성, 유틸리티, 채팅 UX/설정
    - 개인 데이터(todo/note/bookmark/favorites/settings/draft)는 계정별 저장소 사용
-   ============================================================ \*/
+   ============================================================ */
 let localTimerHandle=null, localTimerEnd=0;
-<br>
 function userStoreKey(name){ return `nextbot:${currentUser?.uid||'guest'}:${name}`; }
 function storeGet(name, fallback){
   try{ const v=localStorage.getItem(userStoreKey(name)); return v===null ? fallback : JSON.parse(v); }
-  catch(\_){ return fallback; }
+  catch(_){ return fallback; }
 }
 function storeSet(name, value){
   try{ localStorage.setItem(userStoreKey(name), JSON.stringify(value)); }catch(e){ console.warn('local store failed',e); }
@@ -2811,7 +2713,6 @@ function applyUiSettings(){
   document.body.classList.toggle('high-contrast',!!u.contrast);
 }
 function rerenderCurrentChannel(){ if(currentChannelId && !FEATURE_CHANNELS[currentChannelId]) openChatChannel(currentChannelId); }
-<br>
 function saveChannelDraft(){
   if(!currentUser || !currentChannelId || !msgInput) return;
   const drafts=storeGet('drafts',{}); const v=msgInput.value||'';
@@ -2827,13 +2728,12 @@ function restoreChannelDraft(chanId){
 function clearChannelDraft(chanId){
   if(!chanId) return; const drafts=storeGet('drafts',{}); delete drafts[chanId]; storeSet('drafts',drafts);
 }
-<br>
 async function copyTextSafe(text){
   try{
     if(navigator.clipboard && window\.isSecureContext){ await navigator.clipboard.writeText(text); return true; }
     const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
     const ok=document.execCommand('copy'); ta.remove(); return !!ok;
-  }catch(\_){ return false; }
+  }catch(_){ return false; }
 }
 async function copyMessageText(m,u){
   const text=m.type==='poll' ? `📊 ${m.question||''}` : (m.content||'');
@@ -2860,7 +2760,6 @@ function openBookmarksModal(){
     setTimeout(()=>{ const row=document.querySelector(`.msg-row[data-id="${b.msgId}"]`); if(row){row\.scrollIntoView({behavior:'smooth',block:'center'});row\.style.background='var(--blue-glow)';setTimeout(()=>row\.style.background='',1200);}else toast('최근 200개 메시지 밖의 북마크일 수 있어요.'); },700);
   });
 }
-<br>
 function favorites(){ return storeGet('favorites',[]); }
 function isFavoriteChannel(id){ return favorites().includes(id); }
 function updateFavoriteChannelButton(){
@@ -2877,7 +2776,6 @@ function openFavoriteChannelsModal(){
   openModal(`<h3>⭐ 즐겨찾기 채널</h3>${rows}`);
   document.querySelectorAll('[data-favopen]').forEach(el=>el.onclick=()=>{const c=channels.find(x=>x.id===el.dataset.favopen);if(!c)return;const cat=categories.find(x=>x.id===c.categoryId);closeModal();openChannel(c.id,c.name,cat?.name||'');});
 }
-<br>
 function todos(){ return storeGet('todos',[]); }
 function notes(){ return storeGet('notes',[]); }
 function prettyAgo(ms){
@@ -2885,11 +2783,11 @@ function prettyAgo(ms){
   if(m<1)return '방금'; if(m<60)return `${m}분 전`; const h=Math.floor(m/60); if(h<24)return `${h}시간 전`; return `${Math.floor(h/24)}일 전`;
 }
 function parseTimerArg(s){
-  const m=String(s||'').trim().toLowerCase().match(/^(\d+(?:\\.\d+)?)\s\*(s|m|h|초|분|시간)?$/); if(!m)return 0;
-  const n=Number(m[1]); const u=m[2]||'s'; const mult=(u==='h'||u==='시간')?3600000:(u==='m'||u==='분')?60000:1000; return Math.round(n\*mult);
+  const m=String(s||'').trim().toLowerCase().match(/^(\d+(?:\\.\d+)?)\s*(s|m|h|초|분|시간)?$/); if(!m)return 0;
+  const n=Number(m[1]); const u=m[2]||'s'; const mult=(u==='h'||u==='시간')?3600000:(u==='m'||u==='분')?60000:1000; return Math.round(n*mult);
 }
 function safeCalc(expr){
-  let e=String(expr||'').replace(/\\^/g,'\*\*'); if(!e || !/^[0-9+\\-\*/%().\s\*]+$/.test(e)) throw new Error('지원하지 않는 문자');
+  let e=String(expr||'').replace(/\\^/g,'**'); if(!e || !/^[0-9+\\-*/%().\s*]+$/.test(e)) throw new Error('지원하지 않는 문자');
   const v=Function(`"use strict"; return (${e})`)(); if(typeof v!=='number'||!Number.isFinite(v))throw new Error('계산 불가'); return v;
 }
 function normalizeRoleTerm(t){
@@ -2948,13 +2846,12 @@ function openToolsModal(){
   $('toolShortcuts').onclick=openShortcutModal;
   $('toolHelp').onclick=openCommandHelpModal;
 }
-<br>
 async function handleMegaCommand(cmd,args){
   switch(cmd){
     case '/봇도움말': { openCommandHelpModal(); return true; }
-    case '/내토큰': { const u=(await getDoc(doc(db,'users',currentUser.uid))).data()||myDoc||{}; await postBotReply(`🤖 ${myDoc.nickname}님의 AI 봇 토큰: \*\*${botTokensOf(u)}개\*\*\n• /봇채팅 질문 1회 = 1토큰\n• /회의요약도 1회당 1토큰을 사용합니다.`); return true; }
-    case '/내상태': { const u=(await getDoc(doc(db,'users',currentUser.uid))).data()||myDoc||{}; const p=presenceData[currentUser.uid]; await postBotReply(`👤 \*\*${u.nickname||myDoc.nickname}\*\*\n상태: ${isUserTimedOut(u)?`⏳ 타임아웃 (${timeoutRemainingText(u)})`:'✅ 이용 가능'}\n접속: ${p?.state==='online'?'🟢 온라인':'⚫ 오프라인'}\nAI 봇 토큰: 🤖 ${botTokensOf(u)}개`); return true; }
-    case '/핑': { const t=performance.now(); const ping=Math.max(0,Math.round(performance.now()-t)); await postBotReply(`🏓 \*\*PONG!\*\*\n봇 처리: ${ping}ms\n현재 상태: ${isUserTimedOut()?'⏳ 타임아웃':'🟢 정상 이용 가능'}`); return true; }
+    case '/내토큰': { const u=(await getDoc(doc(db,'users',currentUser.uid))).data()||myDoc||{}; await postBotReply(`🤖 ${myDoc.nickname}님의 AI 봇 토큰: **${botTokensOf(u)}개**\n• /봇채팅 질문 1회 = 1토큰\n• /회의요약도 1회당 1토큰을 사용합니다.`); return true; }
+    case '/내상태': { const u=(await getDoc(doc(db,'users',currentUser.uid))).data()||myDoc||{}; const p=presenceData[currentUser.uid]; await postBotReply(`👤 **${u.nickname||myDoc.nickname}**\n상태: ${isUserTimedOut(u)?`⏳ 타임아웃 (${timeoutRemainingText(u)})`:'✅ 이용 가능'}\n접속: ${p?.state==='online'?'🟢 온라인':'⚫ 오프라인'}\nAI 봇 토큰: 🤖 ${botTokensOf(u)}개`); return true; }
+    case '/핑': { const t=performance.now(); const ping=Math.max(0,Math.round(performance.now()-t)); await postBotReply(`🏓 **PONG!**\n봇 처리: ${ping}ms\n현재 상태: ${isUserTimedOut()?'⏳ 타임아웃':'🟢 정상 이용 가능'}`); return true; }
     case '/회의요약': { if(!args) args='지금까지의 회의 내용을 핵심 결정사항, 할 일, 담당자, 일정 중심으로 요약해줘.'; await handleBotChatCommand(args); return true; }
     case '/내점수': {
       const r=await computeRanking(weekIdOf(new Date())); const me=r.find(x=>x.uid===currentUser.uid);
@@ -3047,24 +2944,24 @@ async function handleMegaCommand(cmd,args){
       const a=notes(),i=(parseInt(args)||0)-1;if(!a[i]){toast('올바른 메모 번호를 입력해주세요.');return true;}a.splice(i,1);storeSet('notes',a);toast('🗑 메모를 삭제했어요.');return true;
     }
     case '/타이머': {
-      const ms=parseTimerArg(args);if(ms<1000||ms>24\*3600000){toast('예: /타이머 10m (1초\~24시간)');return true;}if(localTimerHandle)clearTimeout(localTimerHandle);localTimerEnd=Date.now()+ms;localTimerHandle=setTimeout(()=>{localTimerHandle=null;localTimerEnd=0;toast('⏰ 타이머 종료!');if('Notification' in window&&Notification.permission==='granted')new Notification('NEXTBOT',{body:'설정한 타이머가 끝났어요!'});},ms);toast(`⏰ 타이머 시작: ${Math.round(ms/1000)}초`);return true;
+      const ms=parseTimerArg(args);if(ms<1000||ms>24*3600000){toast('예: /타이머 10m (1초\~24시간)');return true;}if(localTimerHandle)clearTimeout(localTimerHandle);localTimerEnd=Date.now()+ms;localTimerHandle=setTimeout(()=>{localTimerHandle=null;localTimerEnd=0;toast('⏰ 타이머 종료!');if('Notification' in window&&Notification.permission==='granted')new Notification('NEXTBOT',{body:'설정한 타이머가 끝났어요!'});},ms);toast(`⏰ 타이머 시작: ${Math.round(ms/1000)}초`);return true;
     }
     case '/타이머취소': {
       if(localTimerHandle){clearTimeout(localTimerHandle);localTimerHandle=null;localTimerEnd=0;toast('⏹ 타이머를 취소했어요.');}else toast('⏹ 실행 중인 타이머가 없어요.');return true;
     }
     case '/계산': {
-      try{await postBotReply(`🧮 ${args} = ${safeCalc(args)}`);}catch(\_){toast('숫자와 + - \* / % ( ) ^ 만 사용할 수 있어요.');}return true;
+      try{await postBotReply(`🧮 ${args} = ${safeCalc(args)}`);}catch(_){toast('숫자와 + - * / % ( ) ^ 만 사용할 수 있어요.');}return true;
     }
     case '/선택': {
-      const a=args.split('|').map(x=>x.trim()).filter(Boolean);if(a.length<2){toast('사용법: /선택 A|B|C');return true;}await postBotReply(`🎯 선택: ${a[Math.floor(Math.random()\*a.length)]}`);return true;
+      const a=args.split('|').map(x=>x.trim()).filter(Boolean);if(a.length<2){toast('사용법: /선택 A|B|C');return true;}await postBotReply(`🎯 선택: ${a[Math.floor(Math.random()*a.length)]}`);return true;
     }
     case '/숫자': {
-      const [aa,bb]=args.split('|').map(Number);if(!Number.isFinite(aa)||!Number.isFinite(bb)){toast('사용법: /숫자 1|100');return true;}const lo=Math.ceil(Math.min(aa,bb)),hi=Math.floor(Math.max(aa,bb));await postBotReply(`🔢 ${lo}\~${hi} → ${lo+Math.floor(Math.random()\*(hi-lo+1))}`);return true;
+      const [aa,bb]=args.split('|').map(Number);if(!Number.isFinite(aa)||!Number.isFinite(bb)){toast('사용법: /숫자 1|100');return true;}const lo=Math.ceil(Math.min(aa,bb)),hi=Math.floor(Math.max(aa,bb));await postBotReply(`🔢 ${lo}\~${hi} → ${lo+Math.floor(Math.random()*(hi-lo+1))}`);return true;
     }
     case '/비밀번호': {
-      const n=Math.min(64,Math.max(8,parseInt(args)||16)),chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&\*\_-';const bytes=new Uint32Array(n);crypto.getRandomValues(bytes);const pw=[...bytes].map(x=>chars[x%chars.length]).join('');openModal(`<h3>🔐 임시 비밀번호</h3><div class="field"><input id="generatedPw" value="${escapeHtml(pw)}" readonly></div><button class="btn btn-primary" id="copyGeneratedPw">복사</button><div class="tool-note">이 값은 채팅방에 전송되지 않습니다. 중요한 계정에는 비밀번호 관리자를 권장합니다.</div>`);$('copyGeneratedPw').onclick=async()=>toast(await copyTextSafe(pw)?'비밀번호를 복사했습니다.':'복사 실패');return true;
+      const n=Math.min(64,Math.max(8,parseInt(args)||16)),chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*_-';const bytes=new Uint32Array(n);crypto.getRandomValues(bytes);const pw=[...bytes].map(x=>chars[x%chars.length]).join('');openModal(`<h3>🔐 임시 비밀번호</h3><div class="field"><input id="generatedPw" value="${escapeHtml(pw)}" readonly></div><button class="btn btn-primary" id="copyGeneratedPw">복사</button><div class="tool-note">이 값은 채팅방에 전송되지 않습니다. 중요한 계정에는 비밀번호 관리자를 권장합니다.</div>`);$('copyGeneratedPw').onclick=async()=>toast(await copyTextSafe(pw)?'비밀번호를 복사했습니다.':'복사 실패');return true;
     }
-    case '/uuid': await postBotReply(`🆔 ${crypto.randomUUID?crypto.randomUUID():'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()\*16|0,v=c==='x'?r:(r&3|8);return v.toString(16);})}`); return true;
+    case '/uuid': await postBotReply(`🆔 ${crypto.randomUUID?crypto.randomUUID():'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0,v=c==='x'?r:(r&3|8);return v.toString(16);})}`); return true;
     case '/시간': await postBotReply('🕒 '+new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',second:'2-digit'})); return true;
     case '/오늘': await postBotReply('📅 '+new Date().toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'})); return true;
     case '/핑': {
@@ -3086,22 +2983,21 @@ async function handleMegaCommand(cmd,args){
   }
   return false;
 }
-<br>
-<br>
-/\* ============================================================
+
+
+/* ============================================================
    NEXTBOT ULTRA PACK
    - 기존 Firestore 컬렉션(stats/users) 조회 + 개인 localStorage 중심
    - 새로운 서버 컬렉션을 만들지 않아 추가 Rules 없이 동작
-   ============================================================ \*/
+   ============================================================ */
 let focusTickHandle=null;
-<br>
 function rawWeekStats(weekId){
   return getDoc(doc(db,'stats',teamStatsDocId(weekId))).then(s=>s.exists()?s.data():{});
 }
 function myRawWeekScore(data){
   const m=Number((data.msgCount||{})[currentUser?.uid])||0;
   const r=Number((data.reactCount||{})[currentUser?.uid])||0;
-  return {msgCount:m,reactCount:r,score:m\*MVP_MSG_WEIGHT+r\*MVP_REACT_WEIGHT};
+  return {msgCount:m,reactCount:r,score:m*MVP_MSG_WEIGHT+r*MVP_REACT_WEIGHT};
 }
 function currentGoal(){
   const g=storeGet('weeklyGoal',null);
@@ -3126,7 +3022,7 @@ function stopFocusTimer(silent=false){
 }
 function startFocusTimer(minutes=25){
   const min=Math.min(180,Math.max(1,Number(minutes)||25));
-  const st={startedAt:Date.now(),endAt:Date.now()+min\*60000,minutes:min}; storeSet('focusTimer',st);
+  const st={startedAt:Date.now(),endAt:Date.now()+min*60000,minutes:min}; storeSet('focusTimer',st);
   armFocusTimer(); refreshFocusPill(); refreshUltraDashboard(); toast(`🎯 ${min}분 집중 시작!`);
 }
 function armFocusTimer(){
@@ -3143,7 +3039,7 @@ function finishFocusTimer(){
   if(focusTickHandle){clearInterval(focusTickHandle);focusTickHandle=null;}
   const st=focusState(); storeSet('focusTimer',null); refreshFocusPill(); refreshUltraDashboard();
   toast('🎉 집중 타이머 완료!');
-  try{ if('Notification' in window&&Notification.permission==='granted') new Notification('NEXTBOT 집중 완료',{body:`${st?.minutes||''}분 집중 시간이 끝났어요.`}); }catch(\_){}
+  try{ if('Notification' in window&&Notification.permission==='granted') new Notification('NEXTBOT 집중 완료',{body:`${st?.minutes||''}분 집중 시간이 끝났어요.`}); }catch(_){}
 }
 function refreshFocusPill(){
   const pill=$('focusPill'), txt=$('focusPillText'); if(!pill||!txt)return;
@@ -3157,7 +3053,7 @@ function teamUsers(includeOffline=true){
   return Object.values(usersMap).filter(u=>u.uid!=='BOT'&&!u.isBot&&!u.disabled&&(includeOffline||presenceData[u.uid]?.state==='online'));
 }
 function shuffleCopy(arr){
-  const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()\*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a;
+  const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a;
 }
 function numericList(args){ return String(args||'').split(/[|,\s]+/).map(Number).filter(Number.isFinite); }
 function downloadJson(filename,obj){
@@ -3169,19 +3065,16 @@ async function refreshUltraDashboard(){
   $('ultraTodoCount').textContent=String(todos().filter(x=>!x.done).length);
   $('ultraFavCount').textContent=String(favorites().filter(id=>channels.some(c=>c.id===id)).length);
   $('ultraOnlineCount').textContent=String(Object.entries(presenceData||{}).filter(([uid,v])=>uid!=='BOT'&&v&&v.state==='online').length);
-<br>
   const g=currentGoal();
   $('ultraGoal').innerHTML=g?`<div class="goal-box ${g.done?'done':''}">${g.done?'✅':'🎯'} ${escapeHtml(g.text)}<div class="ultra-mini" style="margin-top:5px;">${g.done?'완료됨':'/목표완료 로 완료 처리'}</div></div>`:'<div class="empty">/주간목표 목표내용 으로 설정하세요</div>';
   const td=todos().filter(x=>!x.done).slice(0,4);
   $('ultraTodos').innerHTML=td.length?td.map((x,i)=>`<div class="dash-todo-row"><span>⬜</span><span>${escapeHtml(x.text)}</span></div>`).join(''):'<div class="empty">미완료 할 일이 없습니다</div>';
-<br>
   try{
     const [data,rank]=await Promise.all([rawWeekStats(wk),computeRanking(wk)]); const me=myRawWeekScore(data); const idx=rank.findIndex(x=>x.uid===currentUser.uid);
     $('ultraMyScore').textContent=`${me.score}점`; $('ultraMyScoreMeta').textContent=`메시지 ${me.msgCount} · 리액션 ${me.reactCount}`; $('ultraMyRank').textContent=idx>=0?`${idx+1}위`:'-';
     const top=rank.slice(0,3); const medals=['🥇','🥈','🥉'];
     $('ultraMvpTop').innerHTML=top.length?`<div class="mvp-podium">${top.map((r,i)=>`<div class="mvp-place ${i===0?'p1':''}"><div class="rank">${medals[i]}</div><div class="name">${escapeHtml(r.nickname)}</div><div class="score">${r.score}점 · 💬${r.msgCount} · ❤️${r.reactCount}</div></div>`).join('')}</div>`:'<div class="empty">아직 집계된 MVP 활동이 없습니다</div>';
   }catch(e){ console.warn('ultra dashboard stats failed',e); $('ultraMvpTop').innerHTML='<div class="empty">MVP 통계를 불러오지 못했습니다</div>'; }
-<br>
   const qTodo=$('qaTodo'),qFocus=$('qaFocus'),qRank=$('qaRank'),qFav=$('qaFav');
   if(qTodo) qTodo.onclick=()=>{openModal(`<h3>📝 빠른 할 일 추가</h3><div class="field"><input id="qaTodoInput" placeholder="예: 센서 보정 테스트"></div><div class="modal-actions"><button class="btn" id="qaTodoCancel">취소</button><button class="btn btn-primary" id="qaTodoSave" style="width:auto">추가</button></div>`);$('qaTodoCancel').onclick=closeModal;$('qaTodoSave').onclick=()=>{const v=$('qaTodoInput').value.trim();if(!v)return;const a=todos();a.push({text:v,done:false,at:Date.now()});storeSet('todos',a.slice(-100));closeModal();refreshUltraDashboard();toast('할 일을 추가했어요.');};};
   if(qFocus) qFocus.onclick=()=>startFocusTimer(25);
@@ -3189,7 +3082,6 @@ async function refreshUltraDashboard(){
   if(qFav) qFav.onclick=openFavoriteChannelsModal;
   refreshFocusPill();
 }
-<br>
 async function handleUltraCommand(cmd,args){
   switch(cmd){
     case '/상위3': case '/mvp후보': {const r=await computeRanking(weekIdOf(new Date()));await postBotReply(rankText(r,3,'🏆 이번 주 MVP TOP3'));return true;}
@@ -3200,7 +3092,7 @@ async function handleUltraCommand(cmd,args){
     case '/팀짜기': {const n=Math.min(8,Math.max(2,parseInt(args)||2)),u=shuffleCopy(teamUsers(true));if(u.length<n){toast('팀원 수보다 팀 수가 많아요.');return true;}const teams=Array.from({length:n},()=>[]);u.forEach((x,i)=>teams[i%n].push(x.nickname));await postBotReply('🎲 랜덤 팀 편성\n'+teams.map((t,i)=>`팀 ${i+1}: ${t.join(', ')}`).join('\n'));return true;}
     case '/순서': {let a=args.split('|').map(x=>x.trim()).filter(Boolean);if(a.length<2)a=teamUsers(true).map(x=>x.nickname);if(a.length<2){toast('항목을 2개 이상 입력해주세요.');return true;}await postBotReply('🔀 랜덤 순서\n'+shuffleCopy(a).map((x,i)=>`${i+1}. ${x}`).join('\n'));return true;}
     case '/당번': {const n=Math.min(10,Math.max(1,parseInt(args)||1)),u=shuffleCopy(teamUsers(true));await postBotReply('🧹 오늘의 당번\n'+u.slice(0,Math.min(n,u.length)).map((x,i)=>`${i+1}. ${x.nickname}`).join('\n'));return true;}
-    case '/랜덤팀원': {const u=teamUsers(true);await postBotReply(u.length?`🎯 랜덤 팀원: ${u[Math.floor(Math.random()\*u.length)].nickname}`:'팀원이 없습니다.');return true;}
+    case '/랜덤팀원': {const u=teamUsers(true);await postBotReply(u.length?`🎯 랜덤 팀원: ${u[Math.floor(Math.random()*u.length)].nickname}`:'팀원이 없습니다.');return true;}
     case '/역할통계': {const c={teacher:0,leader:0,member:0,coding:0,making:0};teamUsers(true).forEach(u=>(u.roles||['member']).forEach(r=>{if(r in c)c[r]++;}));await postBotReply(`👥 역할 통계\n선생님 ${c.teacher} · 팀장 ${c.leader} · 팀원 ${c.member}\n코딩팀 ${c.coding} · 메이킹팀 ${c.making}`);return true;}
     case '/온라인수': {const u=teamUsers(false);await postBotReply(`🟢 현재 온라인 ${u.length}명${u.length?' — '+u.map(x=>x.nickname).join(', '):''}`);return true;}
     case '/주간목표': {if(args){const g=setWeeklyGoal(args);toast(`🎯 주간 목표 저장: ${g.text}`);}else{const g=currentGoal();await postBotReply(g?`🎯 이번 주 목표: ${g.done?'✅ ':''}${g.text}`:'🎯 아직 주간 목표가 없어요. /주간목표 목표내용 으로 설정하세요.');}return true;}
@@ -3223,16 +3115,14 @@ async function handleUltraCommand(cmd,args){
     case '/단어수': {const n=args.trim()?args.trim().split(/\s+/).length:0;await postBotReply(`📝 단어 수: ${n}개`);return true;}
     case '/평균': {const a=numericList(args);if(!a.length){toast('숫자를 입력해주세요.');return true;}await postBotReply(`📐 평균: ${a.reduce((x,y)=>x+y,0)/a.length}`);return true;}
     case '/중앙값': {const a=numericList(args).sort((x,y)=>x-y);if(!a.length){toast('숫자를 입력해주세요.');return true;}const m=Math.floor(a.length/2),v=a.length%2?a[m]:(a[m-1]+a[m])/2;await postBotReply(`📏 중앙값: ${v}`);return true;}
-    case '/퍼센트': {const [p,w]=args.split('|').map(Number);if(!Number.isFinite(p)||!Number.isFinite(w)||w===0){toast('사용법: /퍼센트 25|200');return true;}await postBotReply(`📊 ${p} / ${w} = ${(p/w\*100).toFixed(2)}%`);return true;}
+    case '/퍼센트': {const [p,w]=args.split('|').map(Number);if(!Number.isFinite(p)||!Number.isFinite(w)||w===0){toast('사용법: /퍼센트 25|200');return true;}await postBotReply(`📊 ${p} / ${w} = ${(p/w*100).toFixed(2)}%`);return true;}
     case '/셔플': {const a=args.split('|').map(x=>x.trim()).filter(Boolean);if(a.length<2){toast('사용법: /셔플 A|B|C');return true;}await postBotReply('🔀 '+shuffleCopy(a).join(' → '));return true;}
     case '/알림권한': {if(!('Notification' in window)){toast('이 브라우저는 알림을 지원하지 않아요.');return true;}const p=await Notification.requestPermission();toast(`브라우저 알림 권한: ${p}`);return true;}
   }
   return false;
 }
-<br>
 $('focusPill').onclick=()=>{const st=focusState();if(st&&st.endAt>Date.now())openModal(`<h3>🎯 집중 타이머</h3><div style="font-family:var(--font-display);font-size:34px;font-weight:700;text-align:center;padding:14px 0;">${escapeHtml(fmtDuration(st.endAt-Date.now()))}</div><div class="modal-actions"><button class="btn btn-danger" id="focusModalCancel">집중 취소</button></div>`);if($('focusModalCancel'))$('focusModalCancel').onclick=()=>{closeModal();stopFocusTimer();refreshUltraDashboard();};};
 armFocusTimer();refreshFocusPill();
-<br>
 // UI wiring for extra features
 $('favChanBtn').onclick=toggleFavoriteChannel;
 $('toolsBtn').onclick=openToolsModal;
@@ -3245,7 +3135,6 @@ window\.addEventListener('keydown',(e)=>{
   if(e.key==='End'&&currentChannelId&&!FEATURE_CHANNELS[currentChannelId]){const l=$('msgList');l.scrollTop=l.scrollHeight;}
 });
 applyUiSettings();
-<br>
 function openCommandHelpModal(){
   const rows = list => list.map(c=>`<div class="day-evt-row"><span style="font-family:'SFMono-Regular',Consolas,monospace; color:var(--blue);">${escapeHtml(c.cmd)}</span><span style="margin-left:auto; color:var(--text-dim); font-size:12px;">${escapeHtml(c.desc)}</span></div>`).join('');
   openModal(`
@@ -3269,7 +3158,7 @@ async function handleSlashCommand(raw){
         openCommandHelpModal(); return;
       case '/주사위': case '/dice': {
         let n=parseInt(args,10); if(!n || n<2) n=6;
-        const result=1+Math.floor(Math.random()\*n);
+        const result=1+Math.floor(Math.random()*n);
         postBotReply(`🎲 ${myDoc.nickname}님이 주사위(1\~${n})를 굴려서 ${result}이(가) 나왔어요!`);
         return;
       }
@@ -3281,7 +3170,7 @@ async function handleSlashCommand(raw){
       case '/가위바위보': case '/rps': {
         const opts=['가위','바위','보'];
         if(!opts.includes(args)){ toast('사용법: /가위바위보 가위|바위|보'); return; }
-        const bot=opts[Math.floor(Math.random()\*3)];
+        const bot=opts[Math.floor(Math.random()*3)];
         let result;
         if(args===bot) result='무승부예요.';
         else if((args==='가위'&&bot==='보')||(args==='바위'&&bot==='가위')||(args==='보'&&bot==='바위')) result=`${myDoc.nickname}님 승리! 🎉`;
@@ -3292,14 +3181,14 @@ async function handleSlashCommand(raw){
       case '/제비뽑기': case '/뽑기': {
         const items=args.split(',').map(s=>s.trim()).filter(Boolean);
         if(items.length<2){ toast('사용법: /제비뽑기 항목1,항목2,항목3'); return; }
-        const pick=items[Math.floor(Math.random()\*items.length)];
+        const pick=items[Math.floor(Math.random()*items.length)];
         postBotReply(`🎯 제비뽑기 결과: "${pick}" 당첨!`);
         return;
       }
       case '/8볼': case '/에잇볼': {
         if(!args){ toast('사용법: /8볼 질문 내용'); return; }
         const answers=['그렇다','아니다','아마도','다시 물어봐줘','확실해','글쎄...','좋은 생각이야','기대하지 않는 게 좋겠어'];
-        const a=answers[Math.floor(Math.random()\*answers.length)];
+        const a=answers[Math.floor(Math.random()*answers.length)];
         postBotReply(`🎱 Q. ${args}\nA. ${a}`);
         return;
       }
@@ -3356,7 +3245,7 @@ async function handleSlashCommand(raw){
     }
   }catch(e){ console.error('slash command error', e); toast('명령어 처리 중 오류가 발생했어요.'); }
 }
-/\* ---------------- File list attach (URL, 스토리지 미사용) ---------------- \*/
+/* ---------------- File list attach (URL, 스토리지 미사용) ---------------- */
 $('fileBtn').onclick=()=>{
   if(!currentChannelId){ toast('채널을 먼저 선택해주세요.'); return; }
   openFileAttachModal();
@@ -3401,7 +3290,7 @@ function refreshAttachDel(){
     x.closest('.attach-edit-row').remove();
   });
 }
-/\* ---------------- Image attach (URL, 스토리지 미사용) ---------------- \*/
+/* ---------------- Image attach (URL, 스토리지 미사용) ---------------- */
 $('imgBtn').onclick=()=>{
   if(!currentChannelId){ toast('채널을 먼저 선택해주세요.'); return; }
   openImageAttachModal();
@@ -3417,7 +3306,7 @@ function openImageAttachModal(){
   const urlInput=$('imgUrlInput'), prev=$('imgUrlPreview');
   urlInput.addEventListener('input', ()=>{
     const url=urlInput.value.trim();
-    if(url && /\\.(png|jpe?g|gif|webp)(\\?.\*)?$/i.test(url)){
+    if(url && /\\.(png|jpe?g|gif|webp)(\\?.*)?$/i.test(url)){
       prev.innerHTML=`<img src="${url}" alt="" onerror="this.parentElement.textContent='이미지를 불러올 수 없습니다'">`;
     } else if(url){
       prev.textContent='이미지 파일 URL(.png/.jpg/.gif/.webp)을 입력해주세요';
@@ -3437,8 +3326,7 @@ function openImageAttachModal(){
     msgInput.focus();
   };
 }
-<br>
-/\* ---------------- Poll (투표) ---------------- \*/
+/* ---------------- Poll (투표) ---------------- */
 $('pollBtn').onclick=()=>{
   if(!currentChannelId){ toast('채널을 먼저 선택해주세요.'); return; }
   openPollModal();
@@ -3491,7 +3379,7 @@ function renderPoll(msgId, m){
   const myVoteIdx = opts.findIndex(o=>(o.votes||[]).includes(currentUser.uid));
   const optsHtml = opts.map((o,idx)=>{
     const cnt=(o.votes||[]).length;
-    const pct = total? Math.round(cnt/total\*100) : 0;
+    const pct = total? Math.round(cnt/total*100) : 0;
     return `<div class="poll-opt ${idx===myVoteIdx?'voted':''}" data-optidx="${idx}">
       <div class="fill" style="width:${pct}%;"></div>
       <div class="txt"><span>${idx===myVoteIdx?'✓ ':''}${escapeHtml(o.text)}</span><span class="pct">${cnt}표 · ${pct}%</span></div>
@@ -3528,7 +3416,7 @@ async function pushMentionNotifications(mentions, text){
   const targets=new Set();
   mentions.forEach(m=>{
     if(m==='전체'){ Object.keys(usersMap).forEach(uid=>targets.add(uid)); }
-    else if(MENTION_ROLE_TOKENS[m] && MENTION_ROLE_TOKENS[m]!=='\_\_all\_\_'){
+    else if(MENTION_ROLE_TOKENS[m] && MENTION_ROLE_TOKENS[m]!=='__all__'){
       Object.values(usersMap).forEach(u=>{ if((u.roles||[]).includes(MENTION_ROLE_TOKENS[m])) targets.add(u.uid); });
     } else if(m.startsWith('user:')){ targets.add(m.slice(5)); }
   });
@@ -3541,13 +3429,12 @@ async function pushMentionNotifications(mentions, text){
     });
   }
 }
-<br>
-/\* mention autocomplete popup \*/
+/* mention autocomplete popup */
 function handleMentionPopup(){
   const val=msgInput.value;
   const caret=msgInput.selectionStart;
   const upto=val.slice(0,caret);
-  const m=upto.match(/@([^\s@]\*)$/);
+  const m=upto.match(/@([^\s@]*)$/);
   const pop=$('mentionPop');
   if(!m){ pop.classList.add('hidden'); return; }
   const term=m[1].toLowerCase();
@@ -3559,20 +3446,19 @@ function handleMentionPopup(){
   pop.classList.remove('hidden');
   pop.querySelectorAll('[data-mv]').forEach(el=>el.onclick=()=>{
     const name=el.getAttribute('data-mv');
-    msgInput.value = upto.replace(/@([^\s@]\*)$/, '@'+name+' ') + val.slice(caret);
+    msgInput.value = upto.replace(/@([^\s@]*)$/, '@'+name+' ') + val.slice(caret);
     pop.classList.add('hidden'); msgInput.focus();
   });
 }
 document.addEventListener('click',(e)=>{
   if(!e.target.closest('.composer')){ $('mentionPop').classList.add('hidden'); $('channelPop').classList.add('hidden'); $('slashPop').classList.add('hidden'); }
 });
-<br>
-/\* channel-reference autocomplete popup: '#'를 입력하면 볼 수 있는 채널 목록을 보여줌 \*/
+/* channel-reference autocomplete popup: '#'를 입력하면 볼 수 있는 채널 목록을 보여줌 */
 function handleChannelPopup(){
   const val=msgInput.value;
   const caret=msgInput.selectionStart;
   const upto=val.slice(0,caret);
-  const m=upto.match(/#([^\s#]\*)$/);
+  const m=upto.match(/#([^\s#]*)$/);
   const pop=$('channelPop');
   if(!m){ pop.classList.add('hidden'); return; }
   const term=m[1].toLowerCase();
@@ -3583,17 +3469,16 @@ function handleChannelPopup(){
   pop.classList.remove('hidden');
   pop.querySelectorAll('[data-cv]').forEach(el=>el.onclick=()=>{
     const name=el.getAttribute('data-cv');
-    msgInput.value = upto.replace(/#([^\s#]\*)$/, '#'+name+' ') + val.slice(caret);
+    msgInput.value = upto.replace(/#([^\s#]*)$/, '#'+name+' ') + val.slice(caret);
     pop.classList.add('hidden'); msgInput.focus();
     $('sendBtn').disabled = !msgInput.value.trim() && !pendingAttachments.length;
   });
 }
-<br>
-/\* slash-command autocomplete popup: 메시지 맨 앞에 '/'를 입력하면 사용 가능한 명령어를 보여줌 \*/
+/* slash-command autocomplete popup: 메시지 맨 앞에 '/'를 입력하면 사용 가능한 명령어를 보여줌 */
 function handleSlashPopup(){
   const val=msgInput.value;
   const pop=$('slashPop');
-  const m=val.match(/^\\/(\S\*)$/); // '/' 로 시작하고 아직 공백(인자) 없이 명령어를 입력 중일 때만
+  const m=val.match(/^\\/(\S*)$/); // '/' 로 시작하고 아직 공백(인자) 없이 명령어를 입력 중일 때만
   if(!m){ pop.classList.add('hidden'); return; }
   const term=m[1].toLowerCase();
   const list=HELP_COMMANDS.concat(canUseAdminCommands() ? HELP_ADMIN_COMMANDS : []);
@@ -3616,7 +3501,6 @@ function handleSlashPopup(){
     msgInput.focus();
   });
 }
-<br>
 function handleTyping(){
   setTypingState(true);
   clearTimeout(typingTimeoutHandle);
@@ -3626,8 +3510,7 @@ function setTypingState(isTyping){
   if(!currentChannelId) return;
   set(ref(rtdb,'typing/'+currentChannelId+'/'+currentUser.uid), isTyping ? { typing:true, nickname:myDoc.nickname } : { typing:false, nickname:myDoc.nickname });
 }
-<br>
-/\* ---------------- Feature channels (strategy/mission/practice/test/record) ---------------- \*/
+/* ---------------- Feature channels (strategy/mission/practice/test/record) ---------------- */
 function openFeatureChannel(chanId){
   const cfg=FEATURE_CHANNELS[chanId];
   $('ftTitle').textContent=cfg.label;
@@ -3672,10 +3555,9 @@ function openFeatureAddModal(cfg){
     closeModal();
   };
 }
-<br>
-/\* ---------------- Dashboard feeds ---------------- \*/
+/* ---------------- Dashboard feeds ---------------- */
 function restartTeamFeeds(){
-  teamFeedUnsubs.forEach(fn=>{try{fn();}catch(\_e){}});
+  teamFeedUnsubs.forEach(fn=>{try{fn();}catch(_e){}});
   teamFeedUnsubs=[];
   listenAnnouncementsDash();listenEventsDash();listenTestsDash();listenEventsAll();
 }
@@ -3723,7 +3605,7 @@ function listenEventsAll(){
   },e=>console.warn('events listener error',e));
   teamFeedUnsubs.push(unsub);
 }
-/\* ---------------- Notifications ---------------- \*/
+/* ---------------- Notifications ---------------- */
 function listenNotifications(){
   onValue(ref(rtdb,'notifications/'+currentUser.uid), (snap)=>{
     const val=snap.val()||{};
@@ -3776,8 +3658,7 @@ $('notifBtn').onclick=(e)=>{
   setTimeout(()=>document.addEventListener('click', closeDD, {once:true}),0);
 };
 function closeDD(){ const dd=$('notifDropdown'); if(dd) dd.remove(); }
-<br>
-/\* ---------------- Profile settings ---------------- \*/
+/* ---------------- Profile settings ---------------- */
 $('meSettingsBtn').onclick=()=>{
   openModal(`
     <h3>프로필 설정</h3>
@@ -3799,11 +3680,10 @@ $('logoutBtn').onclick=async ()=>{
   if(currentUser){ await set(ref(rtdb,'presence/'+currentUser.uid), {state:'offline', nickname:myDoc.nickname, last_changed:Date.now()}); }
   await signOut(auth);
 };
-<br>
-<br>
-/\* ---------------- Admin 50 Control Center ---------------- \*/
+
+
+/* ---------------- Admin 50 Control Center ---------------- */
 $('navAdmin').onclick=()=>{ closeDrawer(); openAdminModal(); };
-<br>
 const ADMIN50_FEATURES = [
   '실시간 KPI','온라인 인원','비활성 계정 수','관리자 수','카테고리 수','채널 수','주간 메시지 수','주간 리액션 수','MVP TOP3','새로고침',
   '사용자 검색','역할 필터','상태 필터','정렬','다중 선택','전체 선택','일괄 활성화','일괄 비활성화','역할 일괄 추가','역할 일괄 제거',
@@ -3814,7 +3694,6 @@ const ADMIN50_FEATURES = [
 ];
 let admin50SelectedUsers = new Set();
 let admin50Tab = 'overview';
-<br>
 function openAdminModal(){
   if(!myDoc || !myDoc.isAdmin){ toast('관리자만 사용할 수 있습니다.'); return; }
   openModal(`
@@ -3841,12 +3720,11 @@ function openAdminModal(){
   admin50Tab='overview';
   renderAdminTab('overview');
 }
-<br>
 function a50Ts(v){
   if(!v) return 0;
   if(typeof v==='number') return v;
   if(v.toMillis) return v.toMillis();
-  if(v.seconds) return v.seconds\*1000;
+  if(v.seconds) return v.seconds*1000;
   return 0;
 }
 function a50Date(v){
@@ -3892,7 +3770,6 @@ function a50WeekTotals(data){
 function a50VisibleUsers(){
   return Object.values(usersMap).filter(u=>u && !u.isBot && u.uid!=='BOT');
 }
-<br>
 async function renderAdminTab(tab){
   const body=$('adminBody');
   if(!body) return;
@@ -3912,7 +3789,6 @@ async function renderAdminTab(tab){
     body.innerHTML=`<div class="admin50-card admin50-danger">오류: ${escapeHtml(e.message||String(e))}</div>`;
   }
 }
-<br>
 async function renderAdminOverview(){
   const body=$('adminBody');
   const users=a50VisibleUsers();
@@ -3957,8 +3833,7 @@ function a50SwitchTab(tab){
   document.querySelectorAll('[data-a50tab]').forEach(x=>x.classList.toggle('active',x.getAttribute('data-a50tab')===tab));
   admin50Tab=tab; renderAdminTab(tab);
 }
-<br>
-/\* ----- users ----- \*/
+/* ----- users ----- */
 function renderAdminUsers(){
   const body=$('adminBody');
   body.innerHTML=`
@@ -4024,7 +3899,8 @@ function a50RenderUserRows(){
     const online=presenceData[u.uid]?.state==='online';
     return `<tr>
       <td><input class="admin50-check" type="checkbox" data-a50sel="${u.uid}" ${admin50SelectedUsers.has(u.uid)?'checked':''}></td>
-      <td><b>${escapeHtml(u.nickname||'?')}</b><div class="admin50-muted">${escapeHtml(u.email||'')}<br>${escapeHtml(u.uid)}</div></td>
+      <td><b>${escapeHtml(u.nickname||'?')}</b><div class="admin50-muted">${escapeHtml(u.email||'')}
+${escapeHtml(u.uid)}</div></td>
       <td>${escapeHtml(rolesLabel(u.roles))}${u.isAdmin?' · 👑':''}</td>
       <td>${u.disabled?'<span class="pill fail">정지</span>':isUserTimedOut(u)?`<span class="pill fail">타임아웃 · ${escapeHtml(timeoutRemainingText(u))}</span>`:online?'<span class="pill ok">온라인</span>':'오프라인'}</td>
       <td>${escapeHtml(a50Date(u.lastSeen))}</td>
@@ -4061,10 +3937,9 @@ async function a50BulkUserUpdate(mode,role){
 function a50ExportUsersCsv(){
   const rows=[['UID','닉네임','로그인 이메일','연락 이메일','역할','관리자','비활성','최근접속']];
   a50VisibleUsers().forEach(u=>rows.push([u.uid,u.nickname,u.email,u.contactEmail,(u.roles||[]).join('|'),u.isAdmin,u.disabled,a50Date(u.lastSeen)]));
-  a50Download(`nextbot_users\_${new Date().toISOString().slice(0,10)}.csv`,rows.map(r=>r.map(a50Csv).join(',')).join('\n'),'text/csv;charset=utf-8');
+  a50Download(`nextbot_users_${new Date().toISOString().slice(0,10)}.csv`,rows.map(r=>r.map(a50Csv).join(',')).join('\n'),'text/csv;charset=utf-8');
   auditAdmin('export-users');
 }
-<br>
 async function openUserManageModal(uid){
   const u=usersMap[uid]; if(!u||u.isBot) return;
   let stats={};
@@ -4075,7 +3950,7 @@ async function openUserManageModal(uid){
     <div class="admin50-grid">
       <div class="admin50-stat"><div class="v">${m}</div><div class="k">이번 주 메시지</div></div>
       <div class="admin50-stat"><div class="v">${r}</div><div class="k">받은 리액션</div></div>
-      <div class="admin50-stat"><div class="v">${m\*MVP_MSG_WEIGHT+r\*MVP_REACT_WEIGHT}</div><div class="k">MVP 점수</div></div>
+      <div class="admin50-stat"><div class="v">${m*MVP_MSG_WEIGHT+r*MVP_REACT_WEIGHT}</div><div class="k">MVP 점수</div></div>
       <div class="admin50-stat"><div class="v">${presenceData[uid]?.state==='online'?'ON':'OFF'}</div><div class="k">접속 상태</div></div>
     </div>
     <div class="field"><label>UID</label><div class="admin50-toolbar"><input id="mgUid" value="${escapeHtml(uid)}" readonly><button class="btn btn-sm" id="mgCopyUid">복사</button></div></div>
@@ -4104,11 +3979,11 @@ async function openUserManageModal(uid){
   $('mgAdminToggle').onclick=()=>{if(uid===currentUser.uid&&adminState){toast('현재 로그인한 자기 관리자 권한은 해제하지 않도록 막았습니다.');return;}adminState=!adminState;paintState();};
   const paintTimeout=()=>{ $('mgTimeoutInfo').textContent=timeoutUntil>Date.now()?`현재 타임아웃: ${timeoutRemainingText({timeoutUntil})}`:'현재 타임아웃 없음'; };
   const addTimeout=(ms)=>{ timeoutUntil=Math.max(Date.now(),timeoutUntil)+ms; paintTimeout(); };
-  $('mgTimeout1').onclick=()=>addTimeout(60\*1000);
-  $('mgTimeout5').onclick=()=>addTimeout(5\*60\*1000);
-  $('mgTimeout10').onclick=()=>addTimeout(10\*60\*1000);
-  $('mgTimeout60').onclick=()=>addTimeout(60\*60\*1000);
-  $('mgTimeoutDay').onclick=()=>addTimeout(24\*60\*60\*1000);
+  $('mgTimeout1').onclick=()=>addTimeout(60*1000);
+  $('mgTimeout5').onclick=()=>addTimeout(5*60*1000);
+  $('mgTimeout10').onclick=()=>addTimeout(10*60*1000);
+  $('mgTimeout60').onclick=()=>addTimeout(60*60*1000);
+  $('mgTimeoutDay').onclick=()=>addTimeout(24*60*60*1000);
   $('mgTimeoutClear').onclick=()=>{timeoutUntil=0;paintTimeout();};
     $('mgBotGrant').onclick=()=>{ $('mgBotTokens').value=botTokensOf({botTokens:Number($('mgBotTokens').value)||0})+10; };
   $('mgBotGrant50').onclick=()=>{ $('mgBotTokens').value=botTokensOf({botTokens:Number($('mgBotTokens').value)||0})+50; };
@@ -4136,8 +4011,7 @@ async function openUserManageModal(uid){
     toast('계정을 저장했습니다.');closeModal();
   };
 }
-<br>
-/\* ----- structure ----- \*/
+/* ----- structure ----- */
 function renderAdminStructure(){
   const body=$('adminBody');
   const cats=[...categories].sort((a,b)=>(a.position||0)-(b.position||0));
@@ -4249,7 +4123,7 @@ async function a50ExportChannel(id){
   const ch=channels.find(c=>c.id===id);if(!ch)return;
   const q=query(collection(db,'channels',id,'messages'),orderBy('createdAt','asc'),limit(500));
   const s=await getDocs(q);const rows=s.docs.map(d=>({id:d.id,...d.data(),createdAt:a50Date(d.data().createdAt)}));
-  a50Download(`channel\_${ch.name}\_${Date.now()}.json`,JSON.stringify({channel:ch,messages:rows},null,2),'application/json');
+  a50Download(`channel_${ch.name}_${Date.now()}.json`,JSON.stringify({channel:ch,messages:rows},null,2),'application/json');
   auditAdmin('export-channel',id,`${rows.length} messages`);
 }
 async function a50ClearChannel(id){
@@ -4263,8 +4137,7 @@ async function a50ClearChannel(id){
   }
   await auditAdmin('clear-channel',id,`${total} deleted`);toast(`${total}개 메시지를 삭제했습니다.`);closeModal();
 }
-<br>
-/\* ----- content ----- \*/
+/* ----- content ----- */
 async function renderAdminContent(){
   const body=$('adminBody');
   const [an,ev]=await Promise.all([
@@ -4304,8 +4177,7 @@ function a50EditEvent(e=null){
     }else await addDoc(collection(db,'events'),{title,date,team:activeTeam,createdAt:serverTimestamp(),notified:[]});
     await auditAdmin(e?'edit-event':'create-event',e?.id||'',`${title}|${date}`);toast('저장했습니다.');closeModal();};
 }
-<br>
-/\* ----- moderation ----- \*/
+/* ----- moderation ----- */
 function renderAdminModeration(){
   const body=$('adminBody');
   body.innerHTML=`<div class="admin50-toolbar"><select id="a50ModChannel"><option value="">채널 선택</option>${channels.filter(c=>!FEATURE_CHANNELS[c.id]).sort((a,b)=>a.name.localeCompare(b.name)).map(c=>`<option value="${c.id}">#${escapeHtml(c.name)}</option>`).join('')}</select><input id="a50ModSearch" placeholder="메시지 내용/작성자 검색"><button class="btn btn-sm" id="a50ModLoad">불러오기</button><button class="btn btn-sm" id="a50ModExport">JSON</button></div><div id="a50ModList"><div class="empty">관리할 채널을 선택하세요.</div></div>`;
@@ -4323,8 +4195,7 @@ async function a50LoadModeration(){
   box.querySelectorAll('[data-moddel]').forEach(b=>b.onclick=async()=>{if(!confirm('이 메시지를 삭제할까요?'))return;await deleteDoc(doc(db,'channels',id,'messages',b.dataset.moddel));await auditAdmin('delete-message',`${id}/${b.dataset.moddel}`);a50LoadModeration();});
   box.querySelectorAll('[data-modpin]').forEach(b=>b.onclick=async()=>{const m=rows.find(x=>x.id===b.dataset.modpin);await updateDoc(doc(db,'channels',id,'messages',m.id),{pinned:!m.pinned});await auditAdmin(m.pinned?'unpin-message':'pin-message',`${id}/${m.id}`);a50LoadModeration();});
 }
-<br>
-/\* ----- MVP ----- \*/
+/* ----- MVP ----- */
 async function renderAdminMvp(){
   const body=$('adminBody'),wk=weekIdOf(new Date()),prev=prevWeekId(wk),ranking=await computeRanking(wk),stats=await a50GetWeekData(wk);
   const curMvp=await getDoc(doc(db,'mvp_weeks',teamMvpDocId(wk))), prevMvp=await getDoc(doc(db,'mvp_weeks',teamMvpDocId(prev)));
@@ -4334,7 +4205,7 @@ async function renderAdminMvp(){
     <div class="admin50-card"><h4>🏆 현재 랭킹</h4>${ranking.map((r,i)=>`<div class="day-evt-row"><div><b>${i+1}. ${escapeHtml(r.nickname)}</b><div class="admin50-muted">${r.uid}</div></div><span>${r.score}점 · 💬${r.msgCount} · 👍${r.reactCount}</span><button class="btn btn-sm" data-mvpadj="${r.uid}">점수 편집</button></div>`).join('')||'<div class="empty">활동 없음</div>'}</div>
     <div class="admin50-toolbar"><button class="btn btn-sm" id="a50MvpCreate">지난주 TOP3로 이번 주 투표 생성</button><button class="btn btn-sm" id="a50MvpTally">지난주 MVP 투표 집계</button></div>`;
   $('a50MvpRefresh').onclick=()=>renderAdminMvp();
-  $('a50MvpExport').onclick=()=>{const rows=[['순위','UID','닉네임','메시지','리액션','점수'],...ranking.map((r,i)=>[i+1,r.uid,r.nickname,r.msgCount,r.reactCount,r.score])];a50Download(`mvp\_${wk}.csv`,rows.map(r=>r.map(a50Csv).join(',')).join('\n'),'text/csv;charset=utf-8');};
+  $('a50MvpExport').onclick=()=>{const rows=[['순위','UID','닉네임','메시지','리액션','점수'],...ranking.map((r,i)=>[i+1,r.uid,r.nickname,r.msgCount,r.reactCount,r.score])];a50Download(`mvp_${wk}.csv`,rows.map(r=>r.map(a50Csv).join(',')).join('\n'),'text/csv;charset=utf-8');};
   $('a50MvpResetStats').onclick=async()=>{if(!confirm('이번 주 전체 MVP 통계를 삭제할까요?'))return;await deleteDoc(doc(db,'stats',teamStatsDocId(wk)));await auditAdmin('reset-week-stats',wk);toast('초기화했습니다.');renderAdminMvp();};
   $('a50MvpResetState').onclick=async()=>{if(!curMvp.exists()){toast('삭제할 MVP 상태가 없습니다.');return;}if(!confirm('이번 주 MVP 상태 문서를 삭제할까요?'))return;await deleteDoc(doc(db,'mvp_weeks',teamMvpDocId(wk)));mvpCycleChecked=false;await auditAdmin('reset-mvp-state',wk);toast('삭제했습니다.');renderAdminMvp();};
   $('a50MvpCreate').onclick=async()=>{if(curMvp.exists()){toast('이번 주 MVP 문서가 이미 있습니다.');return;}await createWeeklyMvpPoll(wk,prev);await auditAdmin('manual-create-mvp-poll',wk,prev);toast('생성 요청을 완료했습니다.');renderAdminMvp();};
@@ -4347,8 +4218,7 @@ function a50EditMvpUser(uid,stats){
   $('a50MvpCancel').onclick=()=>{closeModal();setTimeout(openAdminModal,0);};
   $('a50MvpSave').onclick=async()=>{const s=await a50GetWeekData(wk),mc={...(s.msgCount||{})},rc={...(s.reactCount||{})};mc[uid]=Math.max(0,Number($('a50MvpMsg').value)||0);rc[uid]=Math.max(0,Number($('a50MvpReact').value)||0);await setDoc(doc(db,'stats',teamStatsDocId(wk)),{weekId:wk,msgCount:mc,reactCount:rc,updatedAt:serverTimestamp()},{merge:true});await auditAdmin('edit-mvp-score',uid,`m=${mc[uid]},r=${rc[uid]}`);toast('점수를 저장했습니다.');closeModal();};
 }
-<br>
-/\* ----- AI bot admin ----- \*/
+/* ----- AI bot admin ----- */
 async function renderAdminBot(){
   const body=$('adminBody');
   const s=await getBotSettings();
@@ -4369,8 +4239,7 @@ async function renderAdminBot(){
   document.querySelectorAll('[data-botspeed]').forEach(b=>b.onclick=()=>{const v=Math.min(100,Math.max(.25,Number(b.dataset.botspeed)||1));$('a50BotTypingSpeed').value=v;$('a50BotTypingSpeedValue').textContent=`${v}x`;});
   $('a50GeminiSave').onclick=async()=>{const key=$('a50GeminiKey').value.trim();const model=$('a50GeminiModel').value;const typingSpeed=Math.min(100,Math.max(.25,Number($('a50BotTypingSpeed').value)||BOT_DEFAULT_TYPING_SPEED));const defaultPrompt=$('a50BotDefaultPrompt').value.trim();await setDoc(doc(db,'settings','bot'),{apiKey:key,model,typingSpeed,defaultPrompt,updatedAt:serverTimestamp(),updatedBy:currentUser.uid},{merge:true});await auditAdmin('update-gemini-settings','settings/bot',`model=${model}, typingSpeed=${typingSpeed}x, prompt=${defaultPrompt?'custom':'default'}`);toast(`Gemini 설정을 저장했습니다. · 출력 속도 ${typingSpeed}x`);};
 }
-<br>
-/\* ----- system ----- \*/
+/* ----- system ----- */
 async function renderAdminSystem(){
   const body=$('adminBody');
   const appSnap=await getDoc(doc(db,'settings','app'));
@@ -4405,11 +4274,10 @@ async function a50AdminBackup(){
   const settings={};
   for(const id of ['dday','app']){const s=await getDoc(doc(db,'settings',id));if(s.exists())settings[id]=s.data();}
   const backup={exportedAt:new Date().toISOString(),projectId:firebaseConfig.projectId,categories,channels,users:a50VisibleUsers().map(u=>({...u,lastSeen:a50Date(u.lastSeen)})),settings};
-  a50Download(`nextbot_admin_backup\_${Date.now()}.json`,JSON.stringify(backup,null,2),'application/json');
+  a50Download(`nextbot_admin_backup_${Date.now()}.json`,JSON.stringify(backup,null,2),'application/json');
   auditAdmin('admin-backup');
 }
-<br>
-/\* ----- audit ----- \*/
+/* ----- audit ----- */
 async function renderAdminAudit(){
   const body=$('adminBody');
   const s=await getDocs(query(collection(db,'admin_logs'),orderBy('createdAt','desc'),limit(100)));
@@ -4417,11 +4285,10 @@ async function renderAdminAudit(){
   body.innerHTML=`<div class="admin50-toolbar"><input id="a50AuditSearch" placeholder="행동/대상/관리자 검색"><button class="btn btn-sm" id="a50AuditExport">JSON</button><button class="btn btn-sm admin50-danger" id="a50AuditClear">최근 로그 삭제</button></div><div id="a50AuditList"></div>`;
   const draw=()=>{const term=($('a50AuditSearch').value||'').toLowerCase();const arr=logs.filter(l=>!term||[l.action,l.target,l.adminNickname,l.detail].some(x=>String(x||'').toLowerCase().includes(term)));$('a50AuditList').innerHTML=arr.map(l=>`<div class="admin50-log"><b>${escapeHtml(l.action||'')}</b> · ${escapeHtml(l.adminNickname||'')} <span class="admin50-muted">${escapeHtml(a50Date(l.createdAt))}</span><div class="admin50-muted">${escapeHtml(l.target||'')} ${escapeHtml(l.detail||'')}</div></div>`).join('')||'<div class="empty">로그 없음</div>';};
   $('a50AuditSearch').addEventListener('input',draw);draw();
-  $('a50AuditExport').onclick=()=>a50Download(`admin_logs\_${Date.now()}.json`,JSON.stringify(logs.map(l=>({...l,createdAt:a50Date(l.createdAt)})),null,2),'application/json');
+  $('a50AuditExport').onclick=()=>a50Download(`admin_logs_${Date.now()}.json`,JSON.stringify(logs.map(l=>({...l,createdAt:a50Date(l.createdAt)})),null,2),'application/json');
   $('a50AuditClear').onclick=async()=>{if(!confirm(`화면에 불러온 최근 ${logs.length}개 로그를 삭제할까요?`))return;await Promise.all(logs.map(l=>deleteDoc(doc(db,'admin_logs',l.id))));toast('삭제했습니다.');renderAdminAudit();};
 }
-<br>
-/\* ----- global admin settings behavior ----- \*/
+/* ----- global admin settings behavior ----- */
 let adminAppSettings={};
 function listenAdminAppSettings(){
   onSnapshot(doc(db,'settings','app'),snap=>{
@@ -4445,9 +4312,7 @@ function applyCurrentChannelAdminState(){
   if(locked&&!note){note=document.createElement('div');note.id='adminChannelLockNote';note.className='admin50-locknote';note.textContent='🔒 이 채널은 관리자가 쓰기 잠금했습니다.';$('chatView')?.insertBefore(note,$('msgList'));}
   if(!locked&&note)note.remove();
 }
-<br>
-/\* ---------------- Modal helper ---------------- \*/
-<br>
+/* ---------------- Modal helper ---------------- */
 function openModal(innerHtml, wide=false){
   closeModal();
   const bg=document.createElement('div'); bg.className='modal-bg'; bg.id='modalBg';
@@ -4457,12 +4322,10 @@ function openModal(innerHtml, wide=false){
   bg.onclick=(e)=>{ if(e.target===bg) closeModal(); };
 }
 function closeModal(){ const bg=$('modalBg'); if(bg) bg.remove(); }
-<br>
-/\* ---------------- Drawer (mobile) ---------------- \*/
+/* ---------------- Drawer (mobile) ---------------- */
 $('drawerToggle').onclick=()=>{ $('sidebar').classList.add('open'); $('drawerScrim').classList.add('show'); };
 $('drawerScrim').onclick=closeDrawer;
 function closeDrawer(){ $('sidebar').classList.remove('open'); $('drawerScrim').classList.remove('show'); }
 </script>
 </body>
 </html>
-
